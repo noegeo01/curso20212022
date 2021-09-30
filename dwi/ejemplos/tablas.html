@@ -1,29 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Horario</title>
     <style>
-        
-        th{
-            border: 3px solid blue;
-            background-color: cadetblue;
+        td {
+            border:1px solid black ;
+            text-align: center;
+            background: gray;
         }
-        thead{
-            background-color: lime;
-        }
-        tr{
-            background-color: yellow;
+        #recreo{
+            background-color: yellowgreen;
         }
     </style>
 </head>
+
 <body>
     <table>
         <caption>Horario de alumnos DAW</caption>
         <thead>
-            <tr>               
+            <tr>
                 <th>hora</th>
                 <th>Lunes</th>
                 <th>Martes</th>
@@ -35,26 +34,58 @@
         <tbody>
             <tr>
                 <td>4:00</td>
-                <td >Programacion</td>
-                <tdrowspan="2">DWI</td>
-                <td>Servidor</td>
-                <td>fol</td>
-                <td>fol</td>
+                <td rowspan="2"><img src="img/DWS.png" alt="Desarrollo wen entorno servidor" width="100px"><br> DWS</td>
+                <td rowspan="3"><img src="img/lmgi.jpeg" alt="Lenguaje de MArcas y Gestion de la información" width="100px"><br> LMGI</td>
+                <td rowspan="2"><img src="img/dwc.jpeg" width="100px" alt="Desarrollo web entorno cliente"><br> DWC</td>
+                <td rowspan="2"><img src="img/interfaces.jpeg" width="100px" alt="Interfaces"><br> Interfaces</td>
+                <td><img src="img/despliegue.png" alt="Despliege" width="100px"><br> Despliege</td>
+                
             </tr>
-        </tbody>
-        <tbody>
+
+
             <tr>
-                <td>5:00</td>
-                <td >DWI</td>
-                <td>Fol</td>
-                <td>Servidor</td>
-                <td>Programacion</td>
-                <td>Servidor</td>
+                <td>4:55</td>
+                <td><img src="img/interfaces.jpeg" width="100px" alt="Interfaces"><br> Interfaces</td>
             </tr>
             <tr>
-                <td colspan="6">Recreo</td>
+                <td>5:50</td>
+                <td ><img src="img/lmgi.jpeg" alt="Lenguaje de MArcas y Gestion de la información" width="100px"><br> LMGI</td>
+                <td><img src="img/DWS.png" alt="Desarrollo wen entorno servidor" width="100px"><br> DWS</td>
+                <td><img src="img/dwc.jpeg" width="100px" alt="Desarrollo web entorno cliente"> <br>DWC</td>
+                <td><img src="img/DWS.png" alt="Desarrollo wen entorno servidor" width="100px"><br> DWS</td>
+                
+            </tr>
+
+            <tr>
+                <td id="recreo">6:45</td>
+                <td colspan="6" id="recreo">Recreo</td>
+            </tr>
+            <tr>
+                <td>7:05</td>
+                <td><img src="img/lmgi.jpeg" alt="Lenguaje de MArcas y Gestion de la información" width="100px"><br> LMGI</td>
+                <td><img src="img/lmgi.jpeg" alt="Lenguaje de MArcas y Gestion de la información" width="100px"><br> LMGI</td>
+                <td><img src="img/DWS.png" alt="Desarrollo wen entorno servidor" width="100px"><br> DWS</td>
+                <td><img src="img/dwc.jpeg" width="100px" alt="Desarrollo web entorno cliente"><br> DWC</td>
+                <td><img src="img/DWS.png" alt="" width="100px"><br> DWS</td>
+            </tr>
+            <tr>
+                <td>8:00</td>
+                <td rowspan="2" ><img src="img/interfaces.jpeg" width="100px" alt="Despliege"><br> Despliege</td>
+                <td rowspan="2"><img src="img/interfaces.jpeg" width="100px" alt="Interfaces"><br> Interfaces</td>
+                <td><img src="img/despliegue.png" alt="Despliege" width="100px"> <br>Despliege</td>
+                <td rowspan="2"><img src="img/DWS.png" alt="Desarrollo wen entorno servidor" width="100px"><br> DWS</td>
+                <td rowspan="2"><img src="img/dwc.jpeg" alt="Desarrollo web entorno cliente" width="100px"><br> DWC</td>
+            </tr>
+            <tr>
+                <td>8:55</td>
+                <td><img src="img/interfaces.jpeg" alt="Interfaces" width="100px"><br> Interfaces</td>
+                
+                
+                
+                
             </tr>
         </tbody>
     </table>
 </body>
+
 </html>
