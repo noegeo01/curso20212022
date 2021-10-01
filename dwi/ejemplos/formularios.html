@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+</head>
+<body>
+    <h1>Mi formulario</h1>
+    <form action="respuesta.html" method="GET">
+
+        <label for="nombre">Nombre</label>
+        <input id="nombre" type="text" name="vnombre">
+
+        <br>
+        
+        <label for="clave">Clave</label>
+        <input type="password" id="clave" name="vclave">
+        <br>
+        <input type="submit" value="Enviar datos"><br>
+        <input type="reset" value="Clear">
+        <input type="button" value="lo que sea">
+        <br>
+        <select name="ciudad" id="ciudad">
+            <optgroup label="España">
+                
+                <option value="30510">Yecla</option>
+                <option value="30520" selected >Jumilla</option>
+                <option value="02310">Alicante</option>
+            </optgroup>
+        </select>
+        
+    </form>
+</body>
+</html>
