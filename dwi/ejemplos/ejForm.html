@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Formulario</h1>
+    <form action="#" method="GET">
+        <fieldset>
+            <legend>Datos personales</legend>
+            <p>
+                <label for="nombre">Nombre</label>
+                <input id="nombre" required  placeholder="Introduce el nombre" type="text" name="nombre">
+            </p>
+            <p>
+                <label for="fechanac">Fecha de Nacimiento</label>
+                <input type="date" id="fechanac" name="fechanac" disabled>
+            </p>
+            <p>
+                <label for="telefono">Telefono</label>
+                <input type="tel" autofocus="true" id="telefono" pattern="[0-9{9}]" name="telefono">
+            </p>
+            <p>
+                <label for="ciudad">Ciudad</label>
+                <select name="ciudad">
+                    <optgroup>
+                        <option value="30510">Yecla</option>
+                        <option value="30520">Jumilla</option>
+                        <option value="02660">Caudete</option>
+                        <option value="02640">Almansa</option>
+                    </optgroup>
+                </select>
+            </p>
+
+        </fieldset>
+        <fieldset>
+            <legend>Deportes</legend>
+
+            
+            <p>
+                <label for="deporte">Escribe tu deporte favorito</label>
+                <input type="text" id="deporte" name="deporte">
+            </p>
+            <p>
+                <label for="horas">Horas practicadas de el deporte</label>
+                <input type="number" name="horas" id="horas" min="3" max="10" step="2">
+            </p>
+            <p>
+                <label for="razon">deportista favorito</label>
+                <input type="text" name="razon" id="razon">
+            </p>
+            <p>
+                <label for="descripcion">informacion del deportista</label>
+                <p>
+                    <textarea name="descripcion" maxlength="10" id="descripcion" cols="50" rows="2"></textarea>
+                </p>
+                
+
+            </p>
+            <p>
+                <label for="buscad">Busca deporte</label>
+                <input type="search" name="buscad" id="buscad">
+            </p>
+            <p>
+                <label for="clave">Clave</label>
+                <input type="password">
+            </p>
+            <p>
+                <input type="url" name="" id="">
+                <input type="file" name="archivo" id="archivo" multiple>
+                <input type="email" name="correo" id="correo">
+                
+            </p>
+            
+            <input type="submit" value="Enviar">
+        </fieldset>
+
+    </form>
+
+
+</body>
+
+</html>
