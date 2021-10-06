@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+        Hacer una pagina web que escriba en la pagina
+        los 10 primeros  numeros impares
+    -->
+    <script>
+        /*
+        let indice=1;
+        
+        while (indice<=10) {
+            if ((indice%2)!==0) {
+                document.write(indice+" es impar"+"<br>");
+            }
+            indice++;
+        }
+        */
+
+
+       /*Hacer una pagina web que pida dos numeros  y nos mostrara 
+       los numeros pares entre el mayor y el menor.
+
+       Pasos
+        1.-Comprobar que el primero es un numero
+        2.-Comprobar que el segundo es un numero
+        3.-Mirar el orden  para ver cual es el mayor 
+        4.-Mostrar los numeros pares  
+
+       */
+        let num1;
+        let num2;
+        let cnum1;
+        let cnum2;
+        let inter;
+
+        //Paso 1
+        num1=prompt("Dame un numero");
+        cnum1=parseInt(num1);
+
+        while (isNaN(cnum1)) {
+            num1=prompt("Dame un numero");
+            cnum1=parseInt(num1);
+        }
+
+        //Paso2
+        num2=prompt("Dame otro numero");
+        cnum2=parseInt(num2);
+
+        while (isNaN(cnum2)) {
+            num2=prompt("Dame un numero");
+            cnum2=parseInt(num2);
+        }
+
+        //Paso 3
+        
+        if (cnum1>cnum2) {
+            inter=cnum2;
+            while (inter<num1) {
+                if ((inter%2)==0) {
+                    document.write(inter+" es par"+"<br>");
+                }
+                inter++;
+            }
+        } else {
+            inter=cnum1;
+            while (inter<num2) {
+                if ((inter%2)==0) {
+                    document.write(inter+" es par"+"<br>");
+                }
+                inter++;
+            }
+        }
+        
+        //(inter%2)==0 ? document.write(inter+ " es par <br>");
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+        Hacer un programa que devuelva de que tipo es el dato
+        introducido en el prompt, en el caso de ser numerico
+        debe parsear (convertir) a numero.
+    -->
+    <script>
+        let respuesta;
+        let coversion;
+        //Prompt  crea un cuadro de texto en el cual el usuario escribira una respuesta 
+        //Esta respuesta sera recogida en una variable
+        respuesta=prompt("Introduce algo");
+        /*Se realiza una conversion a la variable respuesta con parseInt y se recoge en 
+        //una variable llamada conversion
+        //Si la respuesta no es un numero nos devolvera que es una cadena sino nos dira 
+        que es un numero.*/
+        conversion =parseInt(respuesta);
+        if (isNaN(conversion)){
+            console.log("Es una cadena ")
+        }else{
+            console.log("Es un numero");
+        }
+
+        //Todo en una linea
+        isNaN(parseInt(prompt("Introduce algo")) ? console.log("es una cadena") : console.log("es un numero"));
+    </script>
+</body>
+</html>
