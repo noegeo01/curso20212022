@@ -1,8 +1,8 @@
 <?php
-    //Crea una función para resolver la ecuación de segundo grado. Esta función recibe los 
-    //coeficientes de la ecuación y devuelve un array con las soluciones. Si no hay soluciones 
-    //reales, devuelve false
-
+    /*
+    Almacena la funcion anterior en el fichero matematicas.php
+    Crea un fichero que la incluya y la utilice
+    */
     function resolverEcua_grado2($a,$b,$c)
     {
         
