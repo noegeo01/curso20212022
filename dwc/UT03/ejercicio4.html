@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 4 </title>
+</head>
+<body>
+    <!--
+        1.-Hacer un programa que este pidiendo nombres de los alumnos mientras no se teclee fin
+        Deben aparecer los nombres de los alumnos en una lista ordenada.
+        Utilizar WHILE
+
+        Pasos :
+        1.Crear un bucle que nos pida los nombres con prompt
+        2.Si es un nombre se añade en una lista ordenada
+        
+    -->
+    <h1>Alumnos</h1>
+   <ol>
+    <script>
+        let nombre;
+    
+        nombre=prompt("Dame el nombre un alumno");
+        
+        while (nombre,toUpperCase()!="FIN") {
+            //document.write("<li>"+nombre+"</li>");
+            document.write(`<li>${nombre}</li>`);
+            nombre=prompt("Dame el nombre un alumno");
+        }
+        
+    </script>
+    </ol>
+</body>
+</html>

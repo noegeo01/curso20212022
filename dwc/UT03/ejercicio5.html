@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio5</title>
+    
+</head>
+<body>
+    <!--
+        2.-Hacer un programa que cree una tabla.
+        En la cabecera estran los nombrres de las asignaturas.
+        En las filas el nombre del alumno y las notas de cada asignatura y su media
+        Los datps seran introducidos por teclado,para terminar de rellenar una fila 
+        se debe teclear fin.
+        Utilizar WHILE
+    -->
+    <table>
+        <caption></caption>
+        <thead>
+            <tr>
+                <th>Alumno</th>
+        
+        
+    
+    <script>
+        let Nombre;
+        let Cuantas=0;
+        let Contador=0;
+        let Nota;
+        let Continuar;
+
+        Nombre=prompt("Dime el nombre de una  asignatura");
+        
+        while (Nombre!="fin") {
+            Cuantas++;
+          document.write("<th>"+Nombre+"</th>");
+          
+          Nombre=prompt("Dime el nombre de otra asignatura")  ;
+        }
+        document.write("</tr></thead>");
+        document.write("<tbody>");
+
+
+        Continuar=prompt("Quieres añadir un alumno")
+
+        while (Continuar.toUpperCase()!="NO") {
+
+            document.write("<tr>"); 
+            Nombre=prompt("Dime el nombre de el alumno");
+            document.write(`<td>${Nombre}</td>`);
+
+            while (Contador<=Cuantas) {
+                Nota=prompt("Dime la nota"+Contador);
+                document.write(`<td>${Nota}</td>`)
+                Contador++;
+            }
+
+            document.write("</tr");  
+            Continuar=prompt("Quieres añadir otro alumno");
+        }
+        document.write("</tbody>");    
+            
+    </script>
+    </table>
+
+</body>
+</html>
