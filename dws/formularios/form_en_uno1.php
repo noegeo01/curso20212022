@@ -34,7 +34,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 			<label for = "numero">Numeros</label> 
 			<input value = "<?php if(isset($numero))echo $numero;?>"
 			id = "numero" name = "numero" type = "text">				
-			
+			<label for="posicion">En que posicion buscar</label>
+            <input type="number" name="posicion" id="posicion">
 						
 			
 			<input type = "submit">
