@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1, p, li{
+            color: red;
+        }
+        .resto{
+            background-color: pink;
+        }
+        #primero{
+            text-transform: uppercase;
+        }
+        div p {
+            font-weight: bold;
+        }
+        div > p{
+            color: green;
+        }
+        ul + a{
+            text-decoration: none;
+        }
+        ul ~ a{
+            color:yellow;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+    Crear un formulario para introducir nombre, apellidos y calle
+    usando etiquetas label e input e introducir cada pareja de 
+    label e input en un div diferente
+
+    Delante del formulario colocar un h1, con el contendido "Actividad1"
+
+    Debajo del h1 un párrafo con un lorem de 6 palabras.
+
+    Al primer div le pondremos un identificador que será "primero"
+
+    Al resto de div le pondremos una clase que será "resto"
+
+    Debajo del último div pondremos una lista con tres elementos.
+
+    En uno de los elementos pondremos un p con un lorem de 3 palabras.
+
+    Poner las etiquetas p, h1 y li en color rojo. "color: red;"
+    
+    Poner los contendidos de las etiquetas de la clase resto con fondo
+    rosa. background: pink;
+
+    Poner en mayusculas el contenido de la etiqueta con id primero
+    text-transform: uppercase.
+
+    Poner dentro de el div con id primero una p donde ponga "suelto dos"
+
+    Poner dentro de el contenido del label direccion un p con el contenido suelto 2
+
+    Queremos que los p que se encuentren dentro de los div se muestren  en negrita
+    
+    Queremos que los p que sean hijosn directos de los div se muestren en verde
+
+    Queremos quitar el adorno a los a que son hermanos directos de de un ul
+
+    Queremos mostrar de color amarillo los a que sean hermanos de un ul 
+
+    -->
+    <h1>Cactividad1</h1>
+    <p>Lorem ipsum dolor sit amet consectetur.</p>
+    <form action="#">
+        <div id="primero">
+            <label for="nombre">Nombre</label><input id="nombre" type="text">
+            <p>suelto</p>
+        </div>
+        <div class="resto">
+            <label for="apellidos">Apellidos</label><input id="apellidos" type="text">
+        </div>
+        <div class="resto">
+            <label for="direccion">Direccion</label><input id="direccion" type="text">
+            <p>suelto dos</p>
+        </div>
+        <ul>
+            <li>Uno</li>
+            <li>Dos<p>Lorem, ipsum dolor.</p></li>
+            <li>Tres</li>
+        </ul>
+        
+        <a href="" class="resto">a.resto</a>
+        <a href="" id="segundo">a#segundo</a>
+    </form>
+   
+   
+</body>
+</html>
