@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        let cadena1 = "óst1";
+        let cadena2 = "ost2";
+        if (cadena1>cadena2) {
+            document.write(`${cadena1} es mayor que ${cadena2}`);
+        } else {
+            document.write(`${cadena1} es menor que ${cadena2}`);
+        }
+        document.write("<br>");
+        if (cadena1.localeCompare(cadena2,'es')) {
+            document.write(`${cadena1} es mayor que ${cadena2}`);
+        } else {
+            document.write(`${cadena1} es menor que ${cadena2}`);
+        }
+    </script>
+</body>
+</html>
