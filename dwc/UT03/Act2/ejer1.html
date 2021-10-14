@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1</title>
+</head>
+
+<body>
+    <!--
+        Hacer una pagina web que nos este pidiendo datos por teclado   (prompt), mientras no
+        pulsemos en el botón de cancelar (nos devuelve un null).
+        Una vez finalizada nos debe mostrar el número de datos introducidos por teclado.
+    -->
+
+    <script>
+        numero=parseInt(prompt("Dame un numero"));
+        contador=0;
+        while (numero != null) {
+            numero=parseInt(prompt("Dame un numero"));
+            console.log(numero);
+            contador++;
+            
+        }
+        document.write(`El total de numeros introducidos ${contador}`);
+    </script>
+</body>
+
+</html>
