@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+//Locale comapre devuelve - 1, 0 o 1 dependiendo del orden de los elementos a comparar
+
+        console.log('ä'.localeCompare('z', 'de')); // -1 quiere decir que esta antes z
+        console.log('ä'.localeCompare('z', 'sv')); // 1 quiere decir que ä esta despues que la z
+
+        let texto1 = "Andres";
+        let texto2 = "andres"
+        console.log(texto1.localeCompare(texto2, 'es')); // 1
+        console.log(texto1.localeCompare(texto2, 'es', { sensitivity: 'base' })); // 0
+    </script>
+</body>
+
+</html>
