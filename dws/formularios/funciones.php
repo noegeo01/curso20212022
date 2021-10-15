@@ -61,7 +61,7 @@
             $i2++;
         }
     }
-    function 
+    
     function desplazar_izquierda($anum,$apos){
 
 
