@@ -14,5 +14,17 @@
         botón de cancelar.
         Una vez finalizado, nos mostrará cuantos han sido de tipo numérico (isNaN)
     -->
+
+    <script>
+        dato=0;
+        contador=0;
+        while (!(dato === null)) {
+            dato=prompt("Introduce datos");
+            while(isNaN(dato)){
+                contador++;
+            }
+        }
+        document.write("Los valores introducidos que no han sido de tipo numerico son "+contador)
+    </script>
 </body>
 </html>

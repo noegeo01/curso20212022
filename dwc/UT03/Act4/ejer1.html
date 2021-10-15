@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+        Hacer una web que nos pida palabras y nos diga cuantos caracteres tiene hasta que pulsemos
+        cancelar que terminará.
+    -->
+    <script>
+        
+        long=0;
+        palabra=prompt("Introduce datos");
+        console.log(long);
+        while (!(palabra === null)) {
+            
+            long=palabra.length;
+            document.write(`El numero de caracteres es : ${long} de  la palabra ${palabra}<br>`);
+            palabra=prompt("Introduce datos");
+        }
+          
+        document.write("su longitud es "+log);
+        
+    </script>
+</body>
+</html>
