@@ -1,15 +1,33 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ejercicio6</title>
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
 </head>
 <body>
-    <!--
-        3.-Igual que elanterior pero debe aparecer lamedia de cada alumno 
-        Utilizar WHILE  
+    <!--Realizar una pagina web donde dispondremos de
+    un formulario con un label y un input para introducir un nombre
+    tambien de un campo desplegable <select> donde podremos seleccionar
+    un número del 1 al 78, este se debe generar por código javascript,poner
+    tambien su label
+    Usar un while
     -->
+
+    <form action="">
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre">
+        <label for="numero">Selecciona un número:</label>
+        <select name="numero" id="numero">
+        <script>
+            let numero=1
+            while (numero<79)
+                //document.write("<option value='value"+numero+"'>"+numero+"</option>")
+                document.write(`<option value='value${numero}'>${numero++}</option>`)
+        </script>        
+        </select>
+    </form>
+
 </body>
 </html>
