@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3</title>
+</head>
+<body>
+    <!--
+        Hacer una pagina web que nos este pidiendo datos por teclado, mientras no pulsemos en el
+        botón de cancelar.
+        Una vez finalizado,nos mostrará la suma de los numéricos, la media y cuantos se han
+        introducido. 
+    -->
+    <script>
+        dato=parseInt(prompt("Introduce un numero"));
+        contador=0;
+        while (!(dato===null)) {
+            dato=parseInt(prompt("Introduce un numero"));
+            contador++;
+            suma=dato+suma;
+            if(isNaN(dato)){
+                dato=parseInt(prompt("Introduce un numero"));
+            }
+            
+        }
+        media=suma%contador;
+        document.write(`Èl total de numeros introducidos es ${contador}<br>`);
+        document.write(`La suma de todos los numeros introducidos es : ${suma}<br>`);
+        document.write(`La media  es : ${media}`);
+    </script>
+</body>
+</html>
