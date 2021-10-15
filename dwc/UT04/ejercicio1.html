@@ -8,16 +8,21 @@
 </head>
 <body>
     <!--
-        introduce en una cadena 
+        introduce en una cadena  y un caracter debe indicar cuantas veces aparece el 
+        caractewr dentro de la cadena
     -->
     <script>
-        texto="Hola como te llamas";
-        limite=0;
-        while (texto.indexOf("0")=-1) {
-            texto.indexOf("0",limite)
-        }
         
-
+        
+        let palabra,contador=0,posicion,caracter;
+        palabra=prompt("di un palabra");
+        caracter=prompt("di un caracter");
+        posicion=palabra.indexOf(caracter);
+        while (posicion!=-1) {
+            contador++;
+            posicion=palabra.indexOf(caracter,posicion);
+        }
+        document.write(`El caracter ${caracter} aparece ${contador} en ${palabra}`)
     </script>
 </body>
 </html>
