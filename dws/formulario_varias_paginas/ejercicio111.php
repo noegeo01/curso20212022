@@ -11,11 +11,10 @@ while ($j<=$i)
 	//$contenido[$j]= $_SESSION['num_letra_palabra'.$j];/
 	$j++;
 }
-$num=3;
 $salida=repeticiones($contenido);
 print_r($salida);
 $salida=longitud_array($contenido);
 print_r($salida);
-$salida=num_existe_array($num,$contenido);
+$salida=num_existe_array(3,$contenido);
 print_r($salida);
 ?>

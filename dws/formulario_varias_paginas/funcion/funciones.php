@@ -92,9 +92,5 @@ function suprimir_elementos($p)
 	$resultado=array_unique($p);
 	return $resultado;
 }
-function longitud_array($array){
-       
-	$long=count($array);
-	return $long
-}
+
 ?>
