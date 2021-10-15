@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p#absoluto{
+            font-size:xx-small ;
+        }
+        p#relativo{
+            font-size: smaller;
+        }
+        span{
+            font-size: smaller;
+        }
+        a{
+            font-size: smaller;
+        }
+        body{
+            font-size: xx-large;
+        }
+    </style>
+</head>
+<body>
+    <!--
+        tamaño del tipo de letra
+    -->
+    <!--Tamaño absoluto xx-small , xsmall , small , medium , large , x-large y xx-large 
+        estos tamaños los  elige en funcion de la resolucion de la pantalla , el tamaño
+        de fuente,etc
+    -->
+    <p id="absoluto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis dolorum 
+        voluptate commodi dolores tempora explicabo ratione vero, a quasi numquam?</p>
+    <!-- Tamaño relativo 
+        Estos valores se interoretan con respecto a el elemento padre y se toma el
+        valor siguiente o anterior de la lista de tamaños absolutos larguer small
+    -->
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate ad numquam 
+        qui consequatur dicta, debitis a repudiandae. Vel, explicabo rem.</p>
+
+    <p id="relativo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae at nam sint voluptatum
+        consequuntur voluptatem voluptates, quo similique deleniti accusantium?
+        <span>
+            hola
+            <a href="">melon</a>
+        </span>
+
+    </p>
+</body>
+</html>

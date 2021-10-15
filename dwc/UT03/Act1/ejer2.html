@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2</title>
+</head>
+<body>
+    <!--
+        Hacer una pagina web que nos pida numeros mientras el siguiene sea mayor
+        si el numero que no ha introducido es tipo number seguir pidiendo hasta que sea un numero
+        l
+    -->
+    <script>
+        
+        viejo=-1;
+        nuevo=0;
+        while(viejo<nuevo){
+            viejo=nuevo
+            nuevo=parseInt(prompt("Dame un numero nuevo"));
+            while (isNaN(nuevo)){
+                nuevo=parseInt(prompt("Dame un numero nuevo"));
+            }
+        }
+    </script>
+</body>
+</html>
