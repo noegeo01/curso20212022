@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+        copiar derepositoprio de ricardo
+        Hacer una web que nos imprima los caracteres uno en lineas diferentes. Usar los tipos de 
+        bucles for.
+    -->
+    <script>
+        long=0;
+        palabra=" ";
+        
+        
+        while (palabra) {
+           
+            palabra=prompt("Introduce datos");
+            document.write("*"+repeat(10));
+            for (let i = 0; i < palabra.length; i++) {
+            document.write(`${palabra.charAt(i)} <br>`);
+            }
+        }
+          
+        
+    </script>
+</body>
+</html>

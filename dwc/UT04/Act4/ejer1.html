@@ -14,13 +14,15 @@
     <script>
         
         long=0;
-        palabra=prompt("Introduce datos");
-        console.log(long);
+        palabra=" ";
+        
         while (!(palabra === null)) {
             
-            long=palabra.length;
-            document.write(`El numero de caracteres es : ${long} de  la palabra ${palabra}<br>`);
+            
+            
+            //document.write(`El numero de caracteres es : ${long} de  la palabra ${palabra}<br>`);
             palabra=prompt("Introduce datos");
+            alert(palabra.length);
         }
           
         document.write("su longitud es "+log);

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let cadena1="hola";
+        let cadena2=" soy";
+        let cadena3=" noe <br>";
+        cadena=cadena1.concat(cadena2,cadena3);
+
+        document.write(cadena.repeat(5));
+
+        //remplazar con algunas o todas las coincidencias de el patron 
+
+        ;
+        document.write(cadena.replace("o","0")+"<br>");
+        document.write(cadena.replace(/o/g,"0")+"<br>");
+
+
+        //Eliminar espaciosmetodo trim
+        cadena2="    hola    j";
+        document.write(`${cadena2.trim()} -${cadena2}-`);
+        //slice extraer cadenas de una posicion a otra imp
+        cadena="El loro pepe esta cantando";
+        console.log(cadena.slice(3,7));
+        console.log(cadena.slice(3,-2));//menos dos es empezando por la derecha
+        //tambien se puede utilizar los dos indices por la derecha slice(-3,-7);
+        console.log(cadena.slice(-5,-1));
+        //Convierte cadena en array
+        nombre=("ricardo,javier,antonio,oscar,miriam");
+        arrayNombre=nombre.split(",")
+        console.log(arrayNombre);
+        console.log(nombre);
+        //Convertir unicode de u texto
+        console.log("hola".charCodeAt(0))
+    </script>
+
+</body>
+</html>

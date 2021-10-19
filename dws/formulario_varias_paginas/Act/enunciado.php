@@ -15,5 +15,12 @@
  * 
  * 23 4 10
  * 
+ * 
+ * 
+ * Ejercicio dos
+ * Quiero introducir personas dentro de un array por medio de unn formulario
+ * dni nombre apellidos
+ * 
  */
+
 ?>
