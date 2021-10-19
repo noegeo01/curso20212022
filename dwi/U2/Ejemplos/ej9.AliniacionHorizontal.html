@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alineacion horizontal text-align</title>
+    <Style>
+        div{
+            border: solid 1px red;
+            text-align: justify;
+        }
+        .vertical{
+            vertical-align: middle;
+            height: 5em;
+        }
+        .der{
+            text-indent: 15px;
+            letter-spacing: 10px;
+        }
+        .izq{
+            text-indent: -20px;
+            letter-spacing: -2px;
+        }
+        p:nth-child(3){
+            word-spacing: 10px;
+        }
+    </Style>
+</head>
+<body>
+    <!---
+        Crear una caja con un div con un borde de 1px solid red en su interior.Debe el
+        Siguiente texto:
+        "Hola soy yo"
+        Debe aparecer alineado a la izquierda.Propiedad text-aling.
+
+        Crea un div de la clase vertical con el texto :
+        "Hola soy yo "
+        Y que este aparezca centrado verticalmente en div 
+        Propiedad vertical-aling,valor middle
+
+        Crear un p con clase der el texto :
+        "Estoy indentado a ala derecha 15px"
+        utilizar la propiedad text-indent, con el valor positivo
+        Hacer otro p igual pero sin la clase
+
+        Hacer otro p con la clase izq, que este indentado 20 px a laa izquierda
+
+        Hacer que las letras de las palabras  con clase der , esten separadas 10px
+        usar propiedad letter-spacing
+    -->
+    
+    <div class="vertical">
+        Hola soy yo
+    </div>
+    <p class="der">Estoy indentado a la derecha 15 px</p>
+    <p >Estoy indentado a la derecha 15 px</p>
+    <p class="izq">Estoy indentado a la derecha -20px</p>
+</body>
+</html>
