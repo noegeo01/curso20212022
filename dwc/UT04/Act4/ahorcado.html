@@ -22,14 +22,11 @@
         console.log(letraAbuscar);
         letrasintroducidas.push(letraAbuscar);
         
-
-          i=0;
+        
         while (palabracompleta.indexOf(letraAbuscar)!=-1) {
             pos=palabracompleta.indexOf(letraAbuscar)
             Acorrectas[pos]=palabracompleta[pos]
             palabracompleta[pos]=""
-            i++;
-            
         }  
         console.log(Acorrectas)
         
