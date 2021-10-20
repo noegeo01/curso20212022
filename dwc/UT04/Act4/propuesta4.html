@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+        Pedir una cadena y mostrar una piramide
+
+    -->
+    <script>
+        let cadena="Noelia";
+        //len tamaño cadena
+        len=cadena.length;
+        i=0;
+        while (i<len) {
+            document.write(cadena+"<br>");
+            //recorta la cadena .Que coja el ultimo elemento
+            ultima_letra=cadena.substring(len-1,len);
+            //Remplaza la ultima letra por un espacio en blanco
+            cadena=cadena.replace(ultima_letra," ");
+        }
+    </script>
+</body>
+</html>m

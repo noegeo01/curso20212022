@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+        Hacer tres cadenas,buscar en la primera,lo introducido en la segunda y sustituir
+        por lo que hay en la tercera
+    -->
+    <script>
+        let cad_donde_buscar="Hola soy yo soy yo";
+        let cad_busqueda="yo";
+        let cad_remplazo="tu";
+        cont=0;
+        pos=cad_donde_buscar.indexOf(cad_busqueda);
+        while (pos!=-1) {
+            cont++;
+            pos=cad_donde_buscar.indexOf(cont);
+        }
+        document.write();
+        while (cad_donde_buscar.length>0) {
+            cad_donde_buscar.replace(cad_busqueda,cad_remplazo);
+        }
+        document.write(cad_donde_buscar)
+    </script>
+</body>
+</html>
