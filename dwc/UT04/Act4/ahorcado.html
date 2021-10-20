@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ahorcado</title>
+</head>
+<body>
+    <script>
+        var Acorrectas =[];
+        var letrasintroducidas=[];
+        let palabra="perro";
+       
+        palabracompleta=palabra.split("");
+        for (l of palabracompleta){
+            Acorrectas.unshift("")
+        }
+        console.log(Acorrectas)
+
+        let letraAbuscar=prompt("Dime una letra");
+        console.log(letraAbuscar);
+        letrasintroducidas.push(letraAbuscar);
+        
+
+          i=0;
+        while (palabracompleta.indexOf(letraAbuscar)!=-1) {
+            pos=palabracompleta.indexOf(letraAbuscar)
+            Acorrectas[pos]=palabracompleta[pos]
+            palabracompleta[pos]=""
+            i++;
+            
+        }  
+        console.log(Acorrectas)
+        
+    </script>
+</body>
+</html>
