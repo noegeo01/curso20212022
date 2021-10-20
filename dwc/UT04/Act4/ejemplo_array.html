@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Una forma de crear un array
+        var nombres=["Ricardo",,"Daniel",1,"Antonio"];
+        var nombres2=new array('Ricardo','Daniel',1,"Antonio");
+        let nuevo=[1,2,3,4,5];
+        document.write(nombres);
+        console.log(nombres);
+        console.log(nombres2);
+
+        nombres2[0]=true;
+        console.log(nombres2[0]);
+        //var un array puede apuntar aun array
+        //Se puede declarar con var let y const
+        // caundo hacemos un pop se elimina el ultimo elemento 
+        ultimo=nombres.pop();
+        document.write(`<br`+ultimo);
+        document.write(`<br>`+nombres);
+        //Quiere insertar en la posicion 1  insertas x y borras 0 Desplazas
+        nombres.slice(1,0,"XXX");
+        //Quiere insertar en la posicion 3 insertar XXX y borra 1 
+        nombres.slice(3,1,"XXX");
+        //No inserta y desde la posicion 0 elimina 2
+        nombres.slice(0,2);
+        //Desdeel menos dos borra dos
+        nombres.slice(-2,2);
+        //Concatena dos arrays dentro de un array nuevo
+        nuevo=nombres.concat(nombres2);
+        nuevo=['n','o','e','l'];
+        //Join convierte lo que separa por lo que se pida
+        cadena=nuevo.join('</td><td>');
+        document.write('<table><tr><td>'+cadena+'</td></tr></table>');
+        //Nos dice en que posicion de el array se encuentra el elemento
+        nombres.indexOf("elemento");
+        //LAstIndexOf busca desde la derecha 
+        //includes devuelve un boolean si esta o no 
+        /*push agrega a el earray
+        reverse quito de el final
+        shift añado a l principio
+        unsfift añado en el final
+        sort ordena el array
+        splice 0 segundo parametro que quiero hacer una inserccion la posicion 
+         1 donde lo quiero insertar
+        "XXX" lo que quiero insertar
+        Siempre borra hacia la derecha
+        index of
+
+        
+        */
+
+
+</script>
+</body>
+</html>
