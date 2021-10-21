@@ -1,35 +1,61 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ahorcado</title>
 </head>
+
 <body>
+    <h1>El ahorcado</h1>
     <script>
-        var Acorrectas =[];
-        var letrasintroducidas=[];
-        let palabra="perro";
-       
-        palabracompleta=palabra.split("");
-        for (l of palabracompleta){
-            Acorrectas.unshift("")
+        //Array vacio en el que se colocaran las letras correctas
+        var Acorrectas = [];
+        //Array de todas las letras introducidas
+        var letrasintroducidas = [];
+        //Palabra
+        let palabra = "perro";
+        let longpalabra=palabra.length;
+        //Convertir la palabra en un array
+        palabracompleta = palabra.split("");
+        //Completar la cadena  con espacios 
+        for (l of palabracompleta) {
+            Acorrectas.unshift(" ")
         }
         console.log(Acorrectas)
 
-        let letraAbuscar=prompt("Dime una letra");
+        let letraAbuscar ;
         console.log(letraAbuscar);
-        letrasintroducidas.push(letraAbuscar);
+        //añadimos la letra en el array de letras
         
         
-        while (palabracompleta.indexOf(letraAbuscar)!=-1) {
-            pos=palabracompleta.indexOf(letraAbuscar)
-            Acorrectas[pos]=palabracompleta[pos]
-            palabracompleta[pos]=""
-        }  
-        console.log(Acorrectas)
+        let intentos =0;
+        //Si la letra esta en la palabra entonces se pondra un espacio en blanco en el sitio de la letra
+        //Y se completa el array vacio con la letra 
+        document.write("Es un animal");
+        while (intentos <= 5) {
+            letraAbuscar = prompt("Dime una letra");
+            letrasintroducidas.push(letraAbuscar);
+            while (palabracompleta.indexOf(letraAbuscar) != -1) {
+                pos = palabracompleta.indexOf(letraAbuscar);
+                Acorrectas[pos] = palabracompleta[pos];
+                palabracompleta[pos] = "";
+                alert("La letra  "+letraAbuscar+"  es correcta")
+            }
+            console.log(Acorrectas)
+            intentos++;
+            
+            alert(`Las letras que has introducido son ${letrasintroducidas}`)
+            alert(Acorrectas)
+            
+        }
         
+        document.write(` Las letras correctas son ${Acorrectas}`);
+
+
     </script>
 </body>
+
 </html>
