@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+        Hacer un web que nos pida un frase y un número  para  encriptar la frase con el metodo Cesar 
+        que es un tipo de cifrado por sustitución en el que una letra en el texto original es 
+        reemplazada por otra letra que se encuentra un número fijo de posiciones más adelante en 
+        el alfabeto.
+
+        Por ejemplo, con un desplazamiento de 3, la A sería sustituida por la D 
+        (situada 3 lugares a la derecha de la A), la B sería reemplazada por la E, etc. 
+
+        Usar solo cadenas.
+        Es necesario comprobar que se introduce la información correctamente, escribir el resultado
+        en la página y comentar el código.
+        Pista usar charCodeAt.
+    
+    -->
+    <script>
+        let cadena =prompt("Dime una frase");
+        let pos=0;
+        let letra;
+        let resultado="";
+
+        
+         for(pos in cadena){
+            numero=parseInt(prompt("Dime un numero"));
+             
+            letra=cadena.charCodeAt(pos)
+            //console.log(letra)
+            letra=letra+numero;
+            //console.log(String.fromCharCode(letra));
+            letra=String.fromCharCode(letra);
+            
+            resultado=resultado+letra;
+            console.log(resultado);
+        } 
+        document.write(`Lapalabra original es ${cadena}<br>`);
+        document.write(` La encriptacion es ${resultado}`);
+    </script>
+</body>
+</html>

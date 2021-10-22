@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--
+        Hacer un web que nos pida un frase y un número  para  encriptar la frase con el metodo 
+        polialfabétcio
+
+        Por ejemplo, con un desplazamiento de 153, la frase Hol soy yo, será de la siguiente forma:
+        H se desplaza 1 caracter.
+        o se desplaza 5 caracteres.
+        l se despalza 3 caracteres.
+        espeacio se desplaza 1 caracter
+        s se desplaza 5 carateres.
+
+        Usar solo cadenas.
+        Es necesario comprobar que se introduce la información correctamente, escribir el resultado
+        en la página y comentar el código.
+        Pista usar charCodeAt.
+    
+    -->
+    <script>
+        let frase = prompt("Dime una frase");
+        let desplazamiento = "123";
+        i = 0;
+        let resultado = "";
+        let suma;
+        for (pos in frase) {
+            letra=frase.charCodeAt(pos);
+            console.log(letra)
+
+            suma = parseInt(desplazamiento.charAt(i));
+            letra = letra + suma;
+
+            letra = String.fromCharCode(letra);
+            console.log(letra)
+            resultado = resultado + letra;
+            console.log(resultado)
+            i++;
+            if (i = 2) {
+                i = 0;
+            }
+
+        }
+        document.write(`La frase introducida es : ${frase}<br>`)
+        document.write(`El resultado es : ${resultado}`);
+    </script>
+</body>
+
+</html>
