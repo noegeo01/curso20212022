@@ -1,6 +1,7 @@
 <?php
-session_start();
 require_once('persona.php');
+session_start();
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") { 
     if ($_POST['dni'] !=0){
         if (!isset($_SESSION['indice'])){
@@ -28,7 +29,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     header("Location: resolver.php");
     }
  }   
-	
+
 ?>
 
 <!DOCTYPE html>
