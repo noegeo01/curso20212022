@@ -12,7 +12,7 @@
         th,
         td {
             border-color: blueviolet;
-            border-style: solid;
+            border-style: inset;
             border-width: 1px;
         }
 
@@ -58,6 +58,9 @@
 
         p.mix {
             border-style: dotted dashed solid double;
+        }
+        h2{
+            color: blueviolet;
         }
     </style>
 
@@ -147,7 +150,7 @@
         </tr>
     </table>
     <a href="index_ut02_02.html">Enlace al menu</a>
-    <h3>Border-Style</h3>
+    <h2>Border-Style</h2>
     <p>
     <ul>
         <li>Dotted : Define un borde punteado</li>
@@ -157,7 +160,7 @@
         <li>Groove : Define un borde acanalado en 3D</li>
         <li>Ridge : Define un borde estriado en 3D</li>
         <li>Inset : Define un borde de recuadro</li>
-        <li>Outset : DefineDefine un boprde de inicio 3D</li>
+        <li>Outset : Define un borde de inicio 3D</li>
         <li>none : No define ningun borde</li>
         <li>hidden : Define un borde oculto</li>
     </ul>
@@ -174,9 +177,22 @@
     <p class="mix">A mixed border.</p>
 
     </p>
-    <h3>Border-Color</h3>
+    <h2>Border-Color</h2>
     <p>
-
+    La propiedad e sun atajo para definir el color de los cuatro bordes de un elemento.
+    <br>
+    <ul>
+        <li>Valor inicial: el color de el elemento en si</li>
+        <li>Se aplica a todos los elementos</li>
+    </ul>
+    Si solo especificamos  los 4 valores : El primer valor sera el superior, el siguiente el borde derecho, el siguiente 
+    el borde inferior y el ultimo el borde izquierdo.
+    <br>
+    Si  añadimos 3 valores : el primer valor sera el superior, el siguiente el borde derecho e izquierdo y el ultimo el brode inferior
+    <br>
+    Si añadimos 2 valores : el primer valor sera el superior e inferior y el otro sera el borde de la derecha e izquierda
+    <br> 
+    Si solo tiene un valor este se añade a todos los bordes.
     </p>
 </body>
 
