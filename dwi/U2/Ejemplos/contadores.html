@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            counter-reset: lineas;
+            counter-reset: canciones;
+        }
+        h2{
+            counter-reset: lineas;
+        }
+        h2::before{
+            content: counter(canciones,upper-roman);
+            counter-increment: canciones;
+        }
+        p::before{
+            content: counter(canciones,upper-roman)  counter(lineas,upper-alpha) ;
+            counter-increment: lineas;
+        }
+    </style>
+</head>
+<body>
+    <h1>Antonio Vega</h1>
+    <h2>La chica de ayer</h2>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+
+    <h2>La chica de ayer</h2>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+
+    <h2>La chica de ayer</h2>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+</body>
+</html>
