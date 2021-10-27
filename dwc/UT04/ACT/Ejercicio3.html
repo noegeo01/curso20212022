@@ -1,11 +1,30 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        table {
+            border: black 2px groove;
+            border-radius: 3px;
+            background-color: cornflowerblue;
+
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 2em;
+        }
+
+        td {
+            border: white 1px solid;
+            height: 2em;
+            text-align: center;
+            color: white;
+        }
+    </style>
 </head>
+
 <body>
     <!--
        Hacer un programa que pueste n combinaciones para jugar a la lotería primitiva.
@@ -16,20 +35,36 @@
        númeradas.
     
     -->
-    <script>
-        let numero_primitiva=[];
-        let num_combinaciones=parseInt(prompt("dime cuantas combinaciones quieres"));
-        console.log(num_combinaciones)
-        let combinacion;
-        let i=0;
-        while (i<=num_combinaciones) {
-            combinacion=Math.round(Math.random()*49);
-            
-            console.log(combinacion);
-            if (condition) {
-                
-            }
-        }
-    </script>
+    <table>
+        <caption>Primitiva</caption>
+        <tr>
+
+            <script>
+                let numero_primitiva = [];
+                let num_combinaciones = parseInt(prompt("dime cuantas combinaciones quieres")) - 1;
+                // console.log(num_combinaciones)
+                let combinacion;
+                let ncombinacion;
+                let i = 0;
+                while (i <= num_combinaciones) {
+
+
+                    combinacion = Math.round(Math.random() * 49);
+                    console.log(combinacion);
+
+                    numero_primitiva.push(combinacion);
+                    console.log(numero_primitiva);
+                    /* if (  combinacion = numero_primitiva[i]) {
+                     ncombinacion=Math.round(Math.random()*49);
+                     numero_primitiva.splice(numero_primitiva.indexOf(combinacion),1,ncombinacion)} */
+                    document.write(`<td>${combinacion}</td>`)
+                    i++;
+
+                }
+
+            </script>
+        </tr>
+    </table>
 </body>
+
 </html>
