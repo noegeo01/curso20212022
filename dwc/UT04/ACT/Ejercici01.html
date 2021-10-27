@@ -33,12 +33,12 @@
             numero=parseInt(prompt("Dime un numero"));
              
             letra=cadena.charCodeAt(pos)
-            //console.log(letra)
-            letra=letra+numero;
-            //console.log(String.fromCharCode(letra));
+           
+            letra+=numero;
+            
             letra=String.fromCharCode(letra);
             
-            resultado=resultado+letra;
+            resultado+=+letra;
             console.log(resultado);
         } 
         document.write(`Lapalabra original es ${cadena}<br>`);

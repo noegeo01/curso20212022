@@ -28,10 +28,12 @@
     -->
     <script>
         let frase = prompt("Dime una frase");
-        let desplazamiento = "123";
+        let desplazamiento = parseInt(prompt("Dime el desplazamiento"));
         i = 0;
         let resultado = "";
         let suma;
+        
+
         for (pos in frase) {
             letra=frase.charCodeAt(pos);
             console.log(letra)

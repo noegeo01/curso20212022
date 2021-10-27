@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+        Hacer un buclefor que cuente de 0 a 100
+
+        un programa que nos pida  una cadena y un numero de varios digitos.
+        Y queremos que nos muestre cada cadena 
+    -->
+    <script>
+
+        /* 
+        Ejercicio1
+        let limite=100;
+        for(i=0 ;i<=limite;i++){
+            document.write(i%11+"<br>");
+        } */
+
+
+        let cadena=prompt("Dime una cadena ");
+        let numero=(prompt("Dime un numero"));
+        let otra=""
+        let i =0
+        for(let c of cadena){
+            otra=otra+(c.repeat(numero.charAt(i%numero.length)))
+            i++
+        }
+         document.write(otra)   
+        
+    </script>
+</body>
+</html>
