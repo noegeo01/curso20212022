@@ -1,11 +1,44 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        table{
+            border-radius: 1rem;
+            border: 5px grey groove;
+            background-color: lightskyblue;
+        }
+        td {
+            border: grey 4px groove;
+            text-align: center;
+            width: 2rem;
+            height: 2rem;
+            border-radius: 8px;
+            background-color: steelblue;
+            color: white;
+            
+        }
+        .texto{
+            border: grey 4px groove;
+            text-align: center;
+            width: auto;
+            height: 2rem;
+            border-radius: 8px;
+            background-color: royalblue;
+            color: white;
+            font-size: larger;
+        }
+        td:hover{
+            background-color: tomato;
+            font-size: larger;
+        }
+    </style>
 </head>
+
 <body>
     <!--
         Hacer un buclefor que cuente de 0 a 100
@@ -13,26 +46,64 @@
         un programa que nos pida  una cadena y un numero de varios digitos.
         Y queremos que nos muestre cada cadena 
     -->
-    <script>
+    
+            <script>
 
-        /* 
-        Ejercicio1
-        let limite=100;
-        for(i=0 ;i<=limite;i++){
-            document.write(i%11+"<br>");
-        } */
+                /* 
+                Ejercicio1
+                let limite=100;
+                for(i=0 ;i<=limite;i++){
+                    document.write(i%11+"<br>");
+                } */
+
+                /* 
+                let cadena=prompt("Dime una cadena ");
+                let numero=(prompt("Dime un numero"));
+                let otra=""
+                let i =0
+                for(let c of cadena){
+                otra=otra+(c.repeat(numero.charAt(i%numero.length)))
+                i++
+                }
+                document.write(otra)    */
 
 
-        let cadena=prompt("Dime una cadena ");
-        let numero=(prompt("Dime un numero"));
-        let otra=""
-        let i =0
-        for(let c of cadena){
-            otra=otra+(c.repeat(numero.charAt(i%numero.length)))
-            i++
-        }
-         document.write(otra)   
-        
-    </script>
+                let numero;
+                let todos=[];
+                let td
+                let tr=[];
+                let table=[];
+                for (let j = 0; j < 10; j++) {
+                    let array=[];
+                    let i= 0;
+                    while ( i < 5 ) {
+                        
+                        numero=Math.round(Math.random() * 49 + 1);
+                        if(!(array.includes(numero))){
+                            array.push(numero);
+                            i++
+                        }
+                    }//hacer td
+                    console.log(array);
+                     td=`<td class="texto">Numero de combinacion  : ${j}</td>`+'<td>'+array.join('</td><td>')+'</td>';
+                        console.log(td)
+                    todos.push(array);
+                    tr.push(td);
+                    
+                    //document.write(`<ol><li>`+array.join(`</li><li>`)+`</li></ol>`);
+                   
+                }
+                
+                
+                
+                
+                //hacer tr
+                table=tr.join(`</tr><tr>`)
+                document.write(`<table><caption> Primitiva</caption><tr>`+table+`</tr></table>`);
+                
+
+            </script>
+      
 </body>
+
 </html>

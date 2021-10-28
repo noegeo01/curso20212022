@@ -29,7 +29,7 @@
     <script>
         let frase = prompt("Dime una frase");
         let desplazamiento = parseInt(prompt("Dime el desplazamiento"));
-        i = 0;
+        let i = 0;
         let resultado = "";
         let suma;
         
@@ -39,6 +39,7 @@
             console.log(letra)
 
             suma = parseInt(desplazamiento.charAt(i));
+            console.log(suma);
             letra = letra + suma;
 
             letra = String.fromCharCode(letra);
