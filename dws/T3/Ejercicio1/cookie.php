@@ -14,7 +14,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $fondo=$_COOKIE['fondo'];
             echo '<body style="background-color:',$color,';">';
         }
- }   
+    }    
+}   
 
     
 ?> 
@@ -30,8 +31,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	<body>			
 		
     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST">
-<label for = "color">Dime el color que quieres de fondo</label> 
+    <label for = "color">Dime el color que quieres de fondo</label> 
 			
             <input type="color" value="<?php if(isset($fondo))echo $fondo;?>">
+    </form>
 	</body>
 </html>

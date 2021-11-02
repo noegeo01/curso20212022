@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p {
+            border: 1px solid saddlebrown;
+            padding: 5px;
+            margin: 0;
+            width: 50%;
+        }
+
+        p.relativo {
+            position: relative;
+            background-color: salmon;
+           
+            
+        }
+
+        p.absoluto {
+            position: absolute;
+            background-color: sandybrown;
+            top: 10px;
+            left: 10px;
+        }
+        p.relativo {
+            position: relative;
+            background-color: salmon;
+            top: 10px;
+            
+        }
+        p.fijo{
+            position: fixed;
+            bottom: 0px;
+            left: 0%;
+            width: 100%;
+            background-color: seagreen;
+        }
+        div{
+            border:sandybrown 1px solid;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>relativo</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, voluptas.</p>
+    <p class="relativo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, voluptas.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, voluptas.</p>
+    <h1>absoluto desde body</h1>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est, labore.</p>
+    <p class="absoluto">Lorem ixxxxxxxxxxxxxxxxxxxxpsum dolor, sit amet consectetur adipisicing elit. Est, labore.</p>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est, labore.</p>
+    <h1>absoluto desde otro relativo</h1>
+    <div>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est, labore.</p>
+    <p class="relativo">Lorem ixxxxxxxxxxxxxxxxxxxxpsum dolor, sit amet consectetur adipisicing elit. Est, labore.</p>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est, labore.</p>
+    </div>
+    <p class="fijo">Lorem ipsum dolor sit amet.</p>
+
+    
+    
+</body>
+
+</html>
