@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a=5;
+        let b=6;
+        let numeros=[1,2,3,4,5,6];
+        let rest;
+        const vehiculos=['seat','toyota','ford'];
+        //Si quiero intercambiar los valores de las variables
+        /*
+        aux=a;
+        a=b;
+        b=aux
+        */
+
+        [b,a]=[a,b]; //otra forma
+        console.log("a vale "+a+" B vale "+b);
+        console.log(numeros);
+
+
+        /*
+        En a se ha colocado 1
+        En b se ha colocado 2
+        En el array rest se ha colocado lo que quedaba por asignar es decir [3,4,5,6]
+        */
+        [a,b,...rest]=numeros;
+        console.log(rest);
+        console.log("a vale "+a+" B vale "+b);
+
+
+        [coche1,coche2,coche3]=vehiculos;
+        console.log(coche1+" "+coche2+" "+coche3)
+
+
+    </script>
+</body>
+</html>

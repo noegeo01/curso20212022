@@ -1,0 +1,49 @@
+rellenar un aray de 5x5 con valores aleatorios entre el 1 y el 10
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let arr = [];
+        for (let i = 0; i <= 5; i++) {
+            arr[i] = new Array();
+            //arr.push(new Array());
+        }
+
+
+        for (i = 0; i <= 5; i++) {//vertical
+            for (j = 0; j <= 5; j++) {//horizontal
+
+                //arr[i][j]=Math.round(Math.random()*10);
+                arr[i][j] = 0;
+            }
+
+        }
+        let num1, num2, mina;
+        mina = "x";
+        let num=5;
+        while ( num!=0) {
+           
+            num1 = Math.round(Math.random() * 5);
+            num2 = Math.round(Math.random() * 5);
+
+            if (!arr[num1][num2]) {
+                arr[num1][num2] = mina;
+                num--;
+            }
+
+
+        }
+        print(arr);
+        console.log(arr);
+    </script>
+</body>
+
+</html>
