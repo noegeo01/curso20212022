@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <style>
+        li {
+            list-style: none;
+        }
+
+        #menu li ul {
+            visibility: hidden;
+            display: none;
+
+        }
+        #menu  >li {
+            background-color: darkblue;
+            color: white;
+            padding: 3px;
+            width: 20%;
+            border: white 1px solid;
+            
+        }
+        #menu li:hover ul{
+            visibility: visible;
+            display: block;
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <ul id="menu">
+        <li>inicio</li>
+
+        <li>enlaces<ul>
+                <li><a href="#">Ir a la web 1</a> </li>
+                <li><a href="#">Ir a la web 2</a></li>
+                <li><a href="#">Ir a la web 3</a></li>
+                <li><a href="#">Ir a la web 4</a></li>
+            </ul>
+        </li>
+        <li>foro</li>
+        <li>Descargas <ul>
+                <li><a href="#">Descarga 1 </a></li>
+                <li><a href="#">Descarga 2</a></li>
+                <li><a href="#">Descarga 3</a></li>
+                <li><a href="#">Descarga 4</a></li>
+            </ul>
+        </li>
+
+        <li>otra cosa</li>
+    </ul>
+</body>
+
+</html>
