@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapas</title>
+</head>
+
+<body>
+    <!--
+        Un mapa es 
+            -->
+    <script>
+        //Crear un mapa se puede con cost o con let 
+        const poblacion=new Map();
+        //Añadir elementos
+        poblacion.set('jumilla',31223);
+
+        poblacion.set('Caudete',50000);
+
+        poblacion.set('Bonete',232332).set('dskd',77322);
+
+        console.log(poblacion);
+
+        //otra forma
+
+        const telefono = new Map([['Caudete',67332],[677,"fsfsc"]]);
+        console.log(telefono)
+        //Buscar el valor de una clave
+        console.log(poblacion.get('Caudete'))
+
+        //Borrar un valor
+        poblacion.delete('Caudete');
+        console.log(poblacion)
+
+        //Modificar valor de un elemento
+        poblacion.set('Bonete',14444)
+        console.log(poblacion)
+        //Iteradores o deconstruir
+        let ciudades =poblacion.keys();
+        let tamaño=poblacion.values();
+
+        console.log(ciudades)
+        console.log(tamaño)
+
+
+      
+    </script>
+</body>
+
+</html>

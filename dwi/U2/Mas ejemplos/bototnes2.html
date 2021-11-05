@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        header {
+            background-color: rgb(212, 116, 99);
+            text-align: center;
+            padding: 5px;
+            margin: 5px 2px;
+            border-radius: 6px;
+            box-shadow: 3px 3px 3px;
+
+        }
+
+        nav {
+            background-color: rgb(230, 152, 139);
+
+            padding: 3px;
+            margin: 0px 2px 2px 2px;
+            border-radius: 6px;
+            box-shadow: 3px 3px 3px;
+        }
+
+        nav  ul  li {
+            list-style: none;
+            display: inline;
+            margin-left: 20px;
+            margin-right: 5px;
+            padding: 5px;
+            box-shadow: 3px 3px 3px;
+            color: white;
+            background-color: black;
+            border-radius: 5px;
+            
+        }
+        nav >ul >li{
+            display: inline;
+            box-shadow: black 3px 3px 3px ;
+            padding: 5px;
+            color: white;
+            border-radius: 5px;
+        }
+        nav > ul > li:hover {
+            font-size: larger;
+            background-color: white;
+            color: black;
+
+        }
+
+        #submenu  nav >ul >li >ul{
+            margin-left: 20px;
+            list-style: none;
+            position: absolute;
+            
+            
+
+        }
+       
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>cabecera </h1>
+    </header>
+    <nav>
+        <ul id="menu">
+            <li>principal
+
+            </li>
+            <li>clientes 
+                <ul id="submenu">
+                    <li>Alta</li>
+                    <li>Baja</li>
+                    <li>Mostrar</li>
+                </ul>
+            </li>
+            <li>proveedores</li>
+            <li>Agentes</li>
+            <li>Cerrar sesion</li>
+        </ul>
+    </nav>
+</body>
+
+</html>
