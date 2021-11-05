@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        header {
+            width: 100%;
+            background-color: coral;
+            height: 50px;
+
+        }
+
+        header h1 {
+            text-align: center;
+            margin: 0;
+        }
+
+        nav {
+            width: 100%;
+            background-color: burlywood;
+            height: 30px;
+            margin: 0;
+        }
+
+        
+
+        li {
+            list-style: none;
+            padding-right: 10px;
+            float: left;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        aside {
+            width: 30%;
+            background-color: darkgoldenrod;
+            float: left;
+            margin-top: 10px;
+            padding: 50px 0;
+
+        }
+
+        section {
+            width: 70%;
+
+            float: right;
+            margin-bottom: 10px;
+        }
+
+        .nomcat {
+
+            position: relative;
+            width: 100%;
+            height: 900px;
+        }
+
+        img {
+            width: 200px;
+            height: 200px;
+            top: 10px;
+            left: 10px;
+
+            position: absolute;
+
+        }
+
+        .serie {
+            position: relative;
+            border: 1px black solid;
+            left: 0;
+            width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 10px;
+            margin-top: 10px;
+            min-height: 280px;
+            padding: 50px 0;
+        }
+
+        .serie h1 {
+            position: absolute;
+            top: 10px;
+            left: 250px;
+        }
+
+        .tiempo {
+            position: absolute;
+            top: 40px;
+            left: 250px;
+        }
+
+        .fecha {
+            position: absolute;
+            top: 60px;
+            left: 250px;
+        }
+        p.genero{
+            position: absolute;
+            top: 80px;
+            left: 250px;
+        }
+
+        p.resumen {
+            position: absolute;
+            top: 100px;
+            left: 250px;
+        }
+
+        button {
+            position: absolute;
+            right: 10px;
+            bottom: 10px;
+        }
+
+        span {
+            font-size: large;
+            font-style: italic;
+            font-weight: bolder;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Series de Netflix</h1>
+    </header>
+    <nav>
+        
+        <ul>
+            <li>Nombre de series</li>
+            <li><a href="#juego_calamar">El juego de el calamar </a></li>
+            <li><a href="#you">You</a></li>
+            <li><a href="#el_tiempo_que_te_doy">El tiempo que te doy</a></li>
+            <li><a href="#la_asistenta">La asistenta</a></li>
+            <li><a href="#locke_key">Locke Key</a></li>
+        </ul>
+    </nav>
+    <aside>
+        <ul>
+            <li><a href="quienes_somos.html">Quienes somos</a></li>
+            <li><a href="">Alta cliente</a></li>
+            <li><a href="">Pedidos</a></li>
+            <li><a href="">Pagina de contacto</a></li>
+        </ul>
+    </aside>
+    <section>
+        <div class="nomcat">
+            <div class="serie">
+                <img src="img/you-season3-e.jpg" alt="" id="you">
+                <h1>You</h1>
+                <p class="tiempo"><span>Duracion media por episodio</span>Entre 40-50 minutos </p>
+                <p class="fecha"><span>Fecha de estreno </span> 9 de septiembre de 2018</p>
+                <p class="genero"><span>Genero : </span>Suspenso psicologico y drama criminal</p>
+                <p class="resumen"><span>sinopsis</span>
+                    <br>
+                    La tercera temporada de la serie protagonizada por Penn Badgley comienza con Joe
+                            y
+                            Love casados y criando a su bebé. Ahora viven en Madre Linda, al norte de California, donde
+                            están rodeados de empresarios tecnológicos privilegiados, mamás blogueras prejuiciosas y
+                            biohackers Insta-famosos. Joe está comprometido con su nuevo papel de marido y padre, pero
+                            teme la impulsividad letal de Love. Y luego está su corazón. ¿Podría la mujer que ha estado
+                            buscando todo este tiempo vivir justo al lado? Escapar de la jaula de un sótano es una cosa.
+                            ¿Pero la prisión de un matrimonio perfecto con una mujer que conoce sus trucos? Bueno, eso
+                            será un escape mucho más complicado.
+                </p>
+                <button>Comprar</button>
+            </div>
+
+            <div class="serie">
+                <img src="img/el-juego-del-calamar-.jpeg" alt="" id="juego_calamar">
+                <h1>El juego de el calamar</h1>
+                <p class="tiempo"><span>Duracion media por episodio</span></p>
+                <p class="fecha"><span>Fecha de estreno </span></p>
+                <p class="genero"><span>Genero : </span>Drama, Suspenso y Horror</p>
+                <p class="resumen"><span>sinopsis</span> <br> El punto de partida es sencillo: cientos de jugadores con
+                    problemas económicos aceptan una
+                    extraña -y tentadora- invitación para competir en una serie de juegos infantiles y llegar a
+                    encuentran Kin-Hoo y Sang-Woo, dos amigos de la infancia que no están pasando por su mejor
+                    momento.
+
+                    Lo que no saben es que para hacerse con la victoria tendrán que poner en riesgo lo más
+                    preciado que poseen: su vida.Ataviados con unos monos rojos que nos recuerdan a los que
+                    llevan los personajes de La casa de papel, los misteriosos organizadores harán que los
+                    participantes se enfrenten los unos contra los otros.</p>
+
+                <button>Comprar</button>
+            </div>
+
+            <div class="serie">
+                <img src="img/la-asistenta.jpg" alt="" id="la_asistenta">
+                <h1>La asistenta</h1>
+                <p class="tiempo"><span>Duracion media por episodio</span>Entre 50 min </p>
+                <p class="fecha"><span>Fecha de estreno </span> 1 de octubre de 2021</p>
+                <p class="genero"><span>Genero : </span>Drama</p>
+                <p class="resumen"><span>sinopsis</span>
+                <br>
+                La serie muestra las vicisitudes que vive Alex, una madre soltera que recurre a
+                limpiar casas para tratar de llegar a fin de mes mientras huye de una relación abusiva. Pero
+                su propia supervivencia no es su única preocupación. Además tiene que luchar por salir de la
+                indigencia para darle a su hija Maddy una vida mejor. Obligada a vivir en una casa de
+                acogida y a trabajar como asistenta, Alex irá conociendo a gente dispuesta a ayudarla, a
+                salir de las actitudes cohibidas y sumisas arrastradas de su relación tóxica y a encontrar
+                un nuevo futuro para ella y su pequeña.
+            </p>
+                <button>Comprar</button>
+            </div>
+            <div class="serie">
+                <img src="img/locke-key-.jpg" alt="" id="locke_key">
+                <h1>Locke & key</h1>
+                <p class="tiempo"><span>Duracion media por episodio</span>Entre 40-56 minutos </p>
+                <p class="fecha"><span>Fecha de estreno </span>7 de febrero de 2020</p>
+                <p class="genero"><span>Genero : </span>Drama juvenil</p>
+                <p class="resumen"><span>sinopsis</span>
+                <br>
+                Basado en los cómics de Joe Hill y Gabriel Rodríguez, Locke & Key retoma la historia en la
+                segunda temporada con los Locke -Tyler (Connor Jessup), Kinsey (Emilia Jones) y Bode
+                (Jackson Robert Scott)- viviendo su mejor vida, divirtiéndose con las llaves mágicas y, en
+                general, siendo niños por primera vez desde que su padre murió. Sin embargo, sin que ellos
+                lo sepan, en realidad lanzaron a su profesora de gimnasia Ellie (Sherri Saum) a través de la
+                Puerta Negra al final de la primera temporada, en forma de Dodge. Mientras tanto, Dodge anda
+                suelto en forma de Gabe (Griffin Gluck), que se ha aliado con otro demonio que infectó a la
+                enemiga de Locke, Eden (Hallea Jones).
+            </p>
+                <button>Comprar</button>
+            </div>
+            <div class="serie">
+                <img src="img/el-tiempo-que-te-doy-netflix.jpg" alt="" id="el_tiempo_que_te_doy">
+                <h1>El tiempo que te doy </h1>
+                <p class="tiempo"><span>Duracion media por episodio</span>Entre 13-15 minutos </p>
+                <p class="fecha"><span>Fecha de estreno </span>29 de octubre de 2021</p>
+                <p class="genero"><span>Genero : </span>Drama y romance</p>
+                <p class="resumen"><span>sinopsis</span>
+                <br>
+                Lina quiere olvidar a Nico, pero el duelo de una ruptura requiere tiempo. Precisamente eso
+                es lo que hace 'El tiempo que te doy', restar tiempo al recuerdo de un amor pasado para
+                poder vivir un nuevo presente. Nadia de Santiago y Álvaro Cervantes dan vida a esta pareja
+                rota en dos líneas temporales, pasando del enamoramiento a la separación en una tierna
+                historia sobre el desamor.
+            </p>
+                <button>Comprar</button>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

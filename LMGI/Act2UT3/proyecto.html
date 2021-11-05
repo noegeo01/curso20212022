@@ -10,69 +10,136 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <title>Series</title>
     <style>
-        header h1 {
-            text-align: center;
-        }
-
         header {
-            background-color: cornflowerblue;
-            color: cornsilk;
             width: 100%;
+
+            background-color: gray;
             padding-top: 0.5em;
             padding-bottom: 0.5em;
-            margin-bottom: 2px;
-            border-radius: 1em;
+            margin-bottom: 5px;
             float: left;
+            color: white;
+
         }
 
+        header h1 {
+            text-align: center;
+
+        }
+
+        aside {
+            width: 20%;
+            background-color: #808080c9;
+            float: left;
+            clear: both;
+        }
 
         nav {
             width: 100%;
-           
-            padding-top: 0.5em;
 
+            background-color: rgb(218, 212, 212);
 
-
-        }
-
-        nav a {
-            text-decoration: none;
-            color: cornflowerblue;
-
-        }
-
-        nav {
-            clear: both;
             border-radius: 10px;
-            border-color: cornflowerblue;
+
             border-style: ridge;
             border-width: medium;
             height: 60px;
             width: 100%;
         }
-        li{
-            padding-left: 2em ;
-            padding-right: 2em;
-            border-radius: 10px;
-            border-color: cornflowerblue;
-            border-style: ridge;
-        }
-        aside{
-            margin-top: 1em;
-            clear: both;
-            float: right;
-            width: 15em;
-            height: auto;
-            background-color: skyblue;
-        }
-        article{
-            
-           
-            width: 80%;
-            float: left;
-            margin-top: 1em;
+
+        nav a {
+            text-decoration: none;
 
         }
+
+        li {
+            padding-left: 2em;
+            padding-right: 2em;
+            border-radius: 10px;
+            border-color: black;
+            border-style: ridge;
+            list-style: none;
+            float: left;
+
+        }
+
+        .contenido {
+
+            float: left;
+            background-color: rgb(190, 185, 185);
+            width: 80%;
+            margin: 0 auto;
+            
+
+
+        }
+
+        article {
+            width: 70%;
+            position: relative;
+            text-justify: auto;
+            text-align: left;
+
+            margin-bottom: 2px;
+
+
+        }
+
+        img {
+            width: 150px;
+            height: 150px;
+            
+
+            margin-top: 1em;
+            margin-right: 5px;
+            margin-bottom: 10px;
+            float: right;
+            border-radius: 1em;
+
+
+        }
+
+        article p {
+            size: 2em;
+            margin-left: 10px;
+            font-size: x-large;
+            font-style: italic;
+            float: left;
+
+            width: 100%;
+            color: black;
+        }
+
+        .p {
+            width: 60%;
+            color: cornsilk;
+            background-color: cornflowerblue;
+            border-radius: 5px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            float: left;
+            margin-left: 10px;
+        }
+
+        .fondo {
+            float: left;
+            width: 100%;
+            background-color: rgb(150, 190, 206);
+            border: 2px solid cornflowerblue;
+           
+        }
+
+        footer {
+            clear: both;
+            background-color: cadetblue;
+        }
+
+        /* 
+
+
+        
+        
+
 
          article div {
             width: 70%;
@@ -86,6 +153,7 @@
             width: 30%;
             height: auto;
             float: right;
+            position: absolute;
             margin-top: 1em;
             margin-right: 5px;
             margin-bottom: 10px;
@@ -99,11 +167,16 @@
             margin-left: 10px;
             font-size: x-large;
             font-style: italic;
+            float: left;
+            width: 100%;
+            color: darkgray;
+            
 
 
         }
          article p span{
             font-size: large;
+            color: white;
         }
 
         .texto {
@@ -142,7 +215,7 @@
         }
        *{
            box-sizing: border-box;
-       }
+       } */
     </style>
 </head>
 
@@ -153,13 +226,14 @@
     <nav>
         <ul>
 
-        <li><a href="#you">you</a> </li>
-        <li><a href="#el_tiempo_que_te_doy">El tiempo que te doy</a></li>
-        <li><a href="#la_asistenta">La asistenta</a></li>
-        <li><a href="#locke_key">Locke Key</a></li>
-        <li><a href="#el_juego_calamar">El juego de el calamar</a></li>
+            <li><a href="#you">you</a> </li>
+            <li><a href="#el_tiempo_que_te_doy">El tiempo que te doy</a></li>
+            <li><a href="#la_asistenta">La asistenta</a></li>
+            <li><a href="#locke_key">Locke Key</a></li>
+            <li><a href="#el_juego_calamar">El juego de el calamar</a></li>
         </ul>
     </nav>
+
     <aside>
         <a href="#">Alta cliente</a>
         <br>
@@ -167,10 +241,10 @@
         <br>
         <a href="#">Contacto</a>
     </aside>
-    
+    <div class="contenido">
         <article id="you">
             <div class="fondo">
-                <div class="texto">
+                
                     <p>Titulo : <span>You</span></p>
 
                     <p>Emision de el primer episodio :<span> 9 de septiembre de 2018</span></p>
@@ -187,7 +261,7 @@
                             buscando todo este tiempo vivir justo al lado? Escapar de la jaula de un sótano es una cosa.
                             ¿Pero la prisión de un matrimonio perfecto con una mujer que conoce sus trucos? Bueno, eso
                             será un escape mucho más complicado.</span></p>
-                </div>
+                
                 <img src="img/you-season3-e.jpg" alt="You">
             </div>
         </article>
@@ -284,7 +358,7 @@
                 <img src="img/el-juego-del-calamar-.jpeg" alt="El juego de el calamar">
             </div>
         </article>
-  
+    </div>
 
     <footer>
         Pagina creada por Noelia G. Ocaña Vega
