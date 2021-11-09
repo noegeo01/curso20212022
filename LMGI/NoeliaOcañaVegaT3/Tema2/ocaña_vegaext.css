@@ -1,0 +1,20 @@
+a:link{
+    color: darkgreen;
+    background-color: transparent;
+    text-decoration:none ;
+}
+a:visited{
+    color: midnightblue;
+    background-color: mintcream;
+    text-decoration: none;
+}
+a:hover{
+    color: olive;
+    background-color: papayawhip;
+    text-decoration: underline;
+}
+a:active{
+    color: purple;
+    background-color: thistle;
+    text-decoration: underline;
+}

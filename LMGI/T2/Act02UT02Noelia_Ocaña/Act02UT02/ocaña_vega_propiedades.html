@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tablas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <style>
+        table,
+        th,
+        td {
+            border-color: blueviolet;
+            border-style: inset;
+            border-width: 1px;
+        }
+
+        p.dotted {
+            border-style: dotted;
+        }
+
+        p.dashed {
+            border-style: dashed;
+        }
+
+        p.solid {
+            border-style: solid;
+        }
+
+        p.double {
+            border-style: double;
+        }
+
+        p.groove {
+            border-style: groove;
+        }
+
+        p.ridge {
+            border-style: ridge;
+        }
+
+        p.inset {
+            border-style: inset;
+        }
+
+        p.outset {
+            border-style: outset;
+        }
+
+        p.none {
+            border-style: none;
+        }
+
+        p.hidden {
+            border-style: hidden;
+        }
+
+        p.mix {
+            border-style: dotted dashed solid double;
+        }
+        h2{
+            color: blueviolet;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <table>
+        <caption>Calificaciones de Desarrollo de Aplicaciones Web</caption>
+        <tr>
+            <th>Curso</th>
+            <th>abrv modulo</th>
+            <th>nombre modulo</th>
+            <th>calificacion</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>DAW</td>
+            <td>Desarrollo de aplicaciones Web</td>
+            <td>7</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>SI</td>
+            <td>Sistemas Informaticos</td>
+            <td>7</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>BD</td>
+            <td>Base de Datos</td>
+            <td>7</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>EIE</td>
+            <td>Empresa e iniciatica Emprendedora</td>
+            <td>8</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>ITDAW</td>
+            <td>Ingles informatico</td>
+            <td>6</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>P</td>
+            <td>Programacion</td>
+            <td>6</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Fol</td>
+            <td>Formacion y orientacion Laboral</td>
+            <td>8</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>LMGI</td>
+            <td>Lenguaje de Marcas Y Sistemas de Gestion de Informacion</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>DWES</td>
+            <td>Desarrollo web en entorno servidor</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>DWEC</td>
+            <td>Desarollo web entorno cliente</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>DW</td>
+            <td>Despliegue de aplicaciones web</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>DWI</td>
+            <td>Diseño de interfaces web</td>
+            <td></td>
+        </tr>
+    </table>
+    <a href="index_ut02_02.html">Enlace al menu</a>
+    <h2>Border-Style</h2>
+    <p>
+    <ul>
+        <li>Dotted : Define un borde punteado</li>
+        <li>Dashed : Define un borde Discontinuo</li>
+        <li>solid : Define un borde solido</li>
+        <li>Double : Define un borde doble</li>
+        <li>Groove : Define un borde acanalado en 3D</li>
+        <li>Ridge : Define un borde estriado en 3D</li>
+        <li>Inset : Define un borde de recuadro</li>
+        <li>Outset : Define un borde de inicio 3D</li>
+        <li>none : No define ningun borde</li>
+        <li>hidden : Define un borde oculto</li>
+    </ul>
+    <p class="dotted">A dotted border.</p>
+    <p class="dashed">A dashed border.</p>
+    <p class="solid">A solid border.</p>
+    <p class="double">A double border.</p>
+    <p class="groove">A groove border.</p>
+    <p class="ridge">A ridge border.</p>
+    <p class="inset">An inset border.</p>
+    <p class="outset">An outset border.</p>
+    <p class="none">No border.</p>
+    <p class="hidden">A hidden border.</p>
+    <p class="mix">A mixed border.</p>
+
+    </p>
+    <h2>Border-Color</h2>
+    <p>
+    La propiedad e sun atajo para definir el color de los cuatro bordes de un elemento.
+    <br>
+    <ul>
+        <li>Valor inicial: el color de el elemento en si</li>
+        <li>Se aplica a todos los elementos</li>
+    </ul>
+    Si solo especificamos  los 4 valores : El primer valor sera el superior, el siguiente el borde derecho, el siguiente 
+    el borde inferior y el ultimo el borde izquierdo.
+    <br>
+    Si  añadimos 3 valores : el primer valor sera el superior, el siguiente el borde derecho e izquierdo y el ultimo el brode inferior
+    <br>
+    Si añadimos 2 valores : el primer valor sera el superior e inferior y el otro sera el borde de la derecha e izquierda
+    <br> 
+    Si solo tiene un valor este se añade a todos los bordes.
+    </p>
+</body>
+
+</html>
