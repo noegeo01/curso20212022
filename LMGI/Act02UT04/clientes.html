@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pagina sobre series de netflix">
+    <meta name="author" content="Noelia Ocaña Vega">
+    <meta http-equiv="refresh" content="300">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Alta cliente</title>
+    <style>
+        header {
+            width: 100%;
+            background-color: coral;
+            height: 50px;
+
+        }
+
+        header h1 {
+            text-align: center;
+            margin: 0;
+        }
+
+
+
+        aside li {
+            display: block;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        aside {
+            clear: both;
+            width: 29%;
+            background-color: darkgoldenrod;
+            float: left;
+            margin-top: 10px;
+            padding: 50px 0;
+            color: white;
+            margin-left: 10px;
+
+        }
+
+        section {
+            width: 69%;
+            background-color: darkkhaki;
+            float: right;
+            padding: 10px 10px;
+            margin-top: 10px;
+            margin-right: 10px;
+        }
+
+        img {
+            width: 40%;
+            text-align: center;
+            position: relative;
+            left: 250px;
+
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        #boton:hover {
+            margin-top: 5px;
+            border-radius: 4px;
+            font-size: larger;
+            box-shadow: 3px 3px 3px;
+        }
+
+        footer {
+            clear: both;
+            text-align: center;
+            color: white;
+            margin-left: 10px;
+            margin-right: 10px;
+            position: relative;
+            padding: 10px;
+            width: 100%;
+            background-color: burlywood;
+            height: 30px;
+            bottom: 0;
+        }
+
+        table,td {
+            padding: 5px;
+            margin: 1px;
+            border: 2px black groove;
+        }
+       
+            
+
+        
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Series de Netflix</h1>
+    </header>
+
+    <aside>
+        <ul>
+            <li><a href="inicio.html">Inicio</a></li>
+            <li><a href="quienes_somos.html">Quienes somos</a></li>
+            <li><a href="pedidos.html">Pedidos</a></li>
+            <li><a href="contacto.html">Pagina de contacto</a></li>
+        </ul>
+    </aside>
+    <section>
+        <form action="#">
+            <table>
+                <tr>
+                    <td colspan="2">
+                        <label for="">Nombre de usuario</label>
+                        <input type="text">
+                    </td>
+
+                </tr>
+                <tr>
+                    <td>
+                        <label for="">Nombre</label>
+                        <input type="text">
+                    </td>
+                    <td>
+                        <label for="">Apellido</label>
+                        <input type="text">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="">Contraseña</label>
+                        <input type="password">
+                    </td>
+                    <td>
+                        <label for="">Confirmar contraseña</label>
+                        <input type="password">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <label for="">Correo Electornico</label>
+                        <input type="email" name="" id="">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="">Sexo</label>
+                    </td>
+                    <td>
+                        <input type="radio" name="" id="">Mujer
+                        <input type="radio" name="" id="">Varon
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="">Aficiones</label>
+                    </td>
+                    <td>
+                        <input type="checkbox" name="" id="">Deporte
+                        <br>
+                        <input type="checkbox" name="" id="">Lectura
+                        <br>
+                        <input type="checkbox" name="" id="">Cine
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="">Pais</label>
+                    </td>
+                    <td>
+                        <select name="" id="">
+                            <option value="">Francia</option>
+                            <option value="">España</option>
+                            <option value="">Portugal</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="">Color favorito</label>
+                    </td>
+                    
+                </tr>
+            </table>
+        </form>
+    </section>
+    <footer>
+        Creada por Noelia G. Ocaña Vega
+    </footer>
+</body>
+
+</html>

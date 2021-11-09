@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex</title>
+    <style>
+        div.container>div {
+
+            background-color: cornflowerblue;
+            border: 1px black groove;
+            
+            height: 50px;
+
+        }
+
+        div.container {
+            border: 1px black groove;
+            background-color: lightslategray;
+            height: 300px;
+            display: flex;
+            justify-content:space-around;
+            flex-direction: row;
+            margin: 0 auto;
+            width: 90%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div>
+            <p>Lorem ipsum dolor sit.</p>
+
+
+        </div>
+        <div>
+            <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div>
+            <p>Lorem ipsum dolor sit amet consectetur.</p>
+        </div>
+    </div>
+</body>
+
+</html>
