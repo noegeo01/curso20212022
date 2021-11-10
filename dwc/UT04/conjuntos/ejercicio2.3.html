@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+        Hacer un script de JavaScript que nos pida mediante prompt una cadena (la introduciremos 
+        con copiar y pegar) y nos cree una tabla con todas las palabras o signos de puntuación 
+        diferentes y las ocurrencias de cada una.
+        Se debe usar la estructura de datos MAP.
+    -->
+    <script>
+        let cadena=prompt("Dime una cadena");
+        let mapa = new Map();
+        for(let palabra of cadena.split(" ")){
+            if (mapa.has(palabra)) {
+                mapa.set(palabra,(mapa.get(palabra)+1))
+            }else{
+                mapa.set(palabra,1)
+            }
+        }
+        document.write("<table>")
+        for ([clave,valor] of mapa) {
+         document.write(`<tr><td>${clave}</td><td>${valor}</td>`)   
+        }
+        document.write("</table>")
+        console.log(mapa);
+    </script>
+</body>
+</html>

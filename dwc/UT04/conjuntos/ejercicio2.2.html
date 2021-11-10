@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+        Hacer un script de JavaScript que nos pida mediante prompt una cadena (la introduciremos 
+        con copiar y pegar) y nos devuelva la cantidad de palabras o signos de puntuación 
+        diferentes.
+        Se debe usar la estructura de datos Array
+    -->
+    <script>
+        let cadena=prompt("Dame una cadena");
+        let arr=[];
+
+        let separador=" ";
+        let i =0;
+        
+        for(let palabra of cadena.split(separador)){
+            if (!arr.includes(palabra)) {
+                arr.unshift(palabra);
+            }
+        }
+        console.log(arr.length)
+        
+
+        
+    </script>
+</body>
+</html>
