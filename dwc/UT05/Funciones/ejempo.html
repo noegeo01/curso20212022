@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //Declaracion de funcion
+        function nombre_funcion(parametros) {
+            return;
+        }
+        //ejemplo
+        function triple(num) {
+            return num * 3;
+        }
+        console.log(triple(3));
+
+        //Asignar funciones a variables
+
+        //Un posible error es ponerle los parentesis
+        let x = triple;
+        console.log(x(3));
+
+        //Funciones flecha
+        //Otra forma de declarar una funcion 
+
+        let doble = n => n * 2;
+        console.log(doble(6));
+        //Mas de un valor
+        let media = (x, y) => (x + y) / 2;
+        console.log(media(3, 8));
+        //Se pone las llaves cuando NO queremos un return
+        let saludo = () => {
+            console.log("Hola")
+        }
+        saludo();
+        //
+        const sumatorio = (n) => {
+            let acum = 0;
+            for (let i = n; i > 0; i--) {
+                acum += i;
+            }
+            return acum
+        }
+        console.log(sumatorio(2))
+
+        const factorial = (n) => {
+            let acum = 1;
+            for (let i = n; i > 0; i--) {
+                acum *= i;
+            }
+            return acum
+        }
+        console.log(factorial(3))
+
+        //Ambito de las variables.
+        //Cuando estan dentro de la funcion no son visibles
+        function ambito() {
+            const a = "manuel";
+            let b = 9;
+            var c = 9;
+            console.log("Sou una funcion ambito");
+        }
+        ambito();
+        
+
+        function ambito2() {
+            if (true) {
+                const a = 9;//funciona igual se borra
+                let b = 9;//cuando acaba el if se borra
+                var c = 9;
+            }
+
+            
+            console.log(c);
+        }
+        ambito2();
+        //Paso por valory paso por referencia
+
+        //Todo se pasa por valor menos array objetos,conjuntos y mapas
+        //Por valor
+        let y=5;
+        function valor(x){
+            x=10
+            console.log(`${x} es igual a 10`);
+        }
+        valor(y)
+        console.log(y);
+        function variable(n){
+            n[0]=9;
+        }
+        numeros=[1,2,3,4];
+        variable(numeros);
+        console.log(numeros);
+        numeros2=[4,5,6];
+        numeros=numeros2;
+        numeros2[1]=999;
+        console.log(numeros);
+        numeros=[1,2,3]
+        function variable2(n){
+            let n2=[10,11,12];
+            n=n2;
+        }
+        
+        console.log(variable2(numeros));
+
+        //Valores por defecto
+        function saluda(nombre,texto="Buenos dias",ciudad="yecla"){
+            console.log(`hola ${nombre} ${texto} hace un buen tiempo en ${ciudad}`);
+        }
+        saluda("Noelia");
+        saluda("Malia" , "Buenas tardes");
+
+        //Parametros variables en las funciones
+        function mediaguay(...mas){
+            let suma=0;
+            for(let n of mas){
+                suma+=n;
+            }
+            let media=suma/mas.length;
+            console.log(` ${media}`);
+
+        }
+        mediaguay(1,2,3,4,5,6,7);
+        //Funciones callback
+        function calcula(datos,funcion){
+            console.log(funcion(datos))
+        }
+
+      
+        calcula(4,doble);
+        calcula(4,triple);
+        //Recursividad
+
+    </script>
+</body>
+
+</html>

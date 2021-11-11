@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div.container {
+            margin: 10px auto;
+            width: 80%;
+        }
+
+        header {
+            background-color: blanchedalmond;
+            display: flex;
+            padding: 1em;
+        }
+
+        header :nth-child(1) {
+            order: 2;
+            color: white;
+            flex-basis: 10%;
+
+        }
+
+        header :nth-child(2) {
+            order: 1;
+            flex-basis: 10%;
+        }
+
+        header :nth-child(3) {
+            order: 4;
+            flex-basis: 10%;
+            flex-grow: 2;
+        }
+
+        header :nth-child(4) {
+            order: 3;
+            flex-basis: 10%;
+            flex-grow: 4;
+        }
+
+        header div {
+            background-color: burlywood;
+            padding: 1em;
+            border: black 2px groove;
+        }
+
+        footer {
+            background-color: steelblue;
+            border: black 2px groove;
+            margin-top: 1em;
+            padding: 1em;
+        }
+
+        footer div {
+            background-color: skyblue;
+            padding: 1em;
+            border: black 2px groove;
+            height: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div>
+                elemento1
+            </div>
+            <div>
+                elemento2
+            </div>
+            <div>
+                elemento3
+            </div>
+            <div>
+                elemento4
+            </div>
+
+        </header>
+        <footer>
+            <div>A</div>
+            <div>B</div>
+            <div>C</div>
+
+        </footer>
+    </div>
+</body>
+
+</html>
