@@ -45,7 +45,7 @@
         }
 
         section {
-            width: 69%;
+            width: 66%;
             background-color: darkkhaki;
             float: right;
             padding: 10px 10px;
@@ -93,8 +93,13 @@
             padding: 5px;
             margin: 1px;
             border: 2px black groove;
+            border-radius: 10px;
+            background-color: lightgray;
+            box-shadow: 2px 2px 3px;
         }
-       
+       .boton{
+           box-shadow: 1px 1px 2px;
+       }
             
 
         
@@ -147,7 +152,7 @@
                 <tr>
                     <td colspan="2">
                         <label for="">Correo Electornico</label>
-                        <input type="email" name="" id="">
+                        <input type="email" name="correo" id="correo">
                     </td>
                 </tr>
                 <tr>
@@ -155,8 +160,8 @@
                         <label for="">Sexo</label>
                     </td>
                     <td>
-                        <input type="radio" name="" id="">Mujer
-                        <input type="radio" name="" id="">Varon
+                        <input type="radio" name="mujer" id="mujer">Mujer
+                        <input type="radio" name="hombre" id="hombre">Hombre
                     </td>
                 </tr>
                 <tr>
@@ -164,11 +169,11 @@
                         <label for="">Aficiones</label>
                     </td>
                     <td>
-                        <input type="checkbox" name="" id="">Deporte
+                        <input type="checkbox" name="deporte" id="">Deporte
                         <br>
-                        <input type="checkbox" name="" id="">Lectura
+                        <input type="checkbox" name="lectura" id="">Lectura
                         <br>
-                        <input type="checkbox" name="" id="">Cine
+                        <input type="checkbox" name="cine" id="">Cine
                     </td>
                 </tr>
                 <tr>
@@ -176,7 +181,7 @@
                         <label for="">Pais</label>
                     </td>
                     <td>
-                        <select name="" id="">
+                        <select name="pais" id="pais">
                             <option value="">Francia</option>
                             <option value="">España</option>
                             <option value="">Portugal</option>
@@ -187,7 +192,21 @@
                     <td>
                         <label for="">Color favorito</label>
                     </td>
-                    
+                    <td>
+                        <select name="color" id="color" size="5">
+                            <option value="rojo">rojo</option>
+                            <option value="amarillo">amarrillo</option>
+                            <option value="azul">azul</option>
+                        </select>  
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="">Subir foto de usuario</label></td>
+                    <td><input type="file" name="archivo" id="archivo" class="boton"></td>
+                </tr>
+                <tr>
+                    <td><input type="reset" value="Resetear" class="boton"></td>
+                    <td><input type="submit" value="Enviar" class="boton"></td>
                 </tr>
             </table>
         </form>
