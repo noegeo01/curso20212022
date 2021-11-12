@@ -43,14 +43,14 @@ comprobar_sesion();
             <br>
             <label for="peso">Peso</label>
             <input value = "<?php if(isset($peso))echo $peso;?>"
-			id = "peso" name = "peso" type = "text"><br>
+			id = "peso" name = "peso" type = "number" step="0.1"><br>
             <label for="stock">stock</label>
             <input value = "<?php if(isset($stock))echo $stock;?>"
-			id = "stock" name = "stock" type = "text">
+			id = "stock" name = "stock" type = "number">
             <br>
             <label for="categoria">Categoria</label>
             <input value = "<?php if(isset($categoria))echo $categoria;?>"
-			id = "categoria" name = "categoria" type = "text">
+			id = "categoria" name = "categoria" type = "number">
             <br>
 			<input type = "submit">
 		</form>

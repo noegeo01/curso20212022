@@ -53,9 +53,13 @@ function agregarrestaurante($bd,$restaurante){
 function comprobarcategoria($bd,$categoria)
 {
 	
-	$sql=$bd->prepare("Select codcat from categorias where codcat= ${$categoria} ");
-	$result=$bd->query($sql);
-	return $result;
+
+	$ins="Select * from `categorias` where `codcat` =$categoria ";
+	$result=$bd->query($ins);
+	$num=$result->rowCount();
+
+	echo $num;
+	return $num ;
 }
 function agregarproducto($bd,$producto){
 
@@ -69,8 +73,9 @@ function agregarproducto($bd,$producto){
 
 	
 	$existe=comprobarcategoria($bd,$categoria);
+	
 	echo ' <br> existe :'.$existe;
-	if($existe) {
+	if($existe>0) {
 		
 		$sql='insert into productos(nombre,descripcion,peso,stock ,categoria) values(?,?,?,?,?) ';
 		$result=$bd->prepare($sql);
