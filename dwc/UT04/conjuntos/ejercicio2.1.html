@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -17,9 +17,12 @@
     -->
     
     <script>
-        let cadena =prompt("Dime una cadena");
+        let cadena ='Hola: soy. "yo" soy hola; estoy, aqui';
         let conjunto = new Set();
-        
+        //expresiones regulares // esto quiere decir que es una expresion regular y remplazara lo de interior 
+        //la g quiere decir global
+        cadena=cadena.replace(/["']/g,'').replace(/[\.,;:]/g," $&");
+        console.log(cadena);
         
        
             

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //Funciones avanzadas
+
+        const palabras = ['Ñu', 'Águila', 'boa', 'oso', 'mariposa', 'Nutria'];
+        function ordenTamaño(a,b ) {
+            return a.length - b.length;
+        }
+        function ordenAlEs(a,b) {
+            return a.localeCompare(b,'es');
+        }
+        palabras.sort((a,b)=>a.length-b.length);
+        console.log(palabras)
+
+        //foreach
+        const notas=[5,,7,,9,,,10];
+        notas.forEach( (nota,i)=>{
+            console.log(`la nota  en la posicion ${i} es igual a ${nota}`)})
+    </script>
+</body>
+
+</html>

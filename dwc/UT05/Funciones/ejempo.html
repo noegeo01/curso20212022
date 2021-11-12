@@ -131,11 +131,19 @@
         function calcula(datos,funcion){
             console.log(funcion(datos))
         }
-
+        //
       
         calcula(4,doble);
         calcula(4,triple);
         //Recursividad
+         function factorial(n){
+             if(n==1){
+                 return 1
+             }else{
+                factorial(n-1)*n;
+             }
+         }
+         //uso avanzado de las funciones 
 
     </script>
 </body>
