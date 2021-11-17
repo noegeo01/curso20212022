@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //Este metodo
+        const notas = [1, 4, 5, 65, 4, 33, , 8, 7];
+        const notas_mayor_cinco = notas.filter(x => x > 5);
+        console.log(notas_mayor_cinco)
+
+        const notas_par = notas.filter(x => x % 2 == 0);
+        console.log(notas_par);
+
+        //Expresiones regulares
+
+        let er = /^[0-9]{3}[a-z]{2,4}$/;
+        console.log(er.test('012ak'));
+        //Con el siguiente array ,crear uno nuevo array  donde solo aparezcan los
+        //elementos que tengan una mayuscula al principio
+
+        const nombres = ['Daniel', 'Amaro', 'TanIa', 'flipao'];
+        
+        let otraforma=nombres.filter(x=>(/^[A-Z][a-z]{1,}$/).test(x));
+        let arr = nombres.filter(x => {
+             let er=  /^[A-Z][a-z]{1,}$/
+             return  er.test(x)
+            });
+        console.log(otraforma);
+
+    </script>
+</body>
+
+</html>

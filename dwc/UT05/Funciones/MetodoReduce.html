@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //Elmetodo reduce nos devuelve un valor a el final y nos lleva
+        // dos variables, las primera lleva el valor actual y 
+        //la segunda lleva el valor acumulado
+
+        const notas = [5, 6, 7, 4, 2, 4, 8, 9, , 5];
+        let media = notas.reduce((a, b) => a + b)
+        //console.log(Math.round(media / notas.length));
+
+        //Sacar la suma de losvalores pares
+        // let pares = notas.reduce((acumulado, valor) => {
+        //     if (valor % 2 == 0) {
+        //         acumulado += valor;
+        //     } 
+        //     return acumulado
+        // },10);
+       
+        const nombre=['ricardo','antonio','juan'];
+        let todos=nombre.reduce((acu,nom,i)=>acu+`<li>${i}  ${nom}</li>`," ");
+        todos='<ul>'+todos+'</ul>';
+        document.write(todos);
+    </script>
+</body>
+
+</html>
