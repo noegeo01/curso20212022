@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo</title>
+</head>
+
+<body>
+    <section id="s1">
+        <h1>titulo</h1>
+        <p>
+            Su casa bordeando la autopista
+            Hizo que ella creciera deprisa
+        </p>
+
+    </section>
+    <section id="s2">
+
+        <p>
+            Su casa bordeando la autopista
+            Hizo que ella creciera deprisa
+        </p>
+
+
+    </section>
+    <ul>
+        <li class="verdura">tomate</li>
+        <li class="carne">tofu</li>
+        <li class="hidrato">Lechuga</li>
+
+        <li class="verdura">coliflor</li>
+        <li class="carne"id="il">perrito caliente</li>
+        <li class="hidrato" ></li>
+    </ul>
+    <button>aqui</button>
+    <script>
+        //Selcetor por nombre de etiqueta
+        let h1 = document.getElementsByTagName('h1');
+        console.log(h1)
+
+
+        let p = document.getElementsByTagName('p');
+        p[0].innerHTML = 'Soy yo';
+        p[1].innerHTML = 'Ramon';
+
+
+        let b = document.getElementsByTagName('button');
+        b[0].addEventListener('click',()=>{
+            /* h1[0].innerHTML ='otro';
+            for (e of p) {
+                e.innerHTML='Esto es lo mismo';
+            }  */
+            for (e of verdura){
+                e.innerHTML='siempre lo mismo'
+            }
+        });
+
+        //Selector de clase
+        let verdura=document.getElementsByClassName('hidrato');
+
+        let primerli=document.querySelectorAll('ul li:first-child');
+        for(e of primerli){
+            e.innerHTML='siempre';
+        }
+        //Selector por id
+        let pconi1=document.getElementById('il')
+
+        //querySector'clase css
+
+
+        
+    </script>
+</body>
+
+</html>

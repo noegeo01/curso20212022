@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo</title>
+    <style>
+        .verdura {
+            color: green;
+        }
+
+        .carne {
+            color: red;
+        }
+    </style>
+
+</head>
+
+<body>
+    <section id="s1">
+        <h1>titulo</h1>
+        <p>
+            Su casa bordeando la autopista
+            Hizo que ella creciera deprisa
+        </p>
+
+    </section>
+    <section id="s2">
+
+        <p>
+            Su casa bordeando la autopista
+            Hizo que ella creciera deprisa
+        </p>
+
+
+    </section>
+    <ul>
+        <li class="verdura">tomate</li>
+        <li class="carne">tofu</li>
+        <li class="hidrato">Lechuga</li>
+
+        <li class="verdura">coliflor</li>
+        <li class="carne" id="il">perrito caliente</li>
+        <li class="hidrato"></li>
+    </ul>
+    <button>aqui</button>
+    <button>
+        elimin
+    </button>
+    <button>añadir</button><button>alternar</button>
+    <script>
+
+        let b = document.getElementsByTagName('button');
+        let list = document.getElementsByClassName('button');
+        b[0].addEventListener('click', () => {
+            for (li of list) {
+                console.log(li.getAttribute('class', 'carne'))
+            }
+        });
+
+        b[1].addEventListener('click', () => {
+            for (li of list) {
+                li.removeAttribute('class')
+            }
+        });
+        b[2].addEventListener('click', () => {
+            for (li of list) {
+                li.setAttribute('class', 'carne')
+            }
+        });
+        b[3].addEventListener('click', () => {
+            for (li of list) {
+                b[2].toggleAttribute('disabled')
+            }
+        });
+
+
+
+    </script>
+</body>
+
+</html>

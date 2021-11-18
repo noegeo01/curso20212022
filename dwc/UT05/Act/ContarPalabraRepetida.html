@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const cadena='Su casa bordeando juan la autopista el Hizo Su casa bordeando la autopista Hizo que ella creciera';
+        const arr=cadena.split(' ');
+        let conjunto=new Set(arr);
+        let tabla=[];
+        let columna=[];
+        
+       
+        function cuantas(arr,palabra) {
+            let cantidad =0;
+            for ( pal of arr) {
+                
+                if(palabra==pal){
+                  cantidad++;   
+                }
+               
+            }
+            return cantidad;
+        }
+
+        
+        for ( let pal of conjunto) {
+           
+            columna=[cuantas(arr,pal),pal]
+            tabla.push(columna);
+        }
+        for (let i = 0; i < tabla.length; i++) {
+            for (let j = 0; j <=1; j++) {
+                document.write(tabla[i][j],'<br>');
+               
+            }
+            
+        }
+        console.log(tabla)
+
+    </script>
+</body>
+</html>

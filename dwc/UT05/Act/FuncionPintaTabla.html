@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{border: black 1px  solid;
+        }
+        tr{border: black 1px  solid;}
+        td{border: black 1px  solid;}
+        
+    </style>
+</head>
+<body>
+    <!--
+        Hacer una funcion a la que pasemos un array de dos dimensiones
+        y pinte una tabla
+
+        2hacer funcion que sepase dos valores filas y columnas y que pinte una tabla con tantas 
+        filas y columnas y siempre en la celda va a poner hola
+
+        3pintar una tabla html con una funcion a la que pasamos un array de dos dimensiones
+        4hacer una funcion que le pasemos dos cadenas y nos diga si son anagramas devolvera 
+        verdadero sino falso
+    -->
+    <script>
+        let array=[[2,'daw'],[10,'dam'],[33,'simm'],[21,'asi']];
+        function pintar(array) {
+            document.write('<table>')
+            for (elemento of array) {
+                document.write('<tr><td>')
+                document.write(elemento.join('</td> <td>'));
+                document.write('</td></tr>')
+            }
+            document.write('</table>')
+        }
+        x=pintar(array);
+        
+    </script>
+    <script>
+        let filas=parseInt(prompt('dime el numero de filas'))
+        let columnas=parseInt(prompt('dime el numero de columnas'))
+
+        function pinta(filas,columnas) {
+            for (let i = 0; i <= filas; i++) {
+                let dato='hola';
+                document.write(`</tr><td>${dato}</td>`)
+                for (let x = 0; x <=columnas;x++) {
+                    document.write('<td>')
+                    document.write(`</td><td>${dato}`)
+                           document.write('</tr>')                 
+                }
+                
+                
+                
+            }
+        }
+        pinta(filas,columnas)
+
+    </script>
+</body>
+</html>

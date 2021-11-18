@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 4hacer una funcion que le pasemos dos cadenas y nos diga si son anagramas devolvera 
+        //verdadero sino falso
+
+        let cadena=prompt('Dime una palabra')
+        let cad2=prompt('Dime otra palabra ');
+
+        function anagrama(cadena,cad2) {
+            let bool;
+            let ar1=new Array(cadena.split(''));
+            let ar2=new Array(cad2.split(''));
+             for (l of cadena) {
+                 if (cad2.includes(l)) {
+                     bool= true
+                 }else
+                 {
+                     bool=false
+                 }
+             }
+             return bool
+        }
+        let decision;
+         decision=anagrama(cadena,cad2);
+         console.log(decision)
+    </script>
+</body>
+</html>
