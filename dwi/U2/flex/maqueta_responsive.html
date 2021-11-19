@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0%;
+            padding: 0%;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: lightblue;
+            font-family: sans-serif;
+            font-size: 16px;
+            padding: 1rem;
+        }
+
+        main,header,nav,section,aside,footer,article {
+            outline: 1px solid white;
+        }
+
+        main,header,nav,
+        section,aside,footer {
+            width: 100%;
+        }
+
+        header,
+        nav,
+        article,
+        aside,
+        footer {
+            padding: 1rem;
+        }
+
+        section {
+            background-color: cornflowerblue;
+        }
+
+        aside {
+            background-color: teal;
+        }
+
+        footer {
+            background-color: steelblue;
+
+        }
+
+        nav {
+            background-color: darkblue;
+            color: white;
+            display: flex;
+            flex-direction: row;
+
+        }
+
+        header {
+            background-color: skyblue;
+        }
+
+        main {
+
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+
+        }
+
+        .menu {
+            background-color: rgba(83, 83, 209, 0.8);
+            text-align: center;
+            margin: 3px;
+            padding: 2px;
+        }
+
+        /*----tablet----*/
+        @media(min-width:568px) {
+            aside{
+                order: 1;
+                flex-basis: 0;
+                flex-grow: 1;
+            }
+            section{
+                order:2;
+                flex-grow: 3;
+                flex-basis: 0;
+            }
+            footer{
+                order:3;
+            }
+            nav{
+                flex:row;
+                justify-content: flex-end;
+            }
+        }
+        /*----------ORDENADOR------------*/
+        @media(min-width:768px){
+            section{
+                flex-grow: 5;
+                display: flex;
+                flex-wrap: wrap;
+            }
+            article{
+                width: 50%;
+            }
+            nav{
+                justify-content: flex-start;
+            }
+            
+        }
+    </style>
+</head>
+
+<body>
+
+    <main>
+        <header>
+            <h1>Cabecera (header)</h1>
+        </header>
+        <nav>
+            <div class="menu">ítem 1</div>
+            <div class="menu">ítem 2</div>
+            <div class="menu">ítem 3</div>
+        </nav>
+        <section>
+            <article>
+                <h2>Artículo 1</h2>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit obcaecati quidem et temporibus sequi
+                nesciunt neque, odio earum, provident architecto voluptate fuga quod ut vero asperiores magnam excepturi
+                nihil molestiae.
+            </article>
+            <article>
+                <h2>Artículo 2</h2>
+                In autem molestiae, voluptatem ratione omnis rerum dolorem deleniti porro? Repudiandae, pariatur dolorum
+                doloribus a quibusdam, autem porro dignissimos quaerat illum magnam, at perspiciatis! Quasi quas
+                praesentium nisi, nesciunt officia.
+            </article>
+            <article>
+                <h2>Artículo 3</h2>
+                Dignissimos expedita necessitatibus eius! Suscipit quo delectus ratione possimus sit nihil distinctio
+                saepe expedita rerum voluptates dolorem adipisci atque accusamus quisquam commodi ut, eligendi aliquam
+                molestiae nobis ex? Aliquam, consequatur!
+            </article>
+            <article>
+                <h2>Artículo 4</h2>
+                Dignissimos expedita necessitatibus eius! Suscipit quo delectus ratione possimus sit nihil distinctio
+                saepe expedita rerum voluptates dolorem adipisci atque accusamus quisquam commodi ut, eligendi aliquam
+                molestiae nobis ex? Aliquam, consequatur!
+            </article>
+        </section>
+        <aside>
+            <h3>Barra lateral (aside)</h3>
+            <p>Voluptatibus minima quod tenetur fugiat atque nisi ex necessitatibus est. Incidunt facilis quis voluptate
+                repellat eveniet, iure quae! Optio, hic!</p>
+        </aside>
+        <footer>
+            <h5>Pie de página (footer)</h5>
+        </footer>
+
+    </main>
+</body>
+
+
+</html>
