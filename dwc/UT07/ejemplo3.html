@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .verde{
+            background-color: green;
+            color: white;
+        }
+        .roja{
+            background-color: red;
+            color: white;
+        }
+        .negra{
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text" id="nombre">
+    <button>añadir</button>
+    <button> ver palabra</button>
+    <div class="tablero">
+
+    </div>
+    <script>
+        let nombre = document.getElementById('nombre');
+        let button = document.getElementsByTagName('button');
+        let tablero = document.getElementsByClassName('tablero');
+        let array = ['marco', 'lucia', 'cosas', 'perro', 'aguila']
+        //Hacer funcion que  retorne una palabra,se le pasa un array y nos devuelve una 
+        //Palabra al azar
+        function devuelve_palabra(arraypalabra) {
+            return arraypalabra[parseInt(Math.random() * arraypalabra.length - 1)]
+        }
+        //Funcion a la que pasamos una palabra y una letra
+        //Retornara un array de '0's y '1's donde los unos estaran en la posicion que coincida 
+        //la letra en la palabra.Ejemplo para palabra cosas[0,0,1,0,1] 
+
+        function devuelveArrayCeros(palabra, letra) {
+            array = [];
+            for (i of palabra) {
+                if (i == letra) {
+                    array.push(1)
+                } else
+                    array.push(0)
+            }
+            return array;
+        }
+        //Hacer una funcion al que le pasamos dos palabras y retorna un array dondese compara
+        //Dos elementosde la siguiente manera:
+        //Si elemento dela posicion n en la primera palabra esta en la posicion n de la segunda
+        //pondra un dos en la posicion n.
+        //Si el elemento de la posiciom m en la primera palabra esta en alguna de la segunda 
+        //devolvera un 1 en el array de posicion n.
+
+        function comparar(palabra1, palabra2) {
+            array = [0,0,0,0,0];
+            for(i in palabra2){
+                if(palabra1.includes(palabra2[i])){
+                    array[i]=1;
+                }
+            }
+            for (i in palabra1) {
+                 if (palabra1[i] == palabra2[i]) {
+                    array[i]=2;
+                }
+            } 
+            return array;
+        }
+        let array=comparar(devuelveArrayCeros(devuelve_palabra),devuelveArrayCeros(nombre.values()))
+        function info(palabra,array) {
+            
+        }
+        button[0].addEventListener('click', () => {
+            tablero[0].innerHTML = `<h1>${}</h1>`;
+        });
+       
+
+    </script>
+</body>
+
+</html>
