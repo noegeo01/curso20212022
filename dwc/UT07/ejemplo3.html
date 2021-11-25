@@ -7,37 +7,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        .verde{
+        .verde {
             background-color: green;
             color: white;
         }
-        .roja{
+
+        .rojo {
             background-color: red;
             color: white;
         }
-        .negra{
+
+        .negro {
             background-color: black;
             color: white;
         }
+
+        .tablero {
+            text-align: center;
+            font-size: 3em;
+        }
+
+        
     </style>
 </head>
 
 <body>
     <input type="text" id="nombre">
     <button>añadir</button>
-    <button> ver palabra</button>
+    <div>
+        <h1 id="resultado"></h1>
+    </div>
     <div class="tablero">
-
+        <h1 id="intentos"></h1>
+        <h1 class="tirada"></h1>
+        <h1 class="tirada"></h1>
+        <h1 class="tirada"></h1>
+        <h1 class="tirada"></h1>
+        <h1 class="tirada"></h1>
     </div>
     <script>
         let nombre = document.getElementById('nombre');
+
         let button = document.getElementsByTagName('button');
+
         let tablero = document.getElementsByClassName('tablero');
-        let array = ['marco', 'lucia', 'cosas', 'perro', 'aguila']
+
+        let tirada = document.getElementsByClassName('tirada');
+
+        let resultado = document.getElementById('resultado');
+
+        let intentos = document.getElementById('intentos');
+
+        let secreta = 'cosas';
+        let solucion;
+        let pos = 0;
+        let array = ['marco', 'lucia', 'cosas', 'perro', 'aguila'];
+
         //Hacer funcion que  retorne una palabra,se le pasa un array y nos devuelve una 
         //Palabra al azar
         function devuelve_palabra(arraypalabra) {
-            return arraypalabra[parseInt(Math.random() * arraypalabra.length - 1)]
+            return arraypalabra[parseInt(Math.random() * arraypalabra.length)]
         }
         //Funcion a la que pasamos una palabra y una letra
         //Retornara un array de '0's y '1's donde los unos estaran en la posicion que coincida 
@@ -60,28 +89,70 @@
         //Si el elemento de la posiciom m en la primera palabra esta en alguna de la segunda 
         //devolvera un 1 en el array de posicion n.
 
-        function comparar(palabra1, palabra2) {
-            array = [0,0,0,0,0];
-            for(i in palabra2){
-                if(palabra1.includes(palabra2[i])){
-                    array[i]=1;
+        function posiciones(palabra1, palabra2) {
+            let array = ['negro', 'negro', 'negro', 'negro', 'negro'];
+            for (i in palabra2) {
+                if (palabra1.includes(palabra2[i])) {
+                    array[i] = 'rojo';
                 }
             }
             for (i in palabra1) {
-                 if (palabra1[i] == palabra2[i]) {
-                    array[i]=2;
+                if (palabra1[i] == palabra2[i]) {
+                    array[i] = 'verde';
                 }
-            } 
+
+            }
+            console.log(array)
             return array;
         }
-        let array=comparar(devuelveArrayCeros(devuelve_palabra),devuelveArrayCeros(nombre.values()))
-        function info(palabra,array) {
-            
+
+
+
+        //Hacer una funcion a la que pasamos el array de colores  y la palabra secreta 
+        //Nos devuelve una cadena 
+        function unirInfo(palabra2, array) {
+            let cadena = '';
+            for (let i in palabra2) {
+                cadena += `<span class=${array[i]}>${palabra2[i]}</span>`;
+            }
+            return cadena
         }
+
+        function heGanado(arrayPosiciones) {
+            let solucion = true;
+            for (i of arrayPosiciones) {
+                solucion = solucion & (i == 'verde')
+            }
+            console.log(solucion);
+            return solucion
+
+        }
+
+        function borratiradas(tirada) {
+            for ( e of tirada) {
+                e.innerHTML="";
+                
+            }
+             intentos.innerHTML = '';
+                button[0].toggleAttribute('disabled',true);
+        }
+        //hacer una funcion que te devuelve verdadero o falso 
+
         button[0].addEventListener('click', () => {
-            tablero[0].innerHTML = `<h1>${}</h1>`;
-        });
-       
+            tirada[pos++].innerHTML = unirInfo(nombre.value, posiciones(secreta, nombre.value));
+            intentos.innerHTML = pos;
+            if (heGanado(posiciones(secreta, nombre.value))) {
+                resultado.innerHTML = `Has ganado con ${pos} intentos`;
+                intentos.innerHTML = '';
+
+            }
+
+            if (pos == 5) {
+                resultado.innerHTML = 'Has perdido';
+                borratiradas(tirada);
+               
+
+        }});
 
     </script>
 </body>

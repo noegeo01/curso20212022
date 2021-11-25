@@ -59,6 +59,37 @@
                 order: 3;
             }
         }
+        @media all and (min-width:450px){
+            .uno{
+                order: 0;
+            }
+            .dos{
+                flex-direction: row;
+                align-items: center;
+                justify-content: flex-end;
+            }
+            .tres{
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-evenly;
+            }
+        }
+        @media all and (min-width:600px){
+            
+            .dos {
+                flex-grow: 2;
+                justify-content: space-around;
+            }
+            .dos,.tres{
+                height: 400px;
+                flex-basis: 0;
+            }
+            .tres{
+                flex-grow: 1;
+            }
+
+        }
+        
     </style>
 </head>
 <body>
