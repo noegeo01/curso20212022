@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejericicio 1</title>
+</head>
+<body>
+    <h1>Ejercicio 1 </h1>
+    <p>introduce numeros enteros separados por comas</p>
+    <input type="text" placeholder="0,0,0,0" id="array"> <button id="cargar" >Cargar ejemplo</button>
+    <br>
+    <button id="calcular">Calcular</button> <button type="reset" id="reiniciar">Reiniciar</button>
+    <p id="media"></p>
+    <p id="suma"></p>
+    <p id="mayor"></p>
+    <p id="menor"></p>
+    
+    <script>
+        let array =document.getElementById('array');
+        let cargar=document.getElementById('cargar');
+        let calcular=document.getElementById('calcular');
+        let reiniciar =document.getElementById('reiniciar');
+        let mayor=document.getElementById('mayor');
+        let menor=document.getElementById('menor');
+        let suma=document.getElementById('suma');
+        let media=document.getElementById('media');
+        let contenidoArray;
+        
+
+        function calcularMedia(contenidoArray) {
+            
+            return calcularSuma(contenidoArray)/contenidoArray.length;
+        }
+        function calcularSuma(contenidoArray) {
+            var suma=0;
+            for(i of contenidoArray){
+                suma+=i  
+            }
+            return suma;
+        }
+        function calcularMenor(contenidoArray) {
+            contenidoArray.sort();
+
+            return contenidoArray[0];
+        }
+        function calcularMayor(contenidoArray) {
+            contenidoArray.sort();
+
+            return contenidoArray[contenidoArray.length-1];
+            
+        }
+        
+        cargar.addEventListener('click',()=>{
+            contenidoArray=(array.value.split(','));
+            for(i in contenidoArray){
+                contenidoArray[i]=parseInt(contenidoArray[i])
+            }
+           
+            console.log(contenidoArray)
+        })
+        calcular.addEventListener('click',() =>{
+            media.innerHTML='La media de los numeros es '+calcularMedia(contenidoArray);
+            suma.innerHTML=calcularSuma(contenidoArray);
+            mayor.innerHTML='El mayor es '+calcularMayor(contenidoArray);
+            menor.innerHTML='El menor es '+calcularMenor(contenidoArray);
+        });
+
+    </script>
+</body>
+</html>
