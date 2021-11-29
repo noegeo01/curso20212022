@@ -1,0 +1,51 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.menu{
+    float: left;
+    background-color: orange;
+    width: 100%;
+    
+    
+}
+.menu > li{
+    position:relative;
+    float: left;
+    width: 10%;
+    background-color: white;
+    margin: 5px;
+    padding: 2px;
+    
+    list-style: none;
+}
+
+.submenu li{
+    margin-top: 3px;
+    position: relative;
+    list-style: none;border: 1px grey solid;
+}
+a{
+    text-decoration:none;
+    padding:10px 12px;
+    color: black;
+   
+
+}
+ .submenu {
+    position:absolute;
+    visibility: hidden;
+}
+.menu li:hover .submenu{
+    visibility: visible;
+    
+    
+}
+.submenu li a:hover {
+    background-color: black;
+    color: white;display: block;
+
+}
