@@ -14,7 +14,7 @@
 <body>
     <h1>El juego de el ahorcado</h1>
     <div class='imagen'>
-        <img src="img/fase0.png" alt="Ahorcado">
+        <img src="img/fase0.png" alt="Ahorcado" id="foto">
     </div>
 
 
@@ -37,16 +37,17 @@
         let boton = document.getElementsByTagName('button');
         let parrafo = document.getElementById('parrafo');
         let completa = document.getElementById('completa');
+        let imagen=document.getElementById('foto')
         let secreta = 'perro';
         let cProbadas = new Set();
-        let intentos = 0;
+        let numeroDeAciertos = 0;
         let limite = 6;
         let img=0;
         let resultado = ['-', '-', '-', '-', '-'];
 
         function ahorcaUnPocoMas(img) {
 
-            img.setAttribute(src = `fase${img}.png`)
+            imagen.setAttribute('src' ,`fase${img}.png`)
 
         }
 
@@ -68,6 +69,22 @@
             return respuesta
         }
         function CuantosAciertos(array) {
+            let acierto
+            for (e in array) {
+                if(!(array[e]=='-')){
+                    acierto++;
+                }
+            }
+
+            return resultado
+        }
+        function SinBarras(resultado) {
+            bool=true
+            for ( e in resultado) {
+                if (resultado[e]=='-'){
+                    bool=false
+                }
+            }
             
         }
         /* function comprobar(letra, secreta, intentos) {
