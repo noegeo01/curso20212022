@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahorcado</title>
+    <style>
+        span {}
+    </style>
+</head>
+
+<body>
+    <h1>El juego de el ahorcado</h1>
+    <div class='imagen'>
+        <img src="img/fase0.png" alt="Ahorcado">
+    </div>
+
+
+    <label for="letra">Letra</label>
+    <input type="text " id="letra">
+    <button id="boton">Probar</button>
+    <p id="parrafo">
+
+    </p>
+    <p id="completa">
+
+    </p>
+
+
+
+
+    <script>
+        let letra = document.getElementById('letra');
+
+        let boton = document.getElementsByTagName('button');
+        let parrafo = document.getElementById('parrafo');
+        let completa = document.getElementById('completa');
+        let secreta = 'perro';
+        let cProbadas = new Set();
+        let intentos = 0;
+        let limite = 6;
+        let img=0;
+        let resultado = ['-', '-', '-', '-', '-'];
+
+        function ahorcaUnPocoMas(img) {
+
+            img.setAttribute(src = `fase${img}.png`)
+
+        }
+
+
+        function compruebaLetra(palabra, letra, resultado) {
+
+            for (l in palabra) {
+                if (letra == palabra[l]) {
+                    resultado[l] = letra;
+                }
+            }
+            return resultado;
+
+        }
+        function pintaCuadros(respuesta) {
+            for (i in respuesta) {
+                respuesta[i] += '<span> </span>'
+            }
+            return respuesta
+        }
+        function CuantosAciertos(array) {
+            
+        }
+        /* function comprobar(letra, secreta, intentos) {
+            let pos;
+            pos = secreta.indexOf(letra);
+            if (pos != -1) {
+                intentos++;
+            }
+            while (pos != -1) {
+                progreso[pos] = letra;
+                secreta[pos] = '';
+                pos = secreta.indexOf(letra);
+            }
+            return intentos;
+        } */
+
+
+
+        boton[0].addEventListener('click', () => {
+
+            /* if (cuantas(secreta, letra.value)) {
+                while (cuantas(secreta, value) > 0) {
+                    let pos = posicioLetraPalabra(resultado, letra)
+                    resultado[pos] = 0
+                    pintaCuadros(pos, letra.value)
+                }
+            }else{
+                ahorcaUnPocoMas()
+            }
+            if(tirada=5){
+                hasTerminado()
+                mensajePerdedor();
+            }
+            if(estaBlanco($array)){
+                hasTerminado();
+                mensajeVictoria();
+            } */
+
+            
+            limite--;
+            numeroDeAciertos=CuantosAciertos(resultado)
+            cProbadas.add(letra.value);
+            parrafo.innerHTML = `Las letras introducidas son : ${[...cProbadas].join('-')} `;
+            completa.innerHTML = '<span>' + pintaCuadros(compruebaLetra(secreta, letra.value, resultado)) + '</span>'
+            if (numeroDeAciertos==CuantosAciertos(resultado)){
+                img++;
+                ahorcaUnPocoMas(img)
+            }
+            if(limite==0){
+                boton[0].setAttribute('disabled',true)
+            }
+            if(SinBarras(resultado)){
+                boton[0].setAttribute('disabled',true)
+                MesajeVictoria()
+
+            }
+        });
+
+
+    </script>
+
+</body>
+
+</html>
