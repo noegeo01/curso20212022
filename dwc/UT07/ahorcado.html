@@ -7,26 +7,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ahorcado</title>
     <style>
-        span {}
+        img {
+            width: 150px;
+            height: 150px;
+        }
+        .container{
+            width: 80%;
+            margin:0 auto;
+            padding: 2em;
+            text-align: center;
+            border: 3px grey groove;
+        }
+        span{
+            margin-top: 1em;
+            padding-right: 1em;
+            padding-left: 1em;
+            margin: 1em;
+            text-align: center;
+            border: solid 1px black;
+
+        }
     </style>
 </head>
 
 <body>
-    <h1>El juego de el ahorcado</h1>
-    <div class='imagen'>
-        <img src="img/fase0.png" alt="Ahorcado" id="foto">
+    <div class="container">
+        <div class="juego">
+        </div>
+        <h1>El juego de el ahorcado</h1>
+        <div class='imagen'>
+            <img src="img/fase0.png" alt="Ahorcado" id="foto">
+        </div>
+
+
+        <label for="letra">Letra</label>
+        <input type="text " id="letra">
+        <button id="boton">Probar</button>
+        <p id="parrafo">
+
+        </p>
+        <p id="completa">
+
+        </p>
+        <div id="estado">
+
+        </div>
     </div>
 
-
-    <label for="letra">Letra</label>
-    <input type="text " id="letra">
-    <button id="boton">Probar</button>
-    <p id="parrafo">
-
-    </p>
-    <p id="completa">
-
-    </p>
 
 
 
@@ -37,17 +64,18 @@
         let boton = document.getElementsByTagName('button');
         let parrafo = document.getElementById('parrafo');
         let completa = document.getElementById('completa');
-        let imagen=document.getElementById('foto')
+        let imagen = document.getElementById('foto')
+        let estado = document.getElementById('estado')
         let secreta = 'perro';
         let cProbadas = new Set();
         let numeroDeAciertos = 0;
-        let limite = 6;
-        let img=0;
+        let limite = secreta.length + 2;
+        let img = 0;
         let resultado = ['-', '-', '-', '-', '-'];
 
         function ahorcaUnPocoMas(img) {
 
-            imagen.setAttribute('src' ,`fase${img}.png`)
+            imagen.setAttribute('src', `img/fase${img}.png`)
 
         }
 
@@ -71,7 +99,7 @@
         function CuantosAciertos(array) {
             let acierto
             for (e in array) {
-                if(!(array[e]=='-')){
+                if (!(array[e] == '-')) {
                     acierto++;
                 }
             }
@@ -79,14 +107,18 @@
             return resultado
         }
         function SinBarras(resultado) {
-            bool=true
-            for ( e in resultado) {
-                if (resultado[e]=='-'){
-                    bool=false
+            bool = true
+            for (e in resultado) {
+                if (resultado[e].includes('-')) {
+                    bool = false
                 }
             }
-            
+            return bool
         }
+        function mensajeVictoria() {
+            estado.innerHTML = 'Has Ganado'
+        }
+
         /* function comprobar(letra, secreta, intentos) {
             let pos;
             pos = secreta.indexOf(letra);
@@ -102,7 +134,7 @@
         } */
 
 
-
+        
         boton[0].addEventListener('click', () => {
 
             /* if (cuantas(secreta, letra.value)) {
@@ -117,29 +149,28 @@
             if(tirada=5){
                 hasTerminado()
                 mensajePerdedor();
-            }
+            }r
             if(estaBlanco($array)){
                 hasTerminado();
                 mensajeVictoria();
             } */
 
-            
+
             limite--;
-            numeroDeAciertos=CuantosAciertos(resultado)
+            numeroDeAciertos = CuantosAciertos(resultado)
             cProbadas.add(letra.value);
             parrafo.innerHTML = `Las letras introducidas son : ${[...cProbadas].join('-')} `;
             completa.innerHTML = '<span>' + pintaCuadros(compruebaLetra(secreta, letra.value, resultado)) + '</span>'
-            if (numeroDeAciertos==CuantosAciertos(resultado)){
+            if (numeroDeAciertos == CuantosAciertos(resultado)) {
                 img++;
                 ahorcaUnPocoMas(img)
             }
-            if(limite==0){
-                boton[0].setAttribute('disabled',true)
+            if (limite == 0) {
+                boton[0].setAttribute('disabled', true)
             }
-            if(SinBarras(resultado)){
-                boton[0].setAttribute('disabled',true)
-                MesajeVictoria()
-
+            if (SinBarras(resultado)) {
+                boton[0].setAttribute('disabled', true)
+                mensajeVictoria()
             }
         });
 

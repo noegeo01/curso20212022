@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pinta</title>
+    <style>
+       *{
+           margin: 0;
+           padding: 0;
+           box-sizing: border-box;
+       }
+        .container{
+            width: 80%;
+            margin: 0 auto;
+            margin-top: 3em;
+            padding: 1em;
+            display: flex;
+            flex-direction: column;
+            background-color: white;
+            border: black solid 1px;
+        }
+        #color{
+            height: 50px;
+            text-align: center;
+            border: black solid 1px;
+            
+        }
+        #panel{
+            display: flex;
+            flex-direction: row;
+            text-align: center;
+            justify-content: space-around;
+           padding: 1em;
+        }
+    </style>
+</head>
+<body>
+        <div class="container">
+            
+            <div id="color" style="background-color:white">
+                <div id="texto"></div>
+            </div>
+            <div id="panel">
+                <button>Pintar</button>
+                <input type="text" id="rgba" placeholder=" Pon los componentes">
+            </div>
+
+        </div>
+        <script>
+            let color=document.getElementById('color');
+            let boton=document.getElementsByTagName('button');
+            let rgba=document.getElementById('rgba');
+            let texto=document.getElementById('texto');
+
+
+            boton[0].addEventListener('click' , () =>{
+                color.setAttribute('style',`background-color: rgba(${rgba.value});`)
+                texto.innerHTML=rgba.value
+            })
+        </script>
+</body>
+</html>

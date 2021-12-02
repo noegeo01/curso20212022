@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pintar</title>
+    <style>
+        .container{
+            width: 80%;
+            margin: 0 auto;
+            padding: 1em;
+            border: 1px solid black;
+        }
+        #pintar{
+            height: 100px;
+            border: 1px solid black;
+        }
+        .panel{
+            
+    
+            padding: 1em;
+            
+        }
+        input{
+            margin: 1em;
+            flex-basis: 0;
+            
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1></h1>
+        <div id="pintar">
+
+        </div>
+        <div class="panel">
+            <input type="text"  placeholder="Rojo">
+            <input type="text"  placeholder="Verde">
+            <input type="text"  placeholder="Azul">
+            <input type="text"  placeholder="Alfa">
+        </div>
+        <button>Pintar</button>
+    </div>
+    <script>
+        //Declaracion colores
+        let entrada=document.getElementsByTagName('input');
+       
+        //Declaracion de el lienzo donde se va a pintar
+        let pintar=document.getElementById('pintar')
+        //Declaracion boton
+        let boton=document.getElementsByTagName('button');
+
+        //Declaracion array de colores
+        let colores=[];
+        
+        //Funcion Convierte los valores
+        function Pinta(array) {
+            pintar.setAttribute('style',`background-color: rgba(${array});`)
+        }
+
+        function convertirValores(array) {
+            let respuesta
+            respuesta=array.join(',')
+
+            return respuesta
+        }
+
+        boton[0].addEventListener('click',()=>{
+            
+            for(c of entrada){
+                colores.push(c.value)
+            }
+            Pinta(convertirValores(colores))
+        })
+        
+    </script>
+</body>
+</html>
