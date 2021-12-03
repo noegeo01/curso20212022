@@ -118,6 +118,9 @@
         function mensajeVictoria() {
             estado.innerHTML = 'Has Ganado'
         }
+        function mensajePerdedor() {
+            estado.innerHTML = 'Has Perdido'
+        }
 
         /* function comprobar(letra, secreta, intentos) {
             let pos;
@@ -160,10 +163,15 @@
             numeroDeAciertos = CuantosAciertos(resultado)
             cProbadas.add(letra.value);
             parrafo.innerHTML = `Las letras introducidas son : ${[...cProbadas].join('-')} `;
-            completa.innerHTML = '<span>' + pintaCuadros(compruebaLetra(secreta, letra.value, resultado)) + '</span>'
+            completa.innerHTML =pintaCuadros(compruebaLetra(secreta, letra.value, resultado)) 
             if (numeroDeAciertos == CuantosAciertos(resultado)) {
                 img++;
-                ahorcaUnPocoMas(img)
+                if(img<=7){
+                  ahorcaUnPocoMas(img)  
+                }else{
+                    mensajePerdedor();
+                }
+                
             }
             if (limite == 0) {
                 boton[0].setAttribute('disabled', true)
