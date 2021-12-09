@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display&display=swap');
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Big Shoulders Display', cursive;
 }
 .container{
     width:  90%;
@@ -37,9 +39,7 @@ header{
     background-color: hsla(333,80%,67%,0.2);
     text-align: center;
     margin-top:1em;
-    padding: 0.5em;
-   
-    
+    padding: 0.5em;  
 }
 .foto{
     
@@ -60,6 +60,7 @@ header{
     background-color: hsl(300,43%,22%);
     color: hsl(300,24%,96%);
     padding: 0.2em;
+    border-radius: 10%;
 }
 .p{
    padding: 1em;
@@ -81,7 +82,8 @@ header{
     
 }
 
-@media all and (max-width:942px){
+@media all and (min-width:942px){
+    
     .reseñas{
         flex-direction: row;
         
