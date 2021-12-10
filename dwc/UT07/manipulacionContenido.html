@@ -10,12 +10,18 @@
         .rojo{
             color: red;
         }
+        .azul{
+            color: blue;
+        }
+        .grande{
+            font-size: larger;
+        }
     </style>
 </head>
 
 <body>
     <h1>Ilegales</h1>
-    <pre id="ilegales">
+    <pre id="ilegales" class="rojo grande">
         hay un tipo dentro de el espejo
         que me mira con cara de <strong>conejo</strong> 
         oye tu, tu que me miras
@@ -39,15 +45,25 @@
         document.querySelectorAll('.secretos')[0].textContent+=`<p class="rojo">fin</p>`;
 
         //Modificadores css
-        
+
         let pre_ilegales=document.getElementById('ilegales')
         document.querySelector('button').addEventListener('click',()=>{
             pre_ilegales.style.border='3px groove green';
             pre_ilegales.style['background-color']='red'
         })
         //Manipulandores de clases de css
-
-
+        //consultar una clase
+        let pre=document.getElementById('ilegales')
+        console.log(pre.className)
+        for(clase of pre.classList){
+            console.log(clase)
+        }
+        //Eliminar una clasede una etiqueta
+        pre.classList.remove('rojo')
+        //Añadir una clase de una etiqueta
+        pre.classList.add('azul')
+        //Poner,quitar
+        pre.classList.toggle('azul');
     </script>
 </body>
 
