@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulacion de contedidos</title>
+    <style>
+        .rojo{
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Ilegales</h1>
+    <pre id="ilegales">
+        hay un tipo dentro de el espejo
+        que me mira con cara de <strong>conejo</strong> 
+        oye tu, tu que me miras
+        Esque quieres servirme de comida?
+    </pre>
+    <h1>Los secretos</h1>
+    <pre class="secretos">
+        Nunca  he sentido igual una <strong>derrota</strong>
+        que nunca ella me dijo que se acabo
+        nunca crei tener mi vida rota
+        ahora estoy solo y arrastto mi dolor
+
+    </pre>
+    <button>boton</button>
+    <script>
+        //Coger las etiquetas
+        console.log(document.getElementById('ilegales').innerHTML);
+        document.getElementById('ilegales').innerHTML+=`<p class="rojo">fin</p>`;
+        //coger  solo texto
+        console.log(document.getElementsByClassName('secretos')[0].textContent);
+        document.querySelectorAll('.secretos')[0].textContent+=`<p class="rojo">fin</p>`;
+
+        //Modificadores css
+        
+        let pre_ilegales=document.getElementById('ilegales')
+        document.querySelector('button').addEventListener('click',()=>{
+            pre_ilegales.style.border='3px groove green';
+            pre_ilegales.style['background-color']='red'
+        })
+        //Manipulandores de clases de css
+
+
+    </script>
+</body>
+
+</html>
