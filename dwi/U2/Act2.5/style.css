@@ -1,0 +1,100 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+body{
+    font-size: 15px;
+}
+main{
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 2em;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 2em;
+    font-family:'Big Shoulders Display', cursive ;
+}
+.sedan,.lujo,.suv{
+    padding: 2em;
+    width: 100%;flex-grow: 1;
+}
+.sedan{
+    background-color: hsl(31,77%,52%);
+    border-top-left-radius:20px ;
+    border-top-right-radius:20px ;
+}
+.sedan span{
+     color: hsl(31,77%,52%);
+}
+.suv{
+    background-color: hsl(184,100%,22%);
+   
+}
+.suv span{
+    color: hsl(184,100%,22%);
+}
+.lujo{
+    background-color: hsl(179, 100%, 13%);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius:20px ;
+}
+
+.lujo span{
+    color: hsl(179, 100%, 13%);
+}
+p{
+    color: hsla(0, 0%, 100%, 0.75)  ;
+    
+}
+h1{
+    color: hsl(0, 0%,95%);
+    font-family: 'Lobster', cursive;;
+    margin-bottom: 0.5em;
+    margin-top:0.5em
+}
+img{
+    margin: 1em;
+}
+p{
+    margin-bottom: 1em;
+}
+div a{
+   text-decoration: none; 
+}
+ div span{
+    
+    background-color: hsl(0, 0%,95%);
+    border-radius: 20px;
+    padding: 0.5em;
+    
+    margin-top: 0.3em;
+}
+.boton{
+    margin-bottom: 0.5ems;
+}
+
+
+@media all and (min-width: 1000px){
+    main{
+        flex-direction: row;
+    }
+    div{
+        
+        flex-grow: 1;
+        flex-basis: 0;
+    }
+    .sedan{
+        border-bottom-left-radius:20px ;
+        border-top-right-radius:0px ;
+    }
+    .lujo{
+        border-top-right-radius: 20px;
+        border-bottom-left-radius:0px ;
+    }
+}

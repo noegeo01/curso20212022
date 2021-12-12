@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahorcado</title>
+    <style>
+        img {
+            width: 150px;
+            height: 150px;
+        }
+        .container{
+            width: 80%;
+            margin:0 auto;
+            padding: 2em;
+            text-align: center;
+            border: 3px grey groove;
+        }
+        span{
+            margin-top: 1em;
+            padding-right: 1em;
+            padding-left: 1em;
+            margin: 1em;
+            text-align: center;
+            border: solid 1px black;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="juego">
+        </div>
+        <h1>El juego de el ahorcado</h1>
+        <div class='imagen'>
+            <img src="img/fase0.png" alt="Ahorcado" id="foto">
+        </div>
+
+
+        <label for="letra">Letra</label>
+        <input type="text " id="letra">
+        <button id="boton">Probar</button>
+        <p id="parrafo">
+
+        </p>
+        <p id="completa">
+
+        </p>
+        <div id="estado">
+
+        </div>
+    </div>
+
+
+
+
+
+    <script>
+        let letra = document.getElementById('letra');
+
+        let boton = document.getElementsByTagName('button');
+        let parrafo = document.getElementById('parrafo');
+        let completa = document.getElementById('completa');
+        let imagen = document.getElementById('foto')
+        let estado = document.getElementById('estado')
+        let secreta = 'perro';
+        let cProbadas = new Set();
+        let numeroDeAciertos = 0;
+        let limite = secreta.length + 2;
+        let img = 0;
+        let resultado = ['-', '-', '-', '-', '-'];
+
+        function ahorcaUnPocoMas(img) {
+
+            imagen.setAttribute('src', `img/fase${img}.png`)
+
+        }
+
+
+        function compruebaLetra(palabra, letra, resultado) {
+
+            for (l in palabra) {
+                if (letra == palabra[l]) {
+                    resultado[l] = letra;
+                }
+            }
+            return resultado;
+
+        }
+        function pintaCuadros(respuesta) {
+            for (i in respuesta) {
+                respuesta[i] += '<span> </span>'
+            }
+            return respuesta
+        }
+        function CuantosAciertos(array) {
+            let acierto
+            for (e in array) {
+                if (!(array[e] == '-')) {
+                    acierto++;
+                }
+            }
+
+            return resultado
+        }
+        function SinBarras(resultado) {
+            bool = true
+            for (e in resultado) {
+                if (resultado[e].includes('-')) {
+                    bool = false
+                }
+            }
+            return bool
+        }
+        function mensajeVictoria() {
+            estado.innerHTML = 'Has Ganado'
+        }
+        function mensajePerdedor() {
+            estado.innerHTML = 'Has Perdido'
+        }
+
+        /* function comprobar(letra, secreta, intentos) {
+            let pos;
+            pos = secreta.indexOf(letra);
+            if (pos != -1) {
+                intentos++;
+            }
+            while (pos != -1) {
+                progreso[pos] = letra;
+                secreta[pos] = '';
+                pos = secreta.indexOf(letra);
+            }
+            return intentos;
+        } */
+
+
+        
+        boton[0].addEventListener('click', () => {
+
+            /* if (cuantas(secreta, letra.value)) {
+                while (cuantas(secreta, value) > 0) {
+                    let pos = posicioLetraPalabra(resultado, letra)
+                    resultado[pos] = 0
+                    pintaCuadros(pos, letra.value)
+                }
+            }else{
+                ahorcaUnPocoMas()
+            }
+            if(tirada=5){
+                hasTerminado()
+                mensajePerdedor();
+            }r
+            if(estaBlanco($array)){
+                hasTerminado();
+                mensajeVictoria();
+            } */
+
+
+            limite--;
+            numeroDeAciertos = CuantosAciertos(resultado)
+            cProbadas.add(letra.value);
+            parrafo.innerHTML = `Las letras introducidas son : ${[...cProbadas].join('-')} `;
+            completa.innerHTML =pintaCuadros(compruebaLetra(secreta, letra.value, resultado)) 
+            if (numeroDeAciertos == CuantosAciertos(resultado)) {
+                img++;
+                if(img<=7){
+                  ahorcaUnPocoMas(img)  
+                }else{
+                    mensajePerdedor();
+                }
+                
+            }
+            if (limite == 0) {
+                boton[0].setAttribute('disabled', true)
+            }
+            if (SinBarras(resultado)) {
+                boton[0].setAttribute('disabled', true)
+                mensajeVictoria()
+            }
+        });
+
+
+    </script>
+
+</body>
+
+</html>

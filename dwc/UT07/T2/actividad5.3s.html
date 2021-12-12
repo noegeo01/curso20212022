@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0%;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        main{
+            padding: 3rem;
+        }
+        .introducir{
+            padding: 1rem 0 1rem   0;
+            display: flex;
+            justify-content: flex-start;
+            flex-wrap: nowrap;
+        }
+        .introducir label{
+            margin-right: 1rem;
+            flex-grow: 1;
+        }
+        .introducir input{
+            flex-grow: 20;
+        }
+        #boton{
+            margin-left: 5px;
+            background-color: cadetblue;
+            outline:2px solid rgb(3, 44, 44);
+            padding: 0.5rem;
+            border-radius: 5px;
+        }
+        .rojo{
+            color: red;
+        }
+        .azul{
+            color:blue
+        }
+        .resultado{
+            margin-bottom: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Comprobador de expresiones regulares</h1>
+        <div class="introducir">
+            <label for="">Líneas y/o palabras</label>
+            <input id='texto' type="text" placeholder="Introduce las líneas y/o plabras separado por ;">
+        </div>
+        <div class="introducir">
+            <label for="">Introduce la expresión regular a comprobar</label>
+            <input id='expReg' type="text" placeholder="Introduce la expresión regular a comprobar">
+        </div>
+        <div class="resultado">
+
+        </div>    
+        <span id="boton">Comprobar</span>
+    </main>
+</body>
+    <script>
+        let input_Texto=document.getElementById('texto');
+        let input_ExpReg=document.getElementById('expReg');
+        let texto_resultado=document.getElementsByClassName('resultado')
+
+       //Devuelve verdadero o falso segun cumpla la expresion regular pasada
+        function cumpleExpresion(expReg,cadena){
+            return expReg.test(cadena);  
+            
+        }
+        //Añade contenido del div resultado, si la cadena cumple o no cumple la expresion regular
+        //No devuelve nada imprime en pantalla ,cadena,si cumple en azul y en caso contrario rojo
+        function añadirEntrada(cadena,valor=true){ 
+            if(valor){
+                texto_resultado[0].innerHTML+=`<p><span class='azul'>${cadena}</p>`
+            }else{
+                texto_resultado[0].innerHTML+=`<p><span class='rojo'>${cadena}</p>`
+            }
+        }
+
+        document.getElementById('boton').addEventListener('click',()=>{
+            //recorre todos los elementos introducidos
+            let re=new RegExp(input_ExpReg.value);
+            texto_resultado[0].innerHTML+="<p>Para la expresion <span class='azul'>"+input_ExpReg.value+"</span> la cumplen:</p>";
+            ((input_Texto.value).split(';')).forEach(cadena => {
+                añadirEntrada(cadena,cumpleExpresion(re,cadena))
+                /* if(cumpleExpresion(re,cadena))
+                    añadirEntrada(cadena)
+                else
+                    añadirEntrada(cadena,false) */
+            }) 
+
+        })
+    </script>
+</html>

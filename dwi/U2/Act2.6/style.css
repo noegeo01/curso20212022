@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Big Shoulders Display', cursive;
+}
+.container{
+    width:  90%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+   
+}
+.parte1{
+    width:  100%;
+    display: flex;
+    flex-direction: column;
+}
+.reseñas{
+    width:  100%;
+    display: flex;
+    flex-direction: column;
+   
+}
+.reseñas div{
+    margin-top: 1em;
+}
+
+header{
+    flex-grow: 1;
+    padding: 1em;
+    color: hsl(300,43%,22%);
+}
+
+
+
+.estrellas {
+    background-color: hsla(333,80%,67%,0.2);
+    text-align: center;
+    margin-top:1em;
+    padding: 0.5em;  
+}
+.foto{
+    
+    display: flex;
+    flex-direction: row;
+}
+.foto img{
+    width: 15%;
+    border-radius: 80%;
+}
+.texto{
+    width: 80%;
+    text-align: center ;
+    
+}
+
+.reseñas div{
+    background-color: hsl(300,43%,22%);
+    color: hsl(300,24%,96%);
+    padding: 0.2em;
+    border-radius: 10%;
+}
+.p{
+   padding: 1em;
+}
+.comprador{
+    color: rgba(238, 104, 164, 0.753);
+}
+
+@media all and (min-width:542px){
+    .parte1{
+        flex-direction: row;
+    }
+    header{
+        width: 50%;
+    }
+    .valoracion{
+        width: 50%;
+    }
+    
+}
+
+@media all and (min-width:942px){
+    
+    .reseñas{
+        flex-direction: row;
+        
+    }
+    
+    .reseñas div{
+      margin-right: 1em;  
+    }
+    
+}

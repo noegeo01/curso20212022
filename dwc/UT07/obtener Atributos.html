@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .azul {
+            color: blue;
+        }
+
+        .red {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <!--Manipulacionde atributos-->
+    <ul>
+        <li class="azul">uno</li>
+        <li class="red" >uno</li>
+        <li class="azul" hidden>uno</li>
+        <input type="text" id="texto" value='DAW' placeholder="Introduce tu cicclo" disabled> 
+    </ul>
+    <script>
+        let list1 = document.getElementsByClassName('azul');
+        let list2 = document.getElementsByTagName('li');
+        let list3 = document.querySelectorAll('.azul');
+        let list4 = document.querySelectorAll('li');
+    
+
+        //Mostrar el valor de el atributo se utiliza el metodo getAttribute
+
+        for (element of list4) {
+            console.log(element.getAttribute('class'))
+        }
+
+        //Para modificar el valor de un atributo se utiliza el metodo setAttribute
+
+        list4[0].setAttribute('class', 'red')
+
+        //Para eliminar  unatributo se utiliza remove atribute
+
+        list4[2].removeAttribute('hidden');
+
+        //Para preguntar si un elemento tiene la propiedad  se utuliza el metodo 
+        //hasAttribute
+
+        console.log(list4[2].hasAttribute('hidden'))
+        console.log(list4[2].hasAttribute('class'))
+
+        //Para los atributos como hiddeb,enabled  ... podemos utilizar el metodo
+        //toggleAttribute,para invertir su valor
+
+        list4[0].addEventListener('click',()=>{
+            list4[1].toggleAttribute('hidden')
+        })
+
+        //Obtener todos los attributos de una etiqueta se usa la propiedad atributes, 
+        //es una coleccion
+
+        for(at of document.getElementById('texto').attributes){
+            console.log(`El atributo ${at.name}:${at.value}`)
+        }
+    </script>
+</body>
+
+</html>
