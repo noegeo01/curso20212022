@@ -1,0 +1,99 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Mukta', sans-serif;
+}
+@import url('https://fonts.googleapis.com/css2? family = Mukta: wght @ 300 & display = swap');
+
+body{
+    background-color: cornflowerblue;
+}
+.container{
+    display: flex;
+    flex-direction: column    
+}
+.titulo i{
+    color: red;
+}
+.titulo {
+    align-self: flex-end;
+    
+}
+.grados{
+    font-size: 3em;
+    color: red;
+}
+.semanas{
+display: flex;
+flex-direction: row;
+justify-content: stretch;
+align-content: flex-start;
+padding: 2em;
+}
+i{
+    padding: 0.2em;
+}
+#minlun,#minmar{
+    background-color: dodgerblue;
+    color: white;
+    padding: 0.5em;
+    font-size: larger;
+}
+#minmie{
+    padding: 0.5em;
+    color: white;
+    background-color: darkslateblue;
+    font-size: larger;
+}
+#minjue,#minvie{
+    background-color: rgb(15, 19, 201);
+    color: white;
+    padding: 0.5em;
+    font-size: larger;
+}
+#maxlun{
+    background-color: rgb(158, 64, 64);
+    color: white;
+    padding: 0.5em;
+    font-size: larger;
+}
+#maxmar{
+    background-color: rgb(189, 70, 70);
+    color: white;
+    padding: 0.5em;
+    font-size: larger;
+}
+#maxmie{
+    background-color: rgb(189, 83, 83);
+    color: white;
+    padding: 0.5em;
+    font-size: larger;
+}
+#maxjue{
+    background-color: rgb(179, 79, 79);
+    color: white;
+    padding: 0.5em;
+    font-size: larger;
+}
+#maxvie{
+    background-color: rgb(211, 102, 102);
+    color: white;
+    padding: 0.5em;
+    font-size: larger;
+    
+}
+.dias{
+    background-color: grey;
+    margin-right:0.5em ;
+    background-color: white;
+    border:2px black solid;
+    border-top-left-radius: 15%;
+    border-top-right-radius: 15%;
+    text-align: center;
+}
+.dias h1{
+    background-color: grey;
+    border-top-left-radius: 25%;
+    border-top-right-radius: 25%;
+}

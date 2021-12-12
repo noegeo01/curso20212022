@@ -1,21 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    li
+    <script src="https://kit.fontawesome.com/5c31253926.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="tiempo.css">
     <title>Document</title>
 </head>
 <body>
-    <header>
-        <h1>Prevision de el tiempo</h1>
-    </header>
-    <section>
-        <article>
-            <h1>Lun</h1>
-            <i></i>
-        </article>
-    </section>
+    <div class="container">
+
+        <div class="titulo">
+            <h1><i class="fas fa-umbrella"></i>Pronostico de el tiempo<i class="fas fa-temperature-high"></i></h1>
+        </div>
+        <div class="semanas">
+        <div class="dias" id="lunes">
+            <h1>LUN</h1>
+            <p class="grados">
+                <i class="fas fa-sun"></i>
+            </p>
+            <p id="maxlun">29º</p>
+            <p id="minlun">12º</p>
+        </div>
+        <div class="dias" id="mar">
+            <h1>MAR</h1>
+            <p class="grados"><i class="fas fa-cloud-sun"></i></p>
+            <p id="maxmar">22º</p>
+            <p id="minmar">12º</p>
+        </div>
+        <div class="dias" id="mie">
+            <h1>MIE</h1>
+            <p class="grados"><i class="fas fa-cloud-showers-heavy"></i></p>
+            <p id="maxmie">13º</p>
+            <p id="minmie">7º</p>
+        </div>
+        <div class="dias" id="jue">
+            <h1>JUE</h1>
+            <p class="grados"><i class="fas fa-cloud-sun-rain"></i></p>
+            <p id="maxjue">12º</p>
+            <p id="minjue">4º</p>
+        </div>
+        <div class="dias" id="vie">
+            <h1>VIE</h1>
+            <p class="grados"><i class="fas fa-cloud"></i></p>
+            <p id="maxvie">18º</p>
+            <p id="minvie">4º</p>
+        </div>
+        
+    </div>
 </body>
 </html>
