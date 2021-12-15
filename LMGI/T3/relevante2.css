@@ -1,0 +1,130 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.container{
+    margin:0 auto;
+    width: 80%;
+    background-color: darkgoldenrod;
+    display: flex;
+    
+    flex-direction: column;
+    
+}
+
+h1,.pie{
+    text-align: center;
+    font-size: xx-large;
+    font-weight: bolder;
+    color: white;
+    
+}
+#nav{
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+   justify-content: space-around;
+   background-color: brown;
+   position:fixed;
+   right: 0;
+}
+#contenido{
+    
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.p1{
+    order: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0.6em;
+    text-align: justify;
+}
+.p1 img {
+    order: 1;
+    display: block;
+    width: 30%;
+    padding: 0.1em;
+}
+p{
+    
+    background-color: rgb(190, 173, 73);
+}
+div{
+    padding: 0.3em;
+}
+.p2{
+    order: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+    
+}
+.p2 img{
+    width: 30%;
+}
+.p2 img{
+    padding:1em;
+}
+.cuadros {
+    order: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.cuadros div {
+    background-color: white;
+}
+.cuadros a{
+    color: black;
+}
+#botones {
+    order: 0;
+   
+}
+input{
+    border-radius: 5%;
+    margin-top: 0.3em;
+    box-shadow: 3px 3px 3px grey;
+    background-color: white;
+    display: inline;
+}
+.video{
+    order: 1;
+    text-align: center;
+    
+}
+#cuerpo{
+    order: 3;
+}
+.pie{
+    order: 4;
+}
+li{
+    list-style: none;
+    padding: 0.5em;
+    
+}
+li ol{
+    position: absolute;
+}
+li ol li{
+    visibility: hidden;
+}
+li ol:hover li{
+    visibility: visible;
+    background-color:black;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
