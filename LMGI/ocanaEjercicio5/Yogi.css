@@ -1,0 +1,67 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: 'slackey';
+    src: url('fonts/slackey.woff2');
+}
+html{
+    background-image: url("img/violeta.png");
+    background-repeat: repeat;
+}
+body{
+    background-color: rgb(123, 176, 197);
+}
+.texto{
+    margin-top: 1em;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+}
+h1{
+    text-align: center;
+    color: slateblue;
+    font-family:'slackey', cursive;text-shadow: white 3px 3px 3px;
+}
+hr{
+    border: 2px slateblue solid;
+}
+img{
+    flex-grow: 1;
+    padding: 0.5em;
+    border:2px solid black;
+    margin: 0.5em;
+}
+p{
+    flex-grow: 3;
+}
+.fila {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    overflow: visible;
+    width: 100%;
+}
+.element{
+    width: 40;
+    width: 200px;
+    height: 200px; margin: 1em;
+    font-size: 1.5em;
+}
+.element:nth-child(odd)::first-line{
+    color:black;
+}
+.element:nth-child(even){
+    background-image: url('img/verde.png'); 
+    border: green 2px solid;
+    border-radius: 4%;
+}
+.element:nth-child(odd){
+ background-color: orange;
+ border: 2px white dotted;
+ color: white;
+ 
+}

@@ -1,0 +1,116 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+/* El fondo de el body agregamos dos iconos  y un color con transparencia de fondo
+*/
+body{
+    
+    background:url("img/fondo.svg") no-repeat top left 
+    , url("img/fondo.svg")no-repeat   bottom right ; 
+    background-color:hsla(195,2%,63%,0.6) ;
+    background-size: 20%
+    /* background:  */
+    
+    
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital@1&display=swap');
+
+img{
+    width: 10%;
+}
+main{
+    width: 90%;
+    margin: 1em auto;
+
+}
+h1,h2{
+    font-family: 'Karla',sans-serif;
+    font-weight: 700;
+}
+p{
+    font-family: 'Karla',sans-serif;
+    font-weight: 400;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+header{
+    background-color: white;
+    opacity: 0.7;
+    padding: 3em;
+    display: flex;
+    flex-direction: column;
+    
+}
+header p ,#unir ,#garantia{
+    padding: 0.4em;
+}
+header p{
+    color: hsl(195,2%,63%);
+}
+#unir{
+   color:hsl(179,62%,34%) ;
+}
+#garantia{
+    color: hsl(71,73%,54%);
+}
+article{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    color: white;
+}
+.espacio{
+    padding: 1em;
+}
+div{
+    padding: 1em;
+    width: 100%;
+}
+div:first-child{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: hsl(179,112%,43%);
+    
+}
+#registrarse{
+    background-color: hsl(71,73%,54%);
+    text-align: center;
+    padding: 0.5em;
+    box-shadow: 3px 3px 3px black;
+    
+}
+#ultimo{
+    display: flex;
+    flex-direction: column;
+    background-color: hsl(179,62%,34%);
+    opacity: 0.89;
+    
+}
+#ultimo h2, #ultimo p{
+    padding: 0.5em;
+}
+.letra{
+    color: rgba(255, 255, 255,0.7);
+}
+#precio{
+    font-size: 2em;
+    color: white;
+}
+
+/*Resolucion mayor a  529px*/
+@media all and (min-width:529px){
+    article{
+        flex-direction: row;
+        
+    }
+
+} 

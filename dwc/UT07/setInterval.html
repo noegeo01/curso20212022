@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style> 
+        
+        .rojo{
+            background-color: red;
+            color: white;
+            text-align: center;
+        }
+        .verde{
+            background-color: green;
+            color: white;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="texto" class="verde"></h1>
+    <script>
+        color_inicial=true;
+        let contador=0;
+        function color(c){
+            let h1=document.getElementById('texto');
+            c ? h1.classList.replace('rojo','verde') : h1.classList.replace('verde','rojo')
+        }
+        function cambiarTexto(c){
+            let h1=document.getElementById('texto').textContent=c;
+        }
+        var alarma=setInterval(()=>{
+            color_inicial=!color_inicial;
+            color(color_inicial)
+            cambiarTexto(contador++)
+        },2000)
+    </script>
+</body>
+</html>

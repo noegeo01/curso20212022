@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Contenedores</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="contenido">
+            <div class="contenedor">
+                <div class="relleno" id="altura0"></div>
+
+            </div>
+            <div class="boton">Vaciar</div>
+        </div>
+        <div class="contenido">
+            <div class="contenedor">
+                <div class="relleno" id="altura1"></div>
+
+            </div>
+            <div class="boton">Vaciar</div>
+        </div>
+        <div class="contenido">
+            <div class="contenedor">
+                <div class="relleno" id="altura2"></div>
+
+            </div>
+            <div class="boton">Vaciar</div>
+        </div>
+        <div class="contenido">
+            <div class="contenedor">
+                <div class="relleno" id="altura3"></div>
+            </div>
+            <div class="boton">Vaciar</div>
+        </div>
+    </div>
+
+    <script>
+
+        let acumuladores = [0, 0, 0, 0]
+        let boton=document.getElementsByClassName('boton');
+        
+        
+        function cuanto(max) {
+            let cant = Math.round(Math.random() * max)
+            return cant
+        }
+        function donde(long) {
+            contenedor = Math.round(Math.random() * long);
+            return contenedor
+        }
+        boton[0].addEventListener('click',()=>{
+            document.getElementById(`altura${0}`).style.height= 0 + "%"
+                acumuladores[0]=0
+        })
+        boton[1].addEventListener('click',()=>{
+            document.getElementById(`altura${1}`).style.height= 0 + "%"
+                acumuladores[1]=0
+        })
+        boton[2].addEventListener('click',()=>{
+            document.getElementById(`altura${2}`).style.height= 0 + "%"
+                acumuladores[2]=0
+        })
+        boton[3].addEventListener('click',()=>{
+            document.getElementById(`altura${3}`).style.height= 0 + "%"
+                acumuladores[3]=0
+        })
+        function llenar(acumuladores) {
+            cant = cuanto(30)
+
+            sitio = donde(3)
+            let relleno = document.getElementById(`altura${sitio}`);
+            acumuladores[sitio] += cant;
+            
+
+            //relleno[sitio].classList.height=cant+"%"
+            //while(cant >= cant){
+            console.log(acumuladores[sitio])
+            if (acumuladores[sitio] >99) {
+                relleno.style.height= 0 + "%"
+                acumuladores[sitio]=0
+            } else {
+
+                relleno.style.height = acumuladores[sitio] + "%"
+                if (acumuladores[sitio] > 0) {
+                    relleno.setAttribute('class', 'verde')
+                } if (acumuladores[sitio] > 30) {
+                    relleno.setAttribute('class', 'amarillo')
+                }if(acumuladores[sitio]>=80){
+                    relleno.setAttribute('class', 'rojo')
+                }
+            }
+            return acumuladores
+        }
+
+
+        var alarma = setInterval(() => {
+
+            acumuladores = llenar(acumuladores)
+        }, 1000)
+
+    </script>
+</body>
+
+</html>
