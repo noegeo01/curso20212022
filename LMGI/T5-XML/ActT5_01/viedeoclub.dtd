@@ -1,0 +1,32 @@
+<!ELEMENT documento (factura*)>
+<!ELEMENT factura (datos_cliente,datos_ticket)>
+
+    <!ELEMENT datos_cliente (nombre,apellidos,dni,telefono?)>
+        <!ATTLIST datoscliente identificador ID #REQUIRED>
+        <!ELEMENT nombre (#PCDATA)>
+        <!ELEMENT apellidos (#PCDATA)>
+        <!ELEMENT dni (#PCDATA)>
+        <!ELEMENT telefono (#PCDATA)>
+
+    <!ELEMENT datos_ticket (resguardo,(alquiler|compra)+)> 
+
+        <!ELEMENT alquiler (pelicula+)>
+            <!ATTLIST alquiler fecha_devolucion CDATA #REQUIRED>
+
+            <!ELEMENT pelicula (titulo,genero,duracion,reparto,cartelera*)> 
+                <!ELEMENT genero (#PCDATA)>
+                <!ELEMENT duracion (#PCDATA)>
+                <!ELEMENT reparto (actor+)>
+                <!ELEMENT cartelera ANY>
+                    <!ATTLIST cartelera formato CDATA #FIXED ".jpg"
+                                        img (c1201|c0437|c1201) #REQUIRED>
+                    <!ATTLIST pelicula idpelicula ID #REQUIRED
+                                   valoracion CDATA #IMPLIED>
+
+        <!ELEMENT compra ((DVDs|cinta_video)*)>
+                <!ELEMENT DVDs (titulo,fecha_A_Venta)>
+                    <!ATTLIST DVDs extra (si|no) #REQUIRED>
+                <!ELEMENT cintavideo (#PCDATA)>
+                    <!ATTLIST cinta_video formato CDATA #FIXED "VHS"
+                                          rebobinada (si | no) #required >
+        <!ELEMENT resguardo (forma_pago,importe_total)>

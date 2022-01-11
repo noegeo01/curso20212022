@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ciudades>
+
+    <ciudad continente="Asia">
+        <nombre_ciudad>Nueva Delhi</nombre_ciudad>
+        <pais>India</pais>
+    </ciudad>
+
+    <ciudad  continente="Europa">
+        <nombre_ciudad>Lisboa</nombre_ciudad>
+        <pais>Portugal</pais>
+    </ciudad>
+
+    <ciudad continente="África"> 
+        <nombre_ciudad>El Cairo</nombre_ciudad>
+        <pais>Egipto</pais>
+    </ciudad>
+
+    <ciudad continente="América del Sur">
+        <nombre_ciudad>Medellín</nombre_ciudad>
+        <pais>Colombia</pais>
+    </ciudad>
+
+    <ciudad continente="Europa">
+        <nombre_ciudad>Berlín</nombre_ciudad>
+        <pais>Alemania</pais>
+    </ciudad>
+    
+    <ciudad continente="América del Sur">
+        <nombre_ciudad>Rio de Janeiro</nombre_ciudad>
+        <pais>Brasil</pais>
+    </ciudad>
+</ciudades>

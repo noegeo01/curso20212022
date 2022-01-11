@@ -1,0 +1,40 @@
+<!-- Los siguientes elementos pueden no estar escritos correctamente por
+incumplir alguna regla de sintaxis. Entrega un xml con todos ellos
+escritos correctamente e indica en un comentario lo que has tenido
+que corregir para dejarlo correcto, es decir, indica el motivo del error. -->
+<?xml version="1.0" encoding="UTF-8"?>
+<ciudad>Pamplona</ciudad> 
+    <!--Se ha cambiado el nombre del primer elemento escribiendolo todo el minuscula-->
+
+<dia>18</dia> 
+    <!-- El elemento dia se encontaba con una tilde en el inicio y se ha cambiado por  dia
+    sin tildepara que conincida con elemento de cierre-->
+
+<mes>6</mes> 
+    <!-- El elemento mes estaba mal escrito el cierre de la etiqueta : <mes/> por ello se ha
+     cambiado de lasiguente manera: </mes> -->
+
+<ciudad>Pamplona</ciudad>
+    <!-- El elemento de cierre estaba escrito como </finciudad> y se ha cambiado por <ciudad> ya 
+    que la paertura estaba indicada de esa misma manera-->
+
+<_rojo/>
+    <!--El elemeto  no tenia el cierre <_rojo> por ello se ha cambiado añadiendo el cierre al final
+     de la etiqueta de lasiguiente manera : <_rojo/> -->
+
+<_2colores>Rojo yNaranja</_2colores>
+    <!--Elemento tenia el nombre de : <2colores> , por ello se ha agregado un guion de subrayado  
+    de la siguiente manera : <_2colores> -->
+
+<Aficiones>Cine, Bailar , Nadar</Aficiones>
+    <!-- Se ha omitidolos espacios que se tenia en la etiqueta : < Aficiones > < / Aficiones-->
+
+<persona>
+    <nombre>Elsa</nombre>
+</persona>
+    <!-- Se ha anidado correctamente  ya que la version original era la siguiente :
+    <persona><nombre>Elsa</persona></nombre>-->
+
+<color_favorito>azul</color_favorito>
+    <!-- Se ha eliminadoelespacio que se encontraba en  la etiqueta que estaba escrita de la 
+    siguiente manera: <color favorito>azul</color favorito-->

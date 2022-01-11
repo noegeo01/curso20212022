@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<campeonato>
+    <equipo>
+        <nombre>Fútbol Club Barcelona</nombre>
+        <ciudad>Barcelona</ciudad>
+        <entrenador> Xavi Hérnandez</entrenador>
+        <jugadores>
+            <jugador posicion="Delantero">
+                <nombre>Ez Abde</nombre>
+                <nacionalidad>Marroquí</nacionalidad>
+            </jugador>
+            <jugador posicion="medio">
+                <nombre>Gavi</nombre>
+                <nacionalidad>Español</nacionalidad>
+            </jugador>
+        </jugadores>
+    </equipo>
+    <equipo>
+        <nombre>Real Madrid Club de Fútbol</nombre>
+        <ciudad>Madrid</ciudad>
+        <entrenador/>
+        <jugadores>
+            <jugador posicion="Defensa">
+                <nombre>Ferland Mendy</nombre>
+                <nacionalidad>Francés</nacionalidad>
+            </jugador>
+            <jugador posicion="Portero">
+                <nombre>Thibaut Courtois</nombre>
+                <nacionalidad>Belga</nacionalidad>
+            </jugador>
+        </jugadores>
+    </equipo>
+</campeonato>

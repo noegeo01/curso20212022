@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tabla_periodica SYSTEM "tabla_periodica.dtd">
+<tabla_periodica>
+    <atomo estado="Gaseoso">
+        <nombre>Hidrógeno</nombre>
+        <simbolo>H</simbolo>
+        <numero_atomico>1</numero_atomico>
+        <peso_atomico>1.00794</peso_atomico>
+        <punto_embullicion unidades="Grados Kelvin">20.28ºC </punto_embullicion>
+        <densidad unidades="gr/cm3 ">0.0899</densidad>
+    </atomo>
+
+    <atomo estado="Líquido">
+        <nombre>Bromo</nombre>
+        <simbolo>Br</simbolo>
+        <numero_atomico>35</numero_atomico>
+        <peso_atomico>79.90</peso_atomico>
+        <punto_embullicion unidades="Grados Kelvin">58.8ºC</punto_embullicion>
+        <densidad unidades="gr/cm3">3119</densidad>
+    </atomo>
+
+    <atomo estado="Solido">
+        <nombre>Boro</nombre>
+        <simbolo>B</simbolo>
+        <numero_atomico>5</numero_atomico>
+        <peso_atomico>10.81</peso_atomico>
+        <punto_embullicion unidades="Grados Kelvin">2550ºC</punto_embullicion>
+        <densidad unidades="gr/cm3">2460</densidad>
+    </atomo>
+
+    <atomo estado="Solido">
+        <nombre>Osmio</nombre>
+        <simbolo>Os</simbolo>
+        <numero_atomico>76</numero_atomico>
+        <peso_atomico>190.2</peso_atomico>
+        <punto_embullicion unidades="Grados Kelvin">5030ºC</punto_embullicion>
+        <densidad unidades="gr/cm3">22610 </densidad>
+    </atomo>
+</tabla_periodica>

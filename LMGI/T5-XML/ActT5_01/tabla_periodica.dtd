@@ -1,0 +1,11 @@
+<!ELEMENT tabla_periodica (atomo*)>
+<!ELEMENT atomo (nombre,simbolo,numero_atomico,peso_atomico,punto_embullicion,densidad)>
+<!ATTLIST atomo estado CDATA #IMPLIED>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT simbolo (#PCDATA)>
+<!ELEMENT numero_atomico (#PCDATA)>
+<!ELEMENT peso_atomico (#PCDATA)>
+<!ELEMENT punto_embullicion (#PCDATA)>
+<!ATTLIST punto_embullicion unidades CDATA #IMPLIED>
+<!ELEMENT densidad (#PCDATA)>
+<!ATTLIST densidad unidades CDATA #IMPLIED>
