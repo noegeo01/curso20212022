@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Añadir </title>
+    <style>
+        div{
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Cabecera</h1>
+    <div id="contenedor">
+        <p>holaa</p>
+    </div>
+    <input type="text" name="" id="">
+    <button id="boton">Añadir texto</button> 
+    <span>Remplazar</span>
+    <strong id="eli">eliminar</strong>
+    <script>
+        let elemento;
+        let reem=document.getElementsByTagName("span")[0]
+        let contenido = document.getElementById("contenedor");
+        let boton = document.getElementById("boton")
+        let texto = document.getElementsByTagName("input")[0];
+        let eliminar = document.getElementById("eli")
+
+        boton.addEventListener("click" , () =>{  
+            elemento=document.createElement("p")
+            elemento.style.color="pink"
+            elemento.textContent=texto.value
+            //contenido.appendChild(elemento);
+            //contenido.insertBefore(elemento,contenido.firstElementChild)
+            contenido.insertBefore(elemento,contenido.children[Math.round(contenido.children.length/2)])
+        })
+        reem.addEventListener("click",()=>{
+            let h1=document.getElementsByTagName("h1")[0]
+            let echado;
+          
+            echado=contenido.replaceChild(h1,contenido.lastElementChild)
+            document.getElementsByTagName("body")[0].appendChild(echado)
+        } )
+        
+       eli.addEventListener("click",()=>{
+           contenido.removeChild(contenido.firstElementChild)
+       })
+    </script>
+</body>
+</html>
