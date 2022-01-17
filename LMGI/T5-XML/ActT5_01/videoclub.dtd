@@ -14,14 +14,17 @@
             <!ATTLIST alquiler fecha_devolucion CDATA #REQUIRED>
 
             <!ELEMENT pelicula (titulo,genero,duracion,reparto,cartelera*)> 
+                <!ELEMENT titulo (#PCDATA)>
                 <!ELEMENT genero (#PCDATA)>
                 <!ELEMENT duracion (#PCDATA)>
                 <!ELEMENT reparto (actor+)>
+                <!ELEMENT actor (#PCDATA)>
                 <!ELEMENT cartelera ANY>
                     <!ATTLIST cartelera formato CDATA #FIXED ".jpg"
                                         img (c1201|c0437|c1201) #REQUIRED>
                     <!ATTLIST pelicula idpelicula ID #REQUIRED
                                    valoracion CDATA #IMPLIED>
+                
 
         <!ELEMENT compra ((DVDs|cinta_video)*)>
                 <!ELEMENT DVDs (titulo,fecha_A_Venta)>
@@ -30,3 +33,5 @@
                     <!ATTLIST cinta_video formato CDATA #FIXED "VHS"
                                           rebobinada (si | no) #required >
         <!ELEMENT resguardo (forma_pago,importe_total)>
+        <!ELEMENT forma_pago (#PCDATA)>
+        <!ELEMENT importe_total (#PCDATA)>

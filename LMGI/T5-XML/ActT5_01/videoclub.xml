@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE videoclub SYSTEM "videoclub.dtd">
+<documento>
+    <factura>
+        <datos_cliente>
+            <nombre></nombre>
+            <apellidos> </apellidos>
+            <dni></dni>
+            <telefono></telefono>
+        </datos_cliente>
+        <datos_ticket>
+            <resguardo>
+                <forma_pago></forma_pago>
+                <importe_total></importe_total>
+            </resguardo>
+            <alquiler>
+                <pelicula>
+                    <titulo></titulo>
+                    <genero></genero>
+                    <duracion></duracion>
+                    <reparto></reparto>
+                    <cartelera></cartelera>
+                </pelicula>
+            </alquiler>
+        </datos_ticket>
+    </factura>
+</documento>
