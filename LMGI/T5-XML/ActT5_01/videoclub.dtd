@@ -1,37 +1,33 @@
-<!ELEMENT documento (factura*)>
+<!ELEMENT videoclub (factura*)>
 <!ELEMENT factura (datos_cliente,datos_ticket)>
-
-    <!ELEMENT datos_cliente (nombre,apellidos,dni,telefono?)>
-        <!ATTLIST datoscliente identificador ID #REQUIRED>
-        <!ELEMENT nombre (#PCDATA)>
-        <!ELEMENT apellidos (#PCDATA)>
-        <!ELEMENT dni (#PCDATA)>
-        <!ELEMENT telefono (#PCDATA)>
-
-    <!ELEMENT datos_ticket (resguardo,(alquiler|compra)+)> 
-
-        <!ELEMENT alquiler (pelicula+)>
-            <!ATTLIST alquiler fecha_devolucion CDATA #REQUIRED>
-
-            <!ELEMENT pelicula (titulo,genero,duracion,reparto,cartelera*)> 
-                <!ELEMENT titulo (#PCDATA)>
-                <!ELEMENT genero (#PCDATA)>
-                <!ELEMENT duracion (#PCDATA)>
-                <!ELEMENT reparto (actor+)>
-                <!ELEMENT actor (#PCDATA)>
-                <!ELEMENT cartelera ANY>
-                    <!ATTLIST cartelera formato CDATA #FIXED ".jpg"
-                                        img (c1201|c0437|c1201) #REQUIRED>
-                    <!ATTLIST pelicula idpelicula ID #REQUIRED
-                                   valoracion CDATA #IMPLIED>
-                
-
-        <!ELEMENT compra ((DVDs|cinta_video)*)>
-                <!ELEMENT DVDs (titulo,fecha_A_Venta)>
-                    <!ATTLIST DVDs extra (si|no) #REQUIRED>
-                <!ELEMENT cintavideo (#PCDATA)>
-                    <!ATTLIST cinta_video formato CDATA #FIXED "VHS"
-                                          rebobinada (si | no) #required >
-        <!ELEMENT resguardo (forma_pago,importe_total)>
-        <!ELEMENT forma_pago (#PCDATA)>
-        <!ELEMENT importe_total (#PCDATA)>
+<!ELEMENT datos_cliente (nombre,apellidos,dni,telefono?)>
+<!ATTLIST datos_cliente identificador ID #REQUIRED>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT apellidos (#PCDATA)>
+<!ELEMENT dni (#PCDATA)>
+<!ELEMENT telefono (#PCDATA)>
+<!ELEMENT datos_ticket (resguardo,(alquiler|compra)+)> 
+<!ELEMENT alquiler (pelicula+)>
+<!ATTLIST alquiler fecha_devolucion CDATA #REQUIRED>
+<!ELEMENT pelicula (titulo,genero,duracion,reparto,cartelera*)> 
+<!ELEMENT titulo (#PCDATA)>
+<!ELEMENT genero (#PCDATA)>
+<!ELEMENT duracion (#PCDATA)>
+<!ELEMENT reparto (actor+)>
+<!ELEMENT actor (#PCDATA)>
+<!ELEMENT cartelera ANY>
+<!ATTLIST cartelera formato CDATA #FIXED ".jpg">
+<!ATTLIST cartelera img (c1201 | c0437 | c1205)  #REQUIRED>
+<!ATTLIST pelicula idpelicula ID #REQUIRED
+                   valoracion CDATA #IMPLIED>
+<!ELEMENT compra ((DVDs|cinta_video)*)>
+<!ELEMENT DVDs (titulo_D,fecha_A_Venta)>
+<!ELEMENT titulo_D (#PCDATA)>
+<!ELEMENT fecha_A_Venta (#PCDATA)>
+<!ATTLIST DVDs extra (si|no) #REQUIRED>
+<!ELEMENT cinta_video (#PCDATA)>
+<!ATTLIST cinta_video formato CDATA #FIXED "VHS">
+<!ATTLIST cinta_video rebobinado (si|no) #REQUIRED >
+<!ELEMENT resguardo (forma_pago,importe_total)>
+<!ELEMENT forma_pago (#PCDATA)>
+<!ELEMENT importe_total (#PCDATA)>

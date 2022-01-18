@@ -1,27 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE videoclub SYSTEM "videoclub.dtd">
-<documento>
+<videoclub>
     <factura>
-        <datos_cliente>
-            <nombre></nombre>
-            <apellidos> </apellidos>
-            <dni></dni>
-            <telefono></telefono>
+        <datos_cliente identificador="s01">
+            <nombre>Juan</nombre>
+            <apellidos> Vasquez Polo</apellidos>
+            <dni>457855455D</dni>
+            <telefono>65233565</telefono>
         </datos_cliente>
         <datos_ticket>
             <resguardo>
-                <forma_pago></forma_pago>
-                <importe_total></importe_total>
+                <forma_pago>Efectivo</forma_pago>
+                <importe_total>20.3</importe_total>
             </resguardo>
-            <alquiler>
-                <pelicula>
-                    <titulo></titulo>
-                    <genero></genero>
-                    <duracion></duracion>
-                    <reparto></reparto>
-                    <cartelera></cartelera>
+            <alquiler fecha_devolucion="02/02/2022">
+                <pelicula  idpelicula="s03" valoracion="4">
+                    <titulo>Buscando a nemo</titulo>
+                    <genero>Animada</genero>
+                    <duracion>195 min</duracion>
+                    <reparto>
+                        <actor>Dory</actor>
+                    </reparto>
+                    <cartelera formato=".jpg" img="c0437"></cartelera>
                 </pelicula>
             </alquiler>
         </datos_ticket>
     </factura>
-</documento>
+    <factura>
+        <datos_cliente identificador="s03">
+            <nombre>Maria</nombre>
+            <apellidos> Ordoñez Polo</apellidos>
+            <dni>4555775D</dni>
+            <telefono>6448929</telefono>
+        </datos_cliente>
+        <datos_ticket>
+            <resguardo>
+                <forma_pago>Tarjeta</forma_pago>
+                <importe_total>32</importe_total>
+            </resguardo>
+            <compra>
+                <DVDs extra="no">
+                    <titulo_D>Marco</titulo_D>
+                    <fecha_A_Venta>12/11/1999</fecha_A_Venta>
+                </DVDs>
+            </compra>
+        </datos_ticket>
+    </factura>
+    
+</videoclub>
