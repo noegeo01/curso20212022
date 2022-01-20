@@ -18,10 +18,16 @@
         let nombreCookie=document.getElementById('nCookie')
         let valorCookie=document.getElementById('vCookie')
 
-        let bEstablecer=document-getElementById('estCookie')
-        let bMostrar=document-getElementById('mosCookie')
+        let bEstablecer=document.getElementById('estCookie')
+        let bMostrar=document.getElementById('mosCookie')
         bEstablecer.addEventListener('click',()=>{
-            document.cookie=`${nombreCookie}.value=${valorCookie.value}`
+            // ---1*60*100--Quiere decir que un minuto se multiplica por 60 segundos 
+            //     que estos se multiplican por 1000 milisegundos
+            let unMinutoGMT=new Date(new Date().getTime()+1*60*1000);
+            //El navegador chrome añade una hora por defecto
+            //max-age=20 una forma de expirar
+            document.cookie=`${nombreCookie.value}=${valorCookie.value};expires=${unMinutoGMT}`
+            alert(unMinutoGMT+' ' +new Date(new Date().getTime()))
         })
         bMostrar.addEventListener('click',()=>{
             alert(document.cookie)

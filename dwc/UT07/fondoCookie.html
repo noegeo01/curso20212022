@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>color de fondo</p>
+    <input type="text" id="vCookie">
+    <p><button id="estCookie">Establecer Fondo</button>
+        <button id="mosCookie">Mostrar cookie</button>
+    </p>
+    <script>
+        document.body.style.backgroundColor = sacarFondo()
+        let valorCookie = document.getElementById('vCookie')
+        let bEstablecer = document.getElementById('estCookie')
+        let bMostrar = document.getElementById('mosCookie')
+        bEstablecer.addEventListener('click', () => {
+            document.cookie = `fondo=${valorCookie.value}`
+            document.body.style.backgroundColor = valorCookie.value
+        })
+
+        bMostrar.addEventListener('click', () => {
+            alert(sacarFondo())
+
+        })
+
+       
+        function sacarFondo(){
+            let expr=/(fondo=)([a-z]+)/
+           return expr.exec(document.cookie)[2]
+        }
+    </script>
+</body>
+
+</html>

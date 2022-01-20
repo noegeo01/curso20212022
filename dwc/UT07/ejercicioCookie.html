@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Has entrado <span id="contador">0</span></h1>
+
+
+    
+    <script>
+        /**
+         * Contador decuantas veces ingresa el usuario
+        */
+
+
+        let contador = document.getElementById('contador');
+        document.cookie
+        if (!estaLaCookie()) {
+            alert("no hay cookie")
+            document.cookie = 'visitas=1'
+        } else {
+            let valor_nuevo = parseInt(document.cookie.split('=')[1])
+
+            document.cookie = `visitas=${++valor_nuevo}`
+            contador.textContent = document.cookie.split('=')[1]
+
+        }
+
+
+        function estaLaCookie() {
+            let expr = /visitas=[0-9]+/
+            return expr.test(document.cookie)
+        }
+
+       
+    </script>
+</body>
+
+</html>
