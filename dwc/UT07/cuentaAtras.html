@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h1 class="text-center">Cuenta atrás</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-3">
+                <h2>Faltan <span id="cambio">0</span> segundos</h2>
+            </div>
+            <div class="col-6">
+                <label for="Segundos" class="form-label">Introduce segundos a contar</label>
+                <input type="number" class="form-control" id="segundos" placeholder="segundos a contar">
+                <button type="button" class="btn btn-danger mt-3" id="inicio">Iniciar</button>
+                <button type="button" class="btn btn-warning mt-3" id="para">Parar</button>
+            </div>
+            <div class="col-3 bg-warning" id="color">
+                
+            </div>
+            <script>
+                /*variable que inicializa la cuenta atras*/
+                let inicio = document.getElementById('inicio');
+                //Variable que detiene la cuenta atras
+                let para = document.getElementById('para');
+                //Variable que recoje los segundos a contar
+                let segundos = document.getElementById('segundos')
+                // Variable que cambia el color de fondo
+                let color = document.getElementById('color')
+                //Variable que cambia  la cuenta 
+                let cambio = document.getElementById('cambio')
+                //Variable que llevara el tiempo
+                let cuenta_atras = 0
+                
+
+                //Funcion que muestra a el usuario cunatzos segundos han pasado
+                function muestra_segundos(estado) {
+                   
+                        cambio.textContent=`${--estado}`
+                    
+                   
+                }
+                //Convertimos los segundos en milisegundos
+                let limite=0
+                
+                inicio.addEventListener('click', () => {
+                    limite=segundos.value*1000; 
+                    cambio.textContent=segundos.value
+                    cuenta_atras=setInterval(()=>{
+                        muestra_segundos(parseInt(cambio.textContent))},1000);
+                    
+                    setTimeout(() => {
+                        //Cambia el color del recuadro amarrillo a rojo despues de transcurrir los segundos especificados
+                        color.className="col-3 bg-danger"
+                    },limite);
+                })
+
+                para.addEventListener('click', () => {
+                    clearInterval(cuenta_atras)
+                    cambio.textContent=`parado`
+                })
+            </script>
+        </div>
+    </div>
+</body>
+
+</html>

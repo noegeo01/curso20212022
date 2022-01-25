@@ -46,5 +46,22 @@
             </compra>
         </datos_ticket>
     </factura>
+    <factura>
+         <datos_cliente identificador="s06">
+            <nombre>Marco</nombre>
+            <apellidos> Hernandez Ruiz</apellidos>
+            <dni>46767675D</dni>
+            <telefono>6755799</telefono>
+        </datos_cliente>
+        <datos_ticket>
+            <resguardo>
+                <forma_pago>Efectivo</forma_pago>
+                <importe_total>44</importe_total>
+            </resguardo>
+            <compra>
+               <cinta_video formato="VHS" rebobinado="si"></cinta_video>
+            </compra>
+        </datos_ticket>
+    </factura>
     
 </videoclub>

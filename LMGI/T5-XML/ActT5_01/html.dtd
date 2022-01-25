@@ -1,0 +1,43 @@
+<!ELEMENT html (head+,body+)>
+<!ELEMENT head (base*,link*,meta*,noscript*,script*,style*,title+)>
+    <!ELEMENT base (#PCDATA)>
+    <!ELEMENT link (#PCDATA)>
+    <!ELEMENT meta (#PCDATA)>
+    <!ELEMENT noscript (#PCDATA)>
+    <!ELEMENT script (#PCDATA)>
+    <!ELEMENT style (#PCDATA)>
+    <!ELEMENT title (#PCDATA)>
+<!ELEMENT body (a*,hr*,img*,h1*,h6*,p*,strong*,sub*,sup*,ol*,table*,form*)>
+    <!ELEMENT a (#PCDATA)>
+        <!ATTLIST a href  CDATA "#" >
+        <!ATTLIST a rel CDATA >
+    <!ELEMENT hr (#PCDATA)>
+    <!ELEMENT img (#PCDATA)>
+        <!ATTLIST img scr CDATA >
+        <!ATTLIST img alt CDATA >
+        <!ATTLIST img width CDATA>
+        <!ATTLIST img height CDATA>
+    <!ELEMENT h1 (#PCDATA)>
+        <!ATTLIST h1 h1left CDATA>
+        <!ATTLIST h1 h1center CDATA>
+        <!ATTLIST h1 h1right CDATA>
+    <!ELEMENT h6 (#PCDATA)>
+        <!ATTLIST h6 h6left CDATA>
+        <!ATTLIST h6 h6center CDATA>
+        <!ATTLIST h6 h6right CDATA>
+    <!ELEMENT p (#PCDATA)>
+    <!ELEMENT strong (#PCDATA)>
+    <!ELEMENT sub (#PCDATA)>
+    <!ELEMENT sup (#PCDATA)>
+    <!ELEMENT ol (li)>
+    <!ELEMENT li (#PCDATA)>
+    <!ELEMENT ul (li)>
+    <!ELEMENT table (#PCDATA)>
+        <!ATTLIST table aling CDATA>
+        <!ATTLIST table border CDATA>
+        <!ATTLIST table height CDATA>
+        <!ATTLIST table width CDATA>
+    <!ELEMENT form (#PCDATA)>
+        <!ATTLIST form action CDATA>
+        <!ATTLIST form method CDATA>
+        <!ATTLIST form enctype CDATA>
