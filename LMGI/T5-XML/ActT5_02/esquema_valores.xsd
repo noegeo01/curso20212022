@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="valores">
+
+    </xs:element>
+    <xs:element name="accion">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="mercado" type="xs:string"></xs:element>
+                <xs:element name="nombre" type="xs:string"></xs:element>
+                <xs:element name="mercado-abierto" >
+                </xs:element>
+                <xs:element name="recomendacion">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:positiveInteger">
+                                   <xs:minInclusive value="1"></xs:minInclusive>
+                                        <xs:maxInclusive value="5"></xs:maxInclusive>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                </xs:element>
+                
+                <xs:element name="fecha">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="dia">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:positiveInteger">
+                                        <xs:minInclusive value="1"></xs:minInclusive>
+                                        <xs:maxInclusive value="31"></xs:maxInclusive>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
