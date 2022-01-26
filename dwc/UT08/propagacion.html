@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obsoleto</title>
+    <style>
+        div{
+            
+            background-color: burlywood;
+            border: 1px solid black;
+            height: 300px;
+            padding: 2em;
+            width: 90%;
+            
+        }
+        h1{
+            border: 1px solid black;
+            padding: 2em;
+            background-color: cadetblue;
+        }
+        span{
+            padding: 1em;
+            border: 1px solid black;
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1><span>Pulsa aqui</span></h1>
+    </div>
+    <script>
+        let div = document.getElementsByTagName('div')[0]
+        let h1 = document.getElementsByTagName('h1')[0]
+        let span = document.getElementsByTagName('span')[0]
+
+        div.addEventListener('click',()=>{
+            console.log('Estoy en el div')
+        },true)
+
+        h1.addEventListener('click',()=>{
+            console.log('Estoy en el h1')
+        },true)
+
+        span.addEventListener('click',()=>{
+            console.log('Estoy en el span')
+        },true)
+    </script>
+</body>
+</html>

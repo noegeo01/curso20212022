@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navegador</title>
+</head>
+<body>
+    <p id="motor">Datos del navegador</p>
+    <button id="datos_motor">Mostar datos de tu navegador</button>
+    <button id="recargar">Recargar</button>
+    <script>
+        let pmotor=document.getElementById('motor');
+        let bdatos_motor= document.getElementById('datos_motor');
+        let recargar= document.getElementById('recargar');
+
+        bdatos_motor.addEventListener('click',()=>{
+            //Escribe los datos del navegador
+            //navigator.language te dice el idioma del motor
+
+            let lista_plugins
+            for ( plugin of navigator.plugins) {
+                lista_plugins+=plugin.name+' '
+            }
+            //location='https://www.google.es'
+            pmotor.textContent=navigator.userAgent+' '+navigator.cookieEnabled;
+            pmotor.textContent=location
+        })
+        recargar.addEventListener('click',()=>{
+            history.go(-1)
+        })
+    </script>
+</body>
+</html>
