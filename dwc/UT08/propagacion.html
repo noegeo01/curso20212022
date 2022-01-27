@@ -36,10 +36,18 @@
         let h1 = document.getElementsByTagName('h1')[0]
         let span = document.getElementsByTagName('span')[0]
 
-        div.addEventListener('click',()=>{
+        div.addEventListener('click',(e)=>{
+            span.textContent=`x:${e.screenX} y:${e.screenY} `
             console.log('Estoy en el div')
-        },true)
 
+        },true)
+        document.addEventListener('mousemove',(e)=>{
+            span.textContent=`x:${e.screenX} y:${e.screenY} `
+        })
+        document.addEventListener('keyup',(e)=>{
+            
+            span.textContent= `${e.altKeys}+${e.key}`
+        })
         h1.addEventListener('click',()=>{
             console.log('Estoy en el h1')
         },true)
@@ -47,6 +55,9 @@
         span.addEventListener('click',()=>{
             console.log('Estoy en el span')
         },true)
+
+
     </script>
 </body>
 </html>
+

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            position: fixed;
+            width: 500px;
+            height: 500px;
+            background-color: cadetblue;
+        }
+        img{
+            position: absolute;
+            width: 10%;
+        }
+    </style>
+</head>
+<body>
+    <div id="contenedor">
+        <img id="perro" src="img/perro1.png" alt="perro">
+        <img id="hueso" src="img/hueso1.png" alt="">
+    </div>
+    <script>
+        let cuadrado=document.getElementById('contenedor')
+        let perro=document.getElementById('perro')
+        let hueso=document.getElementById('hueso')
+
+        document.addEventListener('mousemove',(e)=>{
+            perro.style.top=`${e.clientY+10}px`
+            perro.style.left=`${e.clientX+10}px`
+            hueso.style.top=`${e.clientY-15}px`
+            hueso.style.left=`${e.clientX-15}px`
+        })
+    </script>
+</body>
+</html>
