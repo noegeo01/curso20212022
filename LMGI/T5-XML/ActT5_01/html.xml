@@ -1,9 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE html SYSTEM "html2.dtd">
+<!DOCTYPE html SYSTEM "html.dtd">
 <html>
-<head>hola</head>
-<body>adfasdf</body>
-<!--    
+ 
     <head>
         <title>Primera prueba</title>
         <style>
@@ -15,5 +13,5 @@
     <body>
         <h1 id="ddsf" title="h1">Primera prueba</h1>
     </body>
-    -->
+    
 </html>
