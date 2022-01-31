@@ -1,0 +1,56 @@
+{
+    "Editoriales" : [{
+        "nombre" : "Ediciones B",
+        "direccion" : "Calle Luchana, 23, 1ª Planta, Madrid" ,
+        "email" : " edicionesb@edicionesb.com.co" ,
+        "pagina_web" : "http://www.edicionesb.com",
+        "telefono" :  915863300 ,
+        "fax" :  915863514  ,
+        "libros" : [
+            {
+                "titulo" :"La casa del páramo",
+                "autor" : "Elizabeth Gaskell ",
+                "fecha" : "29/11/2011",
+                "isbn" : 9788484284376
+            }
+            ,
+            {
+                "titulo" :"Un Gángster en Berlín",
+                "autor" : "Volker Kutscher",
+                "fecha" : "1/1/2015",
+                "isbn" : "8466657150"
+            }
+            
+        ]
+    },
+    {
+        "nombre" : "Planeta",
+        "direccion" : "Carrer de Mexico, 20, 03008 Alacant" ,
+        "email" : "comunicacioneditorialplaneta@planeta.es" ,
+        "pagina_web" : "www.planetadelibros.com",
+        "telefono" :  934928000 ,
+        "fax" : 934928558 ,
+        "libros" : [
+            {
+                "titulo" :"El corresponsal",
+                "autor" : "David Jiménez",
+                "fecha" : "26/01/2022",
+                "isbn" : 9788408250869 
+            }
+            ,
+            {
+                "titulo" :"A fuego lento",
+                "autor" : "Paula Hawkins",
+                "fecha" : "01/09/2021",
+                "isbn" : 9788408246367
+            },
+            {
+                "titulo" :"Miss Merkel. El caso de la canciller jubilada",
+                "autor" : "David Safier",
+                "fecha" : "29/09/2021",
+                "isbn" : 9788432239205
+            }
+        ]
+    }
+]
+}

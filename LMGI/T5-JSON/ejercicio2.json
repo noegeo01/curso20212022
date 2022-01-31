@@ -1,0 +1,49 @@
+{
+    "Personas": [{
+        "nombre" :"Juan",
+        "apellidos" : "Martinez",
+        "fecha_nacimiento" : "22/4/2015" ,
+        "edad" : 12 ,
+        "direccion" : {
+            "tipo" : "principal",
+            "nombre_calle" : "españa",
+            "numero" : 22,
+            "ampliacion" :""
+        },
+        "poblacion" : "Madrid",
+        "idiomas" : "ES-EN"
+    },
+    {
+        "nombre" :"Isabel",
+        "apellidos" : "Puche",
+        "fecha_nacimiento" : "22/1/1989" ,
+        "edad" : 33 ,
+        "direccion" : {
+            "tipo" : "secundaria",
+            "nombre_calle" : "Isabel catolica",
+            "numero" : 41,
+            "ampliacion":{
+                "tipo" : "principal",
+            "nombre_calle" : "Hopital",
+            "numero" : 12
+            }
+        },
+        "poblacion" : "Murcia",
+        "idiomas" : "EN"
+    },
+    {
+        "nombre" :"Marco",
+        "apellidos" : "Ortuño",
+        "fecha_nacimiento" : "13/9/2000" ,
+        "edad" : 22 ,
+        "direccion" : {
+            "tipo" : "principal",
+            "nombre_calle" :"",
+            "numero" : 22,
+            "ampliacion" :""
+        },
+        "poblacion" : "",
+        "idiomas" : ""
+    }
+]
+}
