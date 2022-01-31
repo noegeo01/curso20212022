@@ -8,7 +8,7 @@
             "tipo" : "principal",
             "nombre_calle" : "españa",
             "numero" : 22,
-            "ampliacion" :""
+            "ampliacion" : null
         },
         "poblacion" : "Madrid",
         "idiomas" : "ES-EN"
@@ -40,10 +40,10 @@
             "tipo" : "principal",
             "nombre_calle" :"",
             "numero" : 22,
-            "ampliacion" :""
+            "ampliacion" : null
         },
-        "poblacion" : "",
-        "idiomas" : ""
+        "poblacion" : "Alicante",
+        "idiomas" : "ES"
     }
 ]
 }
