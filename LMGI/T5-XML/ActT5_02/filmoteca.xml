@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<filmoteca xmlns:xs="http://www.w3.org/2001/XMLSchema-instance"
-    xs:noNamespaceSchemaLocation="esquema_filmoteca.xsd">
+
+<filmoteca xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="esquema_filmoteca.xsd">
   <pelicula codigo='p0001'>
     <titulo idioma="es">Cinema Paradiso</titulo>
     <director>Giuseppe Tornatore</director>

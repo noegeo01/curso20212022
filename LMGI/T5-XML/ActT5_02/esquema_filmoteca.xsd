@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="filmoteca">
+
+    </xs:element>
+    <xs:element name="pelicula">
+
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="titulo" > 
+                    <xs:complexType>
+                         <xs:simpleType>
+                            <xs:extesion base="xs:string">
+                                <xs:attribute name="idioma" type="xs:string"/>
+                            </xs:extesion>
+    
+                  
+                       
+                         
+                           
+                        </xs:simpleType>
+                    </xs:complexType>
+                     
+                    
+                </xs:element>
+            </xs:sequence>
+            <xs:attribute name="codigo" type="xs:string"/>      
+        </xs:complexType>
+        https://www.abrirllave.com/xsd/ejercicio-factura.php
+    
+    </xs:element>
+</xs:schema>
