@@ -11,8 +11,15 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
     crossorigin="anonymous"></script>
-
-</head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css">
+  <style>
+    i{
+      color: white;
+      font-size: 3rem;
+      padding-right: 2rem;
+    }
+  </style>
+  </head>
 
 <body>
   <div class="container ">
@@ -104,65 +111,112 @@
       </div>
     </div>
     <div class="row ">
-      <!--Cabecera concierto-->
+      <!--Cabecera conciertos-->
       <div class="col-12 text-center bg-dark text-light p-2  mt-2">
         <p class="h1">Fecha concierto</p>
-        
-      </div>
-    </div>
-    <div class="row mt-1">
-      <div class="col-12 col-sm-6 col-lg-3">
-        <div class="card" >
-          <img src="img/concierto.jpeg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-12 col-sm-6 col-lg-3">
-        <div class="card" >
-          <img src="img/concierto.jpeg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-12 col-sm-6 col-lg-3">
-        <div class="card" >
-          <img src="img/concierto.jpeg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-12 col-sm-6 col-lg-3">
-        <div class="card" >
-          <img src="img/concierto.jpeg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-          </div>
-        </div>
-      </div>
-    </div>
 
-    <div class="row">contacto</div>
+      </div>
+    </div>
+    <!--Fechas de conciertos-->
+    <div class="row mt-1">
+      <!--Primer card-->
+      <div class="col-12 col-sm-6 col-lg-3">
+        <div class="card">
+          <img src="img/concierto.jpeg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+      </div>
+      <!--Segundo card-->
+      <div class="col-12 col-sm-6 col-lg-3">
+        <div class="card">
+          <img src="img/concierto2.jpeg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+      </div>
+      <!--Tercer card-->
+      <div class="col-12 col-sm-6 col-lg-3">
+        <div class="card">
+          <img src="img/concierto.jpeg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+      </div>
+      <!--Cuarto card-->
+      <div class="col-12 col-sm-6 col-lg-3">
+        <div class="card">
+          <img src="img/concierto4.jpeg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--cabecera contacto-->
     <div class="row">
       <div class="col">
-        formulario
-      </div>
-      <div class="col">
-        Datos
+        <p class="h4 text-center bg-dark text-light p-2 mt-2">
+          contacto
+        </p>
       </div>
     </div>
-    <div class="row">Pie</div>
+    <!--Formulario y datos-->
+    <div class="row">
+      <!--Formulario-->
+      <div class="col-12 col-md-6">
+        <form action="">
+          <label class="form-label" for="">nombre</label>
+          <input type="text" class="form-control">
+
+          <label class="form-label" for="">Apellidos</label>
+          <input type="text" class="form-control">
+          <label class="form-label" for="">Descripcion</label>
+          <textarea class="form-control"></textarea>
+          <input type="submit" name="" id="" class="btn btn-dark mt-2">
+        </form>
+      </div>
+      <!--Info -->
+      <div class="col-12 col-md-6 d-flex flex-column justify-content-between">
+        <h3 class="bg-secondary text-light mt-2 text-center ">
+          si necesitas informacion
+        </h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste tempore, tenetur doloribus, voluptatum deleniti
+          ducimus qui corporis reprehenderit officiis odio, vel sapiente consectetur modi aliquid eum consequuntur
+          fugiat minima? Suscipit.
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio nesciunt harum explicabo excepturi totam nobis recusandae modi, cumque laborum asperiores sunt molestias voluptates corrupti molestiae! Ipsa incidunt ipsam autem dignissimos.</p>
+      </div>
+    </div>
+    <!--Pie -->
+    <div class="row bg-dark  p-4 mt-2">
+      <div class="col-12">
+        <p class="text-center text-light">Hecho por Noelia G. Ocaña vega</p>
+      </div>
+    </div>
+    <div class="row bg-dark p-3 ">
+      <div class="col-12 text-center d-flex justify-content-end">
+        <i class="bi bi-twitter"></i>
+        <i class="bi bi-facebook"></i>
+        <i class="bi bi-meta"></i>
+        <i class="bi bi-whatsapp"></i>
+        <i class="bi bi-instagram"></i>
+      </div>
+    </div>
   </div>
 </body>
 
