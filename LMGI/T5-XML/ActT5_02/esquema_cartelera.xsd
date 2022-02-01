@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="cartelera"></xs:element>
+    <xs:element name="película">
+        <xs:complexType>
+            <xs:sequence>
+            <xs:element name="título" >
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:minLength value="4"></xs:minLength>
+                        <xs:maxLength value="80"></xs:maxLength>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="título_original">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:minLength value="4"></xs:minLength>
+                        <xs:maxLength value="80"></xs:maxLength>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="nacionalidad"></xs:element>
+            </xs:sequence>
+            <xs:attribute name="código" type="xs:string"></xs:attribute>
+            <xs:attribute name="duración" type="xs:string"></xs:attribute>
+            <xs:attribute name="año" type="xs:string"></xs:attribute>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

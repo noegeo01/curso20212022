@@ -11,7 +11,10 @@
             "ampliacion" : null
         },
         "poblacion" : "Madrid",
-        "idiomas" : "ES-EN"
+        "idiomas" : {
+            "materno":"Español",
+            "Otro":"Ingles"
+        }
     },
     {
         "nombre" :"Isabel",
@@ -29,7 +32,10 @@
             }
         },
         "poblacion" : "Murcia",
-        "idiomas" : "EN"
+        "idiomas" :  {
+            "materno":"Español",
+            "Otro":null
+        }
     },
     {
         "nombre" :"Marco",
@@ -43,7 +49,10 @@
             "ampliacion" : null
         },
         "poblacion" : "Alicante",
-        "idiomas" : "ES"
+        "idiomas" : {
+            "materno":"Español",
+            "Otro":null
+        }
     }
 ]
 }

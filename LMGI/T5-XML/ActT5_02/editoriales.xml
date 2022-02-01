@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<editoriales xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="esquema_editoriales.xsd">
+   <editorial>
+    <nombre>Ediciones B</nombre>
+    <direccion>Calle Luchana, 23, 1ª Planta, Madrid</direccion>
+    <email> edicionesb@edicionesb.com.co</email>
+    <pagina_web>http://www.edicionesb.com</pagina_web>
+    <telefono>915863300</telefono>
+    <fax>915863514</fax>
+    <libro>
+        <titulo>La casa del páramo</titulo>
+        <autor>Elizabeth Gaskell </autor>
+        <fecha>29/11/2011</fecha>
+        <isbn>9788484284376</isbn>
+    </libro>
+    <libro>
+        <titulo>Un Gángster en Berlín</titulo>
+        <autor>Volker Kutscher</autor>
+        <fecha>01/01/2015</fecha>
+        <isbn>8466657150</isbn>
+    </libro>
+    </editorial>
+    <editorial>
+        <nombre>Planeta</nombre>
+         <direccion>Carrer de Mexico, 20, 03008 Alacant</direccion>
+         <email>comunicacioneditorialplaneta@planeta.es</email>
+         <pagina_web>www.planetadelibros.com</pagina_web>
+         <telefono>934928000</telefono>
+         <fax>934928558</fax>
+         <libro>
+             <titulo>El corresponsal</titulo>
+             <autor>David Jiménez</autor>
+             <fecha>26/01/2022</fecha>
+             <isbn>9788408250869</isbn>
+         </libro>
+         <libro>
+             <titulo>A fuego lento</titulo>
+             <autor>Paula Hawkins</autor>
+             <fecha>01/09/2021</fecha>
+             <isbn>9788408246367</isbn>
+         </libro>
+         <libro>
+             <titulo>Miss Merkel. El caso de la canciller jubilada</titulo>
+             <autor>David Safier</autor>
+             <fecha>29/09/2021</fecha>
+             <isbn>9788432239205</isbn>
+         </libro>
+    </editorial>
+</editoriales>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<personas xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="esquema_persona.xsd">
+    <persona>
+        <nombre>Maria</nombre>
+        <apellidos>Ocampo</apellidos>
+        <direccion>c/ hospital</direccion>
+        <dni>45646612j</dni>
+        <telefono>6155556069</telefono>
+        <cod_postal>30510</cod_postal>
+        <ciudad>Yecla</ciudad>
+        <provincia>Murcia</provincia>
+    </persona>
+    <persona>
+        <nombre>Juan</nombre>
+        <apellidos>Martinez</apellidos>
+        <direccion>c/ alferez maestre</direccion>
+        <dni>45635465x</dni>
+        <telefono>6551274895</telefono>
+        <cod_postal>30510</cod_postal>
+        <ciudad>Yecla</ciudad>
+        <provincia>Murcia</provincia>
+    </persona>
+    <persona>
+        <nombre>Jefferson</nombre>
+        <apellidos>Vasquez </apellidos>
+        <direccion>c/cruz de piedra </direccion>
+        <dni>44355212r</dni>
+        <telefono>6521351328</telefono>
+        <cod_postal>30510</cod_postal>
+        <ciudad>Yecla</ciudad>
+        <provincia>Murcia</provincia>
+    </persona>
+</personas>
