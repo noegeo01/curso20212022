@@ -7,22 +7,21 @@
 
         <xs:complexType>
             <xs:sequence>
-                <xs:element name="titulo" > 
+                <xs:element name="titulo" minOccurs="1" maxOccurs="3"> 
                     <xs:complexType>
-                         <xs:simpleType>
-                            <xs:extesion base="xs:string">
-                                <xs:attribute name="idioma" type="xs:string"/>
-                            </xs:extesion>
-                        </xs:simpleType>
-                    </xs:complexType>
-                     
-                    
+                         <xs:simpleContent>
+                            <xs:extension base="xs:string">
+                                <xs:attribute name="idioma" default="es" ></xs:attribute>
+                            </xs:extension>
+                        </xs:simpleContent>
+                    </xs:complexType>                    
                 </xs:element>
+                <xs:element name="director" type="xs:string"></xs:element>
+                <xs:element name="anyo" type="xs:string"></xs:element>
+                <xs:element name="nacionalidad" type="xs:string"></xs:element>
             </xs:sequence>
             <xs:attribute name="codigo" type="xs:string"/>      
         </xs:complexType>
-        https://www.abrirllave.com/xsd/ejercicio-factura.php
-        https://www.abrirllave.com/xsd/ejercicio-precios-de-articulos.php
     
     </xs:element>
 </xs:schema>
