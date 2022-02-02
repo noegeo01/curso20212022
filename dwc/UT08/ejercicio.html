@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            border: 1px black solid;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .formulario {
+            padding: 1em;
+        }
+
+        label,
+        input,
+        button {
+            margin-top: 1em;
+        }
+
+        .hijo {
+            height: 3rem;
+            width: 3rem;
+            border: 1px black solid;
+            margin: 0.5em;
+            padding: 1em;
+        }
+
+        #padre {
+            width: 100%;
+            padding: 2em;
+            display: flex;
+            flex-wrap: wrap;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="formulario">
+
+            <label for="">Cuantos</label>
+            <input type="number" id="icuantos">
+            <button id="bcuantos">Generar</button>
+            <br>
+            <label for="">Texto a insertar</label>
+            <input type="text" id="itexto">
+        </div>
+        <div id="padre">
+        </div>
+    </div>
+    <script>
+        //Declaracion de variables del DOM
+        //icuanto = a el numero de divs que se quiere generar 
+        let icuantos = document.getElementById('icuantos');
+        let bcuantos = document.getElementById('bcuantos');
+        //itexto = el contenido que se quiere añadir al div
+        let itexto = document.getElementById('itexto');
+        //El padre donde se imsertaran los hijos (divs)
+        let padre = document.getElementById('padre');
+
+        function generar_cuadrados(numero) {
+            for (i = 1; i <= numero; i++) {
+                hijo = document.createElement('div');
+                hijo.addEventListener('click',pasa_texto)
+                hijo.classList.add('hijo')
+                
+                padre.appendChild(hijo)
+
+            }
+        }
+        function pasa_texto(e) {
+            e.target.textContent = itexto.value;
+            itexto.value = ""
+        }
+        bcuantos.addEventListener('click', () => {
+            generar_cuadrados(icuantos.value);
+
+        })
+    </script>
+</body>
+
+</html>

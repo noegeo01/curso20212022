@@ -1,0 +1,12 @@
+$primary:pink;
+$info:rgb(224, 88, 111);
+$secondary:blue;
+$warning:red;
+
+
+@media (min-width: 768px){
+    .alto100{ 
+        height:100vh;
+    }
+ }
+@import '../node_modules/bootstrap/scss/bootstrap' 

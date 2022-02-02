@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #imagen{
+            width: 80%;
+            height:600px;
+            border: 1px black solid;
+        }
+    </style>
+</head>
+<body>
+    <!--hacer una pagina web que cada vez que pulse la teclan cambie el 
+        fondo de un div a una imagen aleatoria
+    source.unsplash.com/random -->
+    <div class="contenedor">
+        <div>
+            <h3>Presiona la tecla n para cambiar el fondo de la imagen</h3>
+        </div>
+        <div id="imagen">
+
+        </div>
+    </div>
+    <script>
+        let imagen = document.getElementById('imagen')
+        document.addEventListener("keyup",(e)=>{
+            if(e.key='n')
+            imagen.style.backgroundImage='url("http://www.source.unsplash.com/random")'
+            console.log('hola')
+        })
+    </script>
+</body>
+</html>
