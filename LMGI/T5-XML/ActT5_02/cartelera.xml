@@ -1,23 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE cartelera [
-    <!ELEMENT cartelera (película*)>
-    <!ELEMENT película (título?, título_original,nacionalidad,género,(clasificación|sin_clasificar),sinopsis,director,reparto,web,cartel)>
-    <!ATTLIST película código ID #REQUIRED
-                        duración CDATA #REQUIRED 
-                        año CDATA  "2003 ">
-    <!ELEMENT título (#PCDATA)>
-    <!ELEMENT título_original (#PCDATA)>
-    <!ELEMENT nacionalidad (#PCDATA)>
-    <!ELEMENT género (#PCDATA)>
-    <!ELEMENT clasificación (#PCDATA)>
-    <!ATTLIST clasificación edad (tp|8|12|16|18) ID #REQUIRED>
-    <!ELEMENT sin_clasificar (EMPTY)>
-    <!ELEMENT repartos (actor+)>
-    <!ELEMENT actor (#PCDATA)>
-    <!ELEMENT web ANY>
-    <!ELEMENT cartel ANY)>
-    ]>
-<cartelera>
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<cartelera xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns="./cartelera.xml" 
+	xsi:SchemaLocation="esquema_cartelera.xsd">	>
+
     <película código="p1" duración="152" año="2002">
         <título>AQUELLAS JUERGAS UNIVERSITARIAS</título>
         <título_original>Old School</título_original>

@@ -4,27 +4,79 @@
     <xs:element name="película">
         <xs:complexType>
             <xs:sequence>
-            <xs:element name="título" >
-                <xs:simpleType>
-                    <xs:restriction base="xs:string">
-                        <xs:minLength value="4"></xs:minLength>
-                        <xs:maxLength value="80"></xs:maxLength>
-                    </xs:restriction>
-                </xs:simpleType>
-            </xs:element>
-            <xs:element name="título_original">
-                <xs:simpleType>
-                    <xs:restriction base="xs:string">
-                        <xs:minLength value="4"></xs:minLength>
-                        <xs:maxLength value="80"></xs:maxLength>
-                    </xs:restriction>
-                </xs:simpleType>
-            </xs:element>
-            <xs:element name="nacionalidad"></xs:element>
+                <xs:element name="título">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:minLength value="4"></xs:minLength>
+                            <xs:maxLength value="80"></xs:maxLength>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+                <xs:element name="título_original">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:minLength value="4"></xs:minLength>
+                            <xs:maxLength value="80"></xs:maxLength>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+                <xs:element name="nacionalidad"></xs:element>
+                <xs:element name="género"></xs:element>
+                <xs:element name="clasificación">
+                    <xs:complexType>
+                        <xs:attribute name="edad">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="sin clasificar" />
+                                    <xs:enumeration value="tp" />
+                                    <xs:enumeration value="8" />
+                                    <xs:enumeration value="16" />
+                                    <xs:enumeration value="18" />
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:attribute>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="sinopsis" type="xs:string"></xs:element>
+                <xs:element name="director" type="xs:string"></xs:element>
+                <xs:element name="año"></xs:element>
+                <xs:element name="reparto" minOccurs="1" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="actor">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="nombre" type="xs:string"></xs:element>
+                                        <xs:element name="apellidos" type="xs:string"></xs:element>
+                                        <xs:element name="fecha_nacimiento">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="dia" type="xs:integer"></xs:element>
+                                                    <xs:element name="mes" type="xs:integer"></xs:element>
+                                                    <xs:element name="año" type="xs:integer"></xs:element>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+
+                </xs:element>
+                <xs:element name="web"></xs:element>
+                <xs:element name="cartel"></xs:element>
             </xs:sequence>
             <xs:attribute name="código" type="xs:string"></xs:attribute>
             <xs:attribute name="duración" type="xs:string"></xs:attribute>
-            <xs:attribute name="año" type="xs:string"></xs:attribute>
+            <xs:attribute name="año" >
+                <xs:simpleType>
+                    <xs:restriction base="xs:integer">
+                        <xs:minInclusive value="1919" />
+                        <xs:maxInclusive value="2022" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
         </xs:complexType>
     </xs:element>
 </xs:schema>
