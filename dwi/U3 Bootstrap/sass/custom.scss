@@ -2,6 +2,7 @@ $primary:pink;
 $info:rgb(224, 88, 111);
 $secondary:blue;
 $warning:red;
+$danger:blue;
 
 
 @media (min-width: 768px){
@@ -9,4 +10,5 @@ $warning:red;
         height:100vh;
     }
  }
+ 
 @import '../node_modules/bootstrap/scss/bootstrap' 
