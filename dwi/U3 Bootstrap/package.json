@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "purgecss --css sass/custom.css --content ejemplo/coches.html --output ejemplo/css/reducido.css"
   },
   "keywords": [],
   "author": "Noelia Ocaña Vega",
