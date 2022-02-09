@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poo 2</title>
+</head>
+<body>
+    <script>
+        let poligono_regular ={
+            lados:4,
+            nombre:'cuadrado',
+            tlado:2,
+            area:function(){
+                return poligono_regular.tlado*poligono_regular.tlado
+            },
+            /* perimetro:function(){
+                return poligono_regular.tlado*poligono_regular.lados
+            } */
+            perimetro:function(){
+                return this.tlado*this.lados
+            } 
+        }
+         console.log(poligono_regular.perimetro())
+    </script>
+</body>
+</html>

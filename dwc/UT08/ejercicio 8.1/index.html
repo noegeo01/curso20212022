@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio</title>
+    <style>
+        .formulario{
+            width: 80%;
+            margin: 0  auto;
+            text-align: center;
+            border: 1px black solid;
+        }
+        label,input,button{
+            margin: 1em;
+        }
+        #padre{
+            display: flex;
+            flex-wrap: wrap;
+            border: 1px black solid;
+            width: 1500px;
+            height: 500px;
+            margin-top: 1em;
+        }
+        .hijo{
+            width: 75px;
+            height: 75px;
+            border: 1px black solid;
+            margin: 1em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="formulario">
+            <label for="">Insertar numero de cuadrados </label>
+            <input id="inumeros" type="text">
+            <button id="crear">Crear</button>
+        </div>
+        <div id="padre">
+
+        </div>
+    </div>
+
+    <script>
+        // ---------Declaracion de variables------------
+
+        //Se obtiene el numero de los elementos  que se quieren crear
+        let inumeros =document.getElementById('inumeros');
+        //Se obtiene el boton
+        let bcrear = document.getElementById('crear');
+        //Se obtiene el contenedor padre donde se insertaran los div
+        let padre = document.getElementById('padre');
+        //Se obtienen todos los elementos hijos
+        let hijo = document.getElementsByClassName('hijo')
+
+        //----------------Funciones-------------------
+        
+        //Funcion que genera color aleatoriamente
+        function genera_color(){
+            
+            let rgb=[0,0,0]
+            for(let num in rgb){
+                rgb[num]=Math.round(Math.random()*256)
+               
+            }
+            
+            return `rgb(${rgb.join()})`
+        }
+        console.log(genera_color())
+        
+        //Funcion que genera cuadrados
+        function generar_cuadrados(numero){
+            for(let i =0;i<=numero;i++){
+                hijo = document.createElement('div');
+                hijo.classList.add('hijo')
+                hijo.style.backgroundColor=genera_color()
+                hijo.addEventListener('click',cambia_posicion)
+                hijo.addEventListener('dblclick',elimina)
+                hijo.textContent=i
+                padre.appendChild(hijo);
+            }
+        }
+        
+        // Funcion cambia posicion al final
+        function cambia_posicion (e) {
+             let hijo= padre.removeChild(e.target)
+             padre.appendChild(hijo)
+            /* e.target.style.order=`${inumeros.value}`
+            hijo[inumeros.value].style.order=e.target.textContent
+            console.log('click') */
+        }
+
+        //Funcion elimina elemento
+        function elimina(e){
+         padre.removeChild(e.target)
+        }
+        
+        //-----------eventos----------
+        bcrear.addEventListener('click',()=>{
+            generar_cuadrados(inumeros.value)
+        })
+
+
+    </script>
+</body>
+</html>
