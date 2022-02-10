@@ -37,13 +37,25 @@
 
 
         }
-        let botella1 = new Botella(100, 'plastico', 0);
+
+        // ----------------------HERENCIA----------------
+        function Botella_vino(capacidad,graduacion,tipo, material, contenido = 0){
+            this.__proto__=new Botella(capacidad, material, contenido = 0)
+            this.graduacion=graduacion
+            this.tipo=tipo
+        }
+
+        let botellaVino=new Botella_vino(100,5.3,'cristal')
+
+        console.log('Capacidad : ' + botellaVino.capacidad+' Graduacion : '+botellaVino.graduacion+ ' Material : ' + botellaVino.capacidad + ' Contenido : ' + botellaVino.contenido)
+        /* let botella1 = new Botella(100, 'plastico', 0);
         console.log('Capacidad : ' + botella1.capacidad, ' Material : ' + botella1.capacidad + ' Contenido : ' + botella1.contenido)
         botella1.llenar();
         console.log('Capacidad : ' + botella1.capacidad, ' Material : ' + botella1.capacidad + ' Contenido : ' + botella1.contenido)
         botella1.vaciar(25)
         console.log('Capacidad : ' + botella1.capacidad, ' Material : ' + botella1.capacidad + ' Contenido : ' + botella1.contenido)
-
+        
+ */
 
     </script>
 </body>
