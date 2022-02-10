@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Botellas</title>
+</head>
+
+<body>
+
+    <script>
+        function Botella(capacidad, material, contenido = 0,) {
+            this.contenido = contenido;
+            this.capacidad = capacidad;
+            this.material = material;
+            this.llenar = (cantidad = 'lleno') => {
+                let contViejo=this.contenido
+                if (cantidad == 'lleno' || (this.contenido + cantidad > this.capacidad)) {
+                    this.contenido = this.capacidad;
+                } else {
+
+                    this.contenido = this.capacidad;
+                }
+                return this.contenido-contViejo
+            }
+
+            this.vaciar = (cantidad = 'vacio') => {
+                if ((cantidad == 'vacio')||(this.contenido-cantidad<0)) {
+                    this.contenido = 0
+                } else {
+
+                    this.contenido -= cantidad
+                }
+            }
+
+
+        }
+        let botella1 = new Botella(100, 'plastico', 0);
+        console.log('Capacidad : ' + botella1.capacidad, ' Material : ' + botella1.capacidad + ' Contenido : ' + botella1.contenido)
+        botella1.llenar();
+        console.log('Capacidad : ' + botella1.capacidad, ' Material : ' + botella1.capacidad + ' Contenido : ' + botella1.contenido)
+        botella1.vaciar(25)
+        console.log('Capacidad : ' + botella1.capacidad, ' Material : ' + botella1.capacidad + ' Contenido : ' + botella1.contenido)
+
+
+    </script>
+</body>
+
+</html>

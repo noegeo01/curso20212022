@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propagacion</title>
+    <style>
+        #cuadroGrande{
+
+        }
+        #cuadroPequeño{
+
+        }
+        #cuadrolite{
+
+        }
+    </style>
+</head>
+<body>
+    <div id="cuadroGrande">
+        <div id="cuadroPequeño">
+            <div id="cuadrolite">
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let cg=document.getElementById('cuadroGrande')
+        let cp=document.getElementById('cuadroPequeño')
+        let cl=document.getElementById('cuadrolite')
+
+        cg.addEventListener(('click',()=>{
+            console.log('Soy el cuadro grande')
+        }))
+        cp.addEventListener(('click',()=>{
+            console.log('Soy el cuadro pequeño')
+        }))
+        cg.addEventListener(('click',(e)=>{
+            console.log('Soy el cuadro lite')
+            e.stopPropagation();
+        }))
+    </script>
+</body>
+</html>
