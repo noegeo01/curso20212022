@@ -42,10 +42,10 @@
         function Botella_vino(capacidad,graduacion,tipo, material, contenido = 0){
             this.__proto__=new Botella(capacidad, material, contenido = 0)
             this.graduacion=graduacion
-            this.tipo=tipo
+            this.tipo=()=>this.graduacion > 10 ? 'espitituosa' : 'otro'
         }
 
-        let botellaVino=new Botella_vino(100,5.3,'cristal')
+        let botellaVino=new Botella_vino(100,15.3,'cristal')
 
         console.log('Capacidad : ' + botellaVino.capacidad+' Graduacion : '+botellaVino.graduacion+ ' Material : ' + botellaVino.capacidad + ' Contenido : ' + botellaVino.contenido)
         /* let botella1 = new Botella(100, 'plastico', 0);
@@ -56,6 +56,7 @@
         console.log('Capacidad : ' + botella1.capacidad, ' Material : ' + botella1.capacidad + ' Contenido : ' + botella1.contenido)
         
  */
+        console.log(botellaVino.tipo())
 
     </script>
 </body>
