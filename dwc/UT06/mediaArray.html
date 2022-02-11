@@ -8,13 +8,24 @@
 </head>
 <body>
     <script>
-        Array.prototype.media=()=>{
-            let suma=this.reduce((anterior,actual)=>(anterior+actual))
+        Array.prototype.media=function(){
+            let suma=this.reduce((anterior,actual)=>anterior+actual,0)
             return suma/this.length
         }
-        let a =[2,4,5,6,3,4,4]
+        let a =[1,4,5,6,3,4,4]
         
+        Array.prototype.ultimo=function(){
+        
+            return this[this.length-1]
+        }
+
+        Array.prototype.autor='Noelia'
+    
+
         console.log(a.media())
+        console.log(a.ultimo())
+        console.log(a.autor)
+
     </script>
 </body>
 </html>
