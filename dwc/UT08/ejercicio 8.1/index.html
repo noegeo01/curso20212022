@@ -11,6 +11,8 @@
             margin: 0  auto;
             text-align: center;
             border: 1px black solid;
+            padding: 1em;
+            background-color: darkkhaki;
         }
         label,input,button{
             margin: 1em;
@@ -23,6 +25,18 @@
             height: 500px;
             margin-top: 1em;
         }
+        h1{
+            text-align: center;
+        }
+        #mostrar{
+
+            background-color: white;
+            border: 1px black solid;
+            border-radius: 20%;
+            padding-left: 1em;
+            padding-right: 1em;
+            
+        }
         .hijo{
             width: 75px;
             height: 75px;
@@ -33,10 +47,16 @@
 </head>
 <body>
     <div class="container">
+        <h1>Ejercicio 8.1</h1>
         <div class="formulario">
             <label for="">Insertar numero de cuadrados </label>
             <input id="inumeros" type="text">
             <button id="crear">Crear</button>
+            <br>
+            El cuadrado que esta seleccionando es : <span id="mostrar"> </span>
+        </div>
+        <div >
+           
         </div>
         <div id="padre">
 
@@ -53,22 +73,23 @@
         //Se obtiene el contenedor padre donde se insertaran los div
         let padre = document.getElementById('padre');
         //Se obtienen todos los elementos hijos
-        let hijo = document.getElementsByClassName('hijo')
+        let hijo = document.getElementsByClassName('hijo');
+        //Se obtiene el elemento p en el cual se mostrara la informacion
+        let mostrar = document.getElementById('mostrar');
 
         //----------------Funciones-------------------
         
         //Funcion que genera color aleatoriamente
         function genera_color(){
             
-            let rgb=[0,0,0]
+            let rgb=[0,0,0];
             for(let num in rgb){
-                rgb[num]=Math.round(Math.random()*256)
-               
+                rgb[num]=Math.round(Math.random()*256);
             }
             
-            return `rgb(${rgb.join()})`
+            return `rgb(${rgb.join()})`;
         }
-        console.log(genera_color())
+        
         
         //Funcion que genera cuadrados
         function generar_cuadrados(numero){
@@ -78,6 +99,8 @@
                 hijo.style.backgroundColor=genera_color()
                 hijo.addEventListener('click',cambia_posicion)
                 hijo.addEventListener('dblclick',elimina)
+                hijo.addEventListener('mouseenter',mostrar_contenido)
+                hijo.addEventListener('mouseleave',oculta_contenido)
                 hijo.textContent=i
                 padre.appendChild(hijo);
             }
@@ -97,6 +120,19 @@
          padre.removeChild(e.target)
         }
         
+        //Funcion que dice el contenido del elemento
+        function mostrar_contenido(e){
+            e.target.style.visibility='visible';
+            contenido=e.target.textContent;
+            mostrar.textContent=contenido;
+            //pone el atributo visible
+            
+        }
+
+        //funcion   que pone el contenido invisible
+        function oculta_contenido(e){
+            mostrar.textContent='' 
+        }
         //-----------eventos----------
         bcrear.addEventListener('click',()=>{
             generar_cuadrados(inumeros.value)
