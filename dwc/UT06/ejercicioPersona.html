@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Persona</title>
+</head>
+<body>
+    <script>
+        //--------------------CREAR OBJETO----------------------------
+
+        //Funcion constructora
+        function Personas(DNI,nombre='Maria Ortuño',edad=25,sexo='M',peso=60,altura=151){
+            //Definicion de atributos
+            this.DNI=DNI;
+            this.nombre=nombre;
+            this.edad=edad;
+            this.sexo=sexo;
+            this.peso=peso;
+            this.altura=altura; 
+            //-----------------Metodos que tendra la clase persona-----------------
+
+            //Metodo que calcula si la persona esta en su peso ideal
+            this.calcularIMC=()=>{
+                altura=this.altura/100
+                //Variable que se retornara la respuesta
+                valor='';
+               resultado= (this.peso/((altura^2)))
+               
+                if(resultado<=25&&(resultado>=20)){
+                    valor=-1;
+                }else if( resultado<20){
+                    valor=0
+                }else if(resultado>25){
+                    valor=1;
+                }
+            }
+            //Metodo que  indica si es mayor de edad
+            this.esMayorDeEdad=()=>{
+                if(this.edad<18){
+                    resultado=false
+                }else{
+                    resultado=true
+                }
+                return resultado
+            }
+
+            //Metodo que devuelve toda la informacion de la persona 
+            this.toString=()=>{
+                return ` Nº DNI : ${this.DNI} , Nombre : ${this.nombre} , edad : ${this.edad} , sexo : ${this.sexo} , peso : ${this.peso} , altura : ${this.altura}`;
+            }
+        }
+
+        let mujer=new Personas(2334223);
+        let hombre= new Personas(7327838,'Juan Martinez',13,'H',200,170);
+        console.log(mujer.toString());
+        console.log(mujer.calcularIMC());
+        console.log(mujer.esMayorDeEdad());
+        console.log(hombre.toString());
+        console.log(hombre.calcularIMC());
+        console.log(hombre.esMayorDeEdad());
+
+        //--------------Creacion de otro objeto con herencia-------------
+
+        //Funcion constructora
+        function Estudiantes(DNI,estudios,curso,nombre='Maria Ortuño',edad=25,sexo='M',peso=60,altura=151,){
+            this.__proto__=new Personas(DNI,nombre='Maria Ortuño',edad=25,sexo='M',peso=60,altura=151)
+            this.estudios=estudios;
+            this.curso=curso;
+            //---------------Metodos estudiante------------
+
+            //Metodo que devuelve la informacion del estudiante
+            this.toString=()=>{
+                return ` Nº DNI : ${this.DNI} ,estudios : ${this.estudios}, curso : ${this.curso} Nombre : ${this.nombre} , edad : ${this.edad} , sexo : ${this.sexo} , peso : ${this.peso} , altura : ${this.altura}`;
+            }
+
+            //Metodo que cambia cambia al alumno a un  curso superior
+            this.promocionar=()=>{
+                //Declaro array con  niveles de estudio
+                /* let estudios=['eso','bachillerato','fp'];
+                respuesta=estudios.indexOf(this.estudios)
+                return estudios[respuesta+1]; */
+                curso=this.curso
+                return curso=curso+1
+                
+            }
+        }
+        let estudianteEso= new Estudiantes(232424,'eso',4,'Miguel','H',80,176);
+        console.log(estudianteEso.toString())
+        console.log(estudianteEso.promocionar())
+            
+    </script>
+</body>
+</html>
