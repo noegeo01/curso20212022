@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Título: <span id="sTitulo"></span></h1>
+    <p>
+        <button id="bPlay">Play</button>
+        <button id="bPause">Pause</button>
+        <button id="bStop">Stop</button>
+        <button id="bSig">>></button>
+        <button id="bAnt">&lt;&lt;</button>
+
+    </p>
+    <p><input type="range" id="rTiempo" value="0" step='1' min="0" max="1"></p>
+    <p><input type="range" id="rVolumen" value="0.5" step="0.1" min='0' max="1"></p>
+    <ul>
+        <li data-orden="0">The</li>
+        <li data-orden="1">IZAL</li>
+    </ul>
+    <script>
+        let canciones = ['./sonidos/The.mp3', './sonidos/IZAL.mp3'];
+        let actual = 0;
+        let cancion = new Audio(canciones[actual]);
+        let $play = document.getElementById('bPlay');
+        let $pause = document.getElementById('bPause');
+        let $stop = document.getElementById('bStop');
+        let $volumen = document.getElementById('rVolumen');
+        let $tiempo = document.getElementById('rTiempo');
+        let $titulo = document.getElementById('sTitulo')
+        let $posicones=document.getElementsByTagName('li');
+        
+        for ($posicon of $posicones){
+            $posicon.addEventListener('click',(e)=>{
+                console.log(e.target.dataset.orden)
+                actual=e.target.dataset.orden;
+                cancion.src = canciones[actual];
+                console.log(actual)
+                cancion.play();
+            })
+        }
+
+
+        $pause.addEventListener('click', () => {
+            console.log('pause')
+            cancion.pause();
+        })
+
+        $play.addEventListener('click', () => {
+            console.log('play')
+            $titulo.textContent = cancion.currentSrc;
+            cancion.play();
+        })
+        $stop.addEventListener('click', () => {
+            console.log('stop')
+            cancion.load();
+        })
+        $volumen.addEventListener('change', () => {
+            cancion.volume = $volumen.value;
+        })
+        cancion.addEventListener('timeupdate', () => {
+            $tiempo.setAttribute('max', cancion.duration)
+            $tiempo.value = cancion.currentTime;
+        })
+        cancion.addEventListener('ended', () => {
+            console.log(actual)
+            cancion.src = canciones[++actual];
+            console.log(actual)
+            cancion.play();
+
+        })
+        $tiempo.addEventListener('change', () => {
+            cancion.currentTime = $tiempo.value;
+        })
+
+    </script>
+</body>
+
+</html>
