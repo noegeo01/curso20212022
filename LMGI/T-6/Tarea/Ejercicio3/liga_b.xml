@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="liga_b.xsl" type="text/xsl"?>
+<liga>
+    <equipo>
+        <codigo>Equipo001</codigo>
+        <nombre>Abarán</nombre>
+        <entrenador>Alex Ferguson</entrenador>
+        <fundacion>1952</fundacion>
+        <presupuesto>2500000000</presupuesto>
+        <puntos>6</puntos>
+    </equipo>
+    <equipo>
+        <codigo>Equipo002</codigo>
+        <nombre>Blanca</nombre>
+        <entrenador>Vicente del Bosque</entrenador>
+        <fundacion>1948</fundacion>
+        <presupuesto>7200000000</presupuesto>
+        <puntos>3</puntos>
+    </equipo>
+    
+    <equipo>
+        <codigo>Equipo003</codigo>
+        <nombre>Cieza</nombre>
+        <entrenador>Louis van Gaal</entrenador>
+        <fundacion>1948</fundacion>
+        <presupuesto>190000000</presupuesto>
+        <puntos>7</puntos>
+    </equipo>
+    <equipo>
+        <codigo>Equipo004</codigo>
+        <nombre>Jumilla</nombre>
+        <entrenador>Arrigo Sacchi</entrenador>
+        <fundacion>1951</fundacion>
+        <presupuesto>310000000</presupuesto>
+        <puntos>10</puntos>
+    </equipo>
+    <equipo>
+        <codigo>Equipo005</codigo>
+        <nombre>Yecla</nombre>
+        <entrenador>Rafael Benitez </entrenador>
+        <fundacion>1925</fundacion>
+        <presupuesto>4500000000</presupuesto>
+        <puntos>9</puntos>
+    </equipo>
+    <equipo>
+        <codigo>Equipo006</codigo>
+        <nombre>Elche</nombre>
+        <entrenador>Rafael Benitez </entrenador>
+        <fundacion>1945</fundacion>
+        <presupuesto>6500000000</presupuesto>
+        <puntos>12</puntos>
+    </equipo>
+    <equipo>
+        <codigo>Equipo007</codigo>
+        <nombre>Almeria</nombre>
+        <entrenador>Vicente del Bosque</entrenador>
+        <fundacion>1948</fundacion>
+        <presupuesto>7200000000</presupuesto>
+        <puntos>11</puntos>
+    </equipo>
+    
+</liga>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="pelicula_b.xsl" type="text/xsl"?>
+<pelicula titulo="Brazil" estreno="1995" minutos="142">
+    <direccion>
+        <director nombre="Terry" apellidos="Gilliam" />
+    </direccion>
+    <produccion>
+        <productor nombre="PAtrick" apellidos="Cassacetti"/>
+        <productor nombre="Arnon" apellidos="Milchan"/>
+    </produccion>
+    <guion>
+        <guionista nombre="Terry" apellidos="Gilliam"/>
+        <guionista nombre="Tom" apellidos="Stoppard"/>
+        <guionista nombre="Charles" apellidos="Mckeowb"/>
+    </guion>
+    <reparto>
+        <interprete nombre="Jonathan" apellidos="Pryce" papel="protagonista"/>
+        <interprete nombre="Robert" apellidos="De Niro" papel="protagonista"/>
+        <interprete nombre="Kim" apellidos="Greist" papel="protagonista"/>
+        <interprete nombre="Michael" apellidos="Palin" papel="secundario"/>
+        <interprete nombre="Ian" apellidos="Holm" papel="secundario"/>
+        <interprete nombre="Bob" apellidos="Hoskins" papel="secundario"/>
+    </reparto>
+    <esloganes>
+        <eslogan>Vuelos fantasticos . La pesadilla de la realidad. Ataques terroristas.
+            Compras a media noche .Amor verdadero .Y fontaneria creativa.
+        </eslogan>
+    </esloganes>
+    <creado>
+        <creador>Noelia G. Ocaña Vega</creador>
+    </creado>
+</pelicula>
