@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #contenido {
+            height: 15rem;
+            width: 15rem;
+            background-color: aquamarine;
+            border: 1px black solid;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="file" name="files[]" id="fichero" multiple>
+    <div>
+        <ul id="lista">
+
+        </ul>
+    </div>
+    <div id="contenido">arrastra aqui.</div>
+    <div id="texto"></div>
+    <script>
+        let $fichero = document.getElementById('fichero');
+        let $padre = document.getElementById('lista');
+        let $zonaArrastre = document.getElementById('contenido');
+        let $texto = document.getElementById('texto');
+
+        function insertarHijos(e, ficheros) {
+            e.stopPropagation();
+            e.preventDefault();
+            for (let f of ficheros) {
+                let $hijo = document.createElement('li');
+                $hijo.innerHTML = `<strong>${f.name} ${f.size} ${f.lastModified}</strong>`;
+                $hijo.addEventListener('click',(e)=>{
+                    leerFichero(f)
+                })
+                $padre.appendChild($hijo);
+            }
+        }
+        function leerFichero(fichero){
+            let reader=new FileReader()
+
+            reader.addEventListener('load',(e)=>{
+                var texto=e.target.result
+                $texto.textContent=texto;
+            })
+            reader.readAsText(fichero)
+        }
+        function mostrarInfoFicheros(e) {
+            let ficheros = e.target.files;
+            insertarHijos(e,ficheros);
+
+        }
+        function mostrarInfoFicherosDrop(e) {
+            let ficheros = e.dataTransfer.files
+            insertarHijos(e,ficheros);
+        }
+        $zonaArrastre.addEventListener('dragover', (e) => {
+            e.stopPropagation();
+            e.preventDefault();
+            e.dataTransfer.dropEffect = 'link';
+        })
+        $zonaArrastre.addEventListener('drop', mostrarInfoFicherosDrop)
+
+        $fichero.addEventListener('change', mostrarInfoFicheros)
+    </script>
+</body>
+
+</html>
