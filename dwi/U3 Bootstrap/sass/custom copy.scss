@@ -1,0 +1,19 @@
+$primary:pink;
+$info:rgb(224, 88, 111);
+$secondary:blue;
+$warning:red;
+$danger:blue;
+
+.fondo{
+    background-image: url("../ejemplo/img_copy/bg-hero-mobile.svg");
+    background-repeat: no-repeat;
+    background-position: 25% top;
+}
+$font-family-sans-serif: 'Lexend Deca', sans-serif;
+@media (min-width: 768px){
+    .alto100{ 
+        height:100vh;
+    }
+ }
+ 
+@import '../node_modules/bootstrap/scss/bootstrap' 
