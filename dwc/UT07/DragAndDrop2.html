@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .contenedor {
+            border: 2px solid burlywood;
+            display: flex;
+            width: 100%;
+        }
+
+        .origen {
+            flex-basis: 100%;
+            flex-grow: 1;
+            padding: 2rem;
+        }
+
+        .arrastrable {
+            background-color: aqua;
+            margin: 10px;
+            padding: 10px;
+            float: left;
+            width: 25%;
+        }
+
+        #destino {
+            background-color: pink;
+            flex-basis: 100%;
+            flex-grow: 1;
+            padding: 10px;
+            border: 2px solid burlywood
+        }
+    </style>
+</head>
+
+<body>
+    <div class="contenedor">
+        <div class="origen destino" id="origen">
+            <div id="viajero1" class="arrastrable" draggable="true">
+                arrastrable
+            </div>
+            <div id="viajero2" class="arrastrable" draggable="true">
+                arrastrable
+            </div>
+
+            <img src="../UT08/img/perro1.png" id="img" class="arrastrable" draggable="true" alt="">
+
+        </div>
+        <div id='destino' class="destino">
+
+        </div>
+    </div>
+    <script>
+        let $arrastrables = document.getElementsByClassName('arrastrable');
+        let $destino = document.getElementsByClassName('destino');
+
+
+        for ($d of $destino) {
+            $d.addEventListener('dragover', onDragOver, false)
+            $d.addEventListener('drop', onDrop)
+        }
+        for ($a of $arrastrables) {
+            $a.addEventListener('dragstart', onDragStart)
+            $a.addEventListener('dblclick', quitarArrastrar)
+        }
+        function quitarArrastrar(e) {
+            e.target.removeEventListener('dragstart', onDragStart)
+            e.target.removeAttribute('draggable')
+            e.target.style.backgroundColor = 'Yellow'
+        }
+        function onDragStart(e) {
+            e.dataTransfer.setData("text/plain", e.target.id);
+            e.target.style.border = "2px dashed orange";
+        }
+
+
+
+        function onDragOver(e) {
+            e.preventDefault();
+            /* e.stopPropagation();
+            e.target.innerHTML='Descargar' */
+
+        }
+
+        function onDrop(e) {
+            if (e.target.classList.contains('destino')) {
+                const id = e.dataTransfer.getData('text')
+
+                let $soltado = document.getElementById(id)
+                e.target.appendChild($soltado)
+                e.dataTransfer.clearData()
+            }
+            e.preventDefault()
+
+        }
+
+    </script>
+</body>
+
+</html>

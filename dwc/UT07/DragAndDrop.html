@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .contenedor {
+            border: 2px solid burlywood;
+            display: flex;
+            width: 50%;
+        }
+
+        .origen {
+            flex-basis: 100%;
+            flex-grow: 1;
+            padding: 2rem;
+        }
+
+        .arrastrable {
+            background-color: aqua;
+            margin: 10px;
+            padding: 10px;
+        }
+
+        .destino {
+            background-color: pink;
+            flex-basis: 100%;
+            flex-grow: 1;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="contenedor">
+        <div class="origen" id="origen">
+            <div id="viajero1" class="arrastrable" draggable="true">
+                arrastrable
+            </div>
+            <div id="viajero2" class="arrastrable" draggable="true">
+                arrastrable
+            </div>
+
+            <img src="../UT08/img/perro1.png" id="img" class="arrastrable" draggable="true" alt="">
+
+        </div>
+        <div id='destino' class="destino">
+
+        </div>
+    </div>
+    <script>
+        let $arrastrables = document.getElementsByClassName('arrastrable');
+        let $destino = document.getElementById('destino');
+        let $origen = document.getElementById('origen');
+
+
+
+        for ($a of $arrastrables) {
+            $a.addEventListener('dragstart', onDragStart)
+        }
+
+        function onDragStart(e) {
+            e.dataTransfer.setData("text/plain", e.target.id);
+            e.target.style.border = "2px dashed orange";
+        }
+
+        $destino.addEventListener('dragover', onDragOver, false)
+        
+        function onDragOver(e) {
+            e.preventDefault();
+            /* e.stopPropagation();
+            e.target.innerHTML='Descargar' */
+
+        }
+        $destino.addEventListener('drop', onDrop)
+        function onDrop(e) {
+            if (e.target.id == 'destino') {
+                const id = e.dataTransfer.getData('text')
+
+                let $soltado = document.getElementById(id)
+                e.target.appendChild($soltado)
+                e.dataTransfer.clearData()
+            }
+            e.preventDefault()
+
+        }
+
+    </script>
+</body>
+
+</html>
