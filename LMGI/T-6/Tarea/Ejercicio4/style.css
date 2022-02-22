@@ -1,0 +1,22 @@
+table{
+    padding:1em;
+    color:white;
+    border:5px black groove;
+    margin:auto auto;
+    border-radius:5%;
+    text-align:center;
+}
+tr th{
+    background-color: darkblue;
+}
+
+td{
+    color:black
+
+}
+.aprobado{
+    background-color: green;
+}
+.suspenso{
+    background-color: red;
+}

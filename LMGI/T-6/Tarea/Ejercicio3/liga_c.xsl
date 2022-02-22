@@ -10,13 +10,23 @@
                         <th>Puntos</th>
                     </tr>
                     <xsl:for-each select="liga/equipo">
-                        <xsl:if test="entrenador!='Rafael Benitez'">
+                        <xsl:sort order="descending" select="nombre"/>
+                        <xsl:if test="entrenador='Rafael Benitez'">
                         <tr>
                             <td><xsl:value-of select="nombre"/></td>
                             <td><xsl:value-of select="entrenador"/></td> 
                             <td><xsl:value-of select="puntos"/></td>
                         </tr>
                         </xsl:if>
+                        <xsl:if test="entrenador='Vicente del Bosque'">
+                        <tr>
+                            <td><xsl:value-of select="nombre"/></td>
+                            <td><xsl:value-of select="entrenador"/></td> 
+                            <td><xsl:value-of select="puntos"/></td>
+                        </tr>
+                        </xsl:if>
+                        
+
                         
                        
                     </xsl:for-each>
