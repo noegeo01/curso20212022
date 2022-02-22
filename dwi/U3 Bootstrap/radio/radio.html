@@ -19,7 +19,9 @@
         <div class="row mt-2">
             <div class="row">
                 <div class="col-2"></div>
-                <div class="col-8 border border-4 border-dark bg-warning p-3 "> </div>
+                <div class="col-8 border border-4 border-dark bg-warning p-3 "> 
+                   
+                </div>
                 <div class="col-2"></div>
 
             </div>
@@ -38,11 +40,11 @@
                     <div class="col-1"></div>
                     <div class="col-5 mt-4">
 
-                        <input type="range" class="form-range " id="customRange1">
-                        <label for="customRange1" class="form-label ">Vol</label>
+                        <input type="range" class="form-range " id="volumen" step="0.2" min="0" max="1" value="1">
+                        <label for="customRange1" class="form-label " step="1" min="0" max="1" value="0">Vol</label>
                     </div>
                     <div class="col-5 mt-4">
-                        <input type="range" class="form-range" id="customRange1">
+                        <input type="range" class="form-range" id="tiempo">
                         <label for="customRange1" class="form-label d-flex aling-items-be"> PAN</label>
                     </div>
 
@@ -69,13 +71,57 @@
 
                         </div>
                     </div>
-                    <div class="col-4 border border-5 border-dark d-flex flex-column justify-content-between ">
-                        <div class="col-4"></div>
-                        <div class="col-4 rounded rounded-pill bg-warning p-3">
-                            <div class="rounded rounded-circle bg-primary p-3"></div>
-                            <div class="rounded rounded-circle bg-primary p-3"></div>
-                        </div>
-                        <div class="col-4"></div>
+                    <div class="col-4 p-2 border border-5 border-dark d-flex flex-column justify-content-between ">
+
+                        <ul class="list-group mt-5 " id="lista">
+                            <li class="list-group-item"data-orden="0" >No-eres-tu-soy-yo</li>
+                            <li class="list-group-item" data-orden="1">Perfect</li>
+                        </ul>
+                        <nav class="navbar navbar-light bg-light">
+                            <div class="container">
+                                <!--icono play -->
+                                <a class="navbar-brand" href="#" id="anterior">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-arrow-bar-left" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M12.5 15a.5.5 0 0 1-.5-.5v-13a.5.5 0 0 1 1 0v13a.5.5 0 0 1-.5.5zM10 8a.5.5 0 0 1-.5.5H3.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L3.707 7.5H9.5a.5.5 0 0 1 .5.5z" />
+                                    </svg>
+                                </a>
+                                <button class="btn" id="play">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-play-fill" viewBox="0 0 16 16">
+                                        <path
+                                            d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z" />
+                                    </svg>
+                                </button>
+                                <button class="btn" id="pause">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-pause-fill" viewBox="0 0 16 16">
+                                        <path
+                                            d="M5.5 3.5A1.5 1.5 0 0 1 7 5v6a1.5 1.5 0 0 1-3 0V5a1.5 1.5 0 0 1 1.5-1.5zm5 0A1.5 1.5 0 0 1 12 5v6a1.5 1.5 0 0 1-3 0V5a1.5 1.5 0 0 1 1.5-1.5z" />
+                                    </svg>
+                                </button>
+                                <button class="btn" id="stop">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-square-fill" viewBox="0 0 16 16">
+                                        <path
+                                            d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2z" />
+                                    </svg>
+                                </button>
+                                <button class="btn" id="siguiente">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-arrow-bar-right" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M6 8a.5.5 0 0 0 .5.5h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L12.293 7.5H6.5A.5.5 0 0 0 6 8zm-2.5 7a.5.5 0 0 1-.5-.5v-13a.5.5 0 0 1 1 0v13a.5.5 0 0 1-.5.5z" />
+                                    </svg>
+                                </button>
+
+
+                            </div>
+
+
+                            <div class="col-4"></div>
+
                     </div>
                     <div class="col-4  p-5">
                         <div class="col rounded rounded-circle  border border-5 border-dark bg-info p-5">
@@ -92,6 +138,77 @@
 
         </div>
     </div>
+    <script>
+
+        let canciones = ['music/No.mp3', 'music/Pe.mp3'];
+        let actual = 0;
+        let cancion = new Audio(canciones[actual]);
+        //Botoness
+        let $play = document.getElementById('play');
+        let $pause = document.getElementById('pause');
+        let $anterior = document.getElementById('anterior');
+        let $siguiente = document.getElementById('siguiente');
+        let $stop = document.getElementById('stop');
+        let $tiempo = document.getElementById('tiempo');
+        let $volumen = document.getElementById('volumen');
+        let $posiciones = document.getElementsByTagName('li');
+
+
+        for ($posicon of $posiciones) {
+            $posicon.addEventListener('click', (e) => {
+                console.log($posicon)
+
+                actual = e.target.dataset.orden;
+                cancion.src = canciones[actual];
+                console.log(actual)
+                cancion.play();
+            })
+        }
+        
+        
+
+        $pause.addEventListener('click', () => {
+            console.log('pause')
+            cancion.pause();
+        })
+
+        $play.addEventListener('click', () => {
+            console.log('play')
+            cancion.play();
+        })
+        $stop.addEventListener('click', () => {
+            console.log('stop')
+            cancion.load();
+        })
+        $volumen.addEventListener('change', () => {
+            cancion.volume = $volumen.value;
+        })
+        cancion.addEventListener('timeupdate', () => {
+            $tiempo.setAttribute('max', cancion.duration)
+            $tiempo.value = cancion.currentTime;
+        })
+        cancion.addEventListener('ended', () => {
+            console.log(actual)
+            cancion.src = canciones[++actual];
+            console.log(actual)
+            cancion.play();
+
+        })
+        $siguiente.addEventListener('click',()=>{
+            cancion.src = canciones[++actual]
+            cancion.play();
+        })
+        $anterior.addEventListener('click',()=>{
+            cancion.src = canciones[--actual]
+            cancion.play();
+        })
+
+        $tiempo.addEventListener('change', () => {
+            cancion.currentTime = $tiempo.value;
+        })
+
+
+    </script>
 </body>
 
 </html>

@@ -34,9 +34,9 @@
         let $volumen = document.getElementById('rVolumen');
         let $tiempo = document.getElementById('rTiempo');
         let $titulo = document.getElementById('sTitulo')
-        let $posicones=document.getElementsByTagName('li');
+        let $posicines=document.getElementsByTagName('li');
         
-        for ($posicon of $posicones){
+        for ($posicon of $posicines){
             $posicon.addEventListener('click',(e)=>{
                 console.log(e.target.dataset.orden)
                 actual=e.target.dataset.orden;
