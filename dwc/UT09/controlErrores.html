@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title><style>
+        #men{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="men"></h1>
+    <script>
+        //Con el uso estricto se debe declarar las varibles
+        'use strict'
+        let x;
+        let err= new Error('No es pepe')
+        let e1=new EvalError('error de eval ');
+        let e2=new SyntaxError(' ');
+        let e3=new URIError(''); 
+        let errores=[e1,e2,e3];
+        x='jose';
+        /* if(x!='pepe'){
+            throw erro;
+        }else{
+            alert('Hola jose')
+        } */
+        try{
+            //alert('H0la');
+            throw errores[Math.round(Math.random()*2)]
+        }catch(erro){
+            if(erro instanceof EvalError){
+                document.getElementById('men').innerHTML=`<span>${erro.message} De eval</span>`
+            }else if(err instanceof SyntaxError){
+                document.getElementById('men').innerHTML=`<span>${erro.message} De sintaxis</span>`
+            }else{
+                document.getElementById('men').innerHTML=`<span>${erro.message} De Uri</span>`
+            }
+            
+
+        }finally{
+            document.getElementById('men').innerHTML+='<span>Noelia<span>'
+        }
+
+
+        //sconsole.log(x);
+    </script>
+</body>
+</html>
