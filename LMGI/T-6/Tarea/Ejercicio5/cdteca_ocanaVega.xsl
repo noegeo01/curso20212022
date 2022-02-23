@@ -28,7 +28,7 @@
                         <xsl:sort select="@tiempo" order="descending"/>
                         <xsl:if test="@tiempo>200">
                             <li>
-                        <xsl:value-of select="."/> - <xsl:value-of select="round(@tiempo)"/>m</li> 
+                        <xsl:value-of select="."/> - <xsl:value-of select="substring(@tiempo,1,1) "/>m</li> 
                         </xsl:if>
                         </xsl:for-each>
                     </ul>
