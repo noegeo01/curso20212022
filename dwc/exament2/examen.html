@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        .contenedor {
+            display: flex;
+            flex-wrap: nowrap;
+            margin-left: 1em;
+            margin-right: 1em;
+        }
+
+        .col {
+            text-align: center;
+            border-left: 5px solid white;
+            padding: 1rem;
+            background-color: gainsboro;
+            padding-top: 0.4rem;
+            flex-grow: 1;
+        }
+
+        h2 {
+            border: 1px solid black;
+            padding: 0.6em;
+            margin-bottom: 1em;
+            background-color: pink;
+        }
+
+        h1 {
+            margin: 0.5em;
+            text-align: center;
+        }
+
+        .panel {
+            margin-top: 2em;
+            margin-left: 1em;
+            margin-right: 1em;
+            border: 1px solid black;
+            padding: 1em;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .tarjeta {
+            background-color: red;
+            padding: 2em;
+            margin-bottom: 1.5em;
+        }
+
+        .tarjeta button {
+            margin-top: 0.5em;
+        }
+
+        button {
+            padding: 0.3em;
+        }
+
+        .todo {
+            background-color: rgb(248, 252, 0);
+            margin: 1em;
+            padding: 1em;
+        }
+
+        .proceso {
+            background-color: rgb(248, 141, 0);
+            margin: 1em;
+            padding: 1em;
+
+        }
+
+        .terminado {
+            background-color: rgb(253, 30, 0);
+            margin: 1em;
+            padding: 1em;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="panel">
+        <label for="">Título</label>
+        <input type="text" id="iTitulo" />
+        <label for="">Descripción</label>
+        <input type="text" id="iDescripcion" />
+        <button id="bAñadir">Añadir</button>
+        <label for="">Nombre del KANBAN</label>
+        <input type="text" id="iNombre" />
+        <button id="bCookie">Añadir nombre como cookie</button>
+    </div>
+    <h1>Tablero KANBAN</h1>
+    <div class="contenedor">
+        <div id="todo" class="col">
+            <h2>ToDo</h2>
+        </div>
+        <div id="proceso" class="col">
+            <h2>En Proceso</h2>
+        </div>
+        <div id="terminado" class="col">
+            <h2>Terminado</h2>
+        </div>
+    </div>
+    <script>
+        //----------------------Declaracion de variables-----------------
+        //Recoge el input del titulo
+        let iTitulo = document.getElementById('iTitulo');
+        //Recoge el input de la descripcion
+        let iDescripcion = document.getElementById('iDescripcion');
+        //Recoge el input del nombre de la cookie
+        let iCookie = document.getElementById('iNombre');
+        //Recoge el boton  para añadir elementos
+        let bAñadir = document.getElementById('bAñadir');
+        //Recoge el boton  para añadir la cookie
+        let bCookie = document.getElementById('bCookie');
+        //Recoge  un contenedor 
+        let todo = document.getElementById('todo');
+        //Recoge  un contenedor 
+        let proceso = document.getElementById('proceso');
+        //Recoge  un contenedor 
+        let terminado = document.getElementById('terminado');
+        //Recoge le contendor
+        let contenedor=document.getElementsByClassName('contenedor')[0]
+        //Recoge el h1
+        h1Titulo=document.getElementsByTagName('h1')[0]
+
+        let contador=0;
+        //--------------------Eventos------------------------------
+        bAñadir.addEventListener('click', añadirElementos)
+        //Añadeventos de dragover,drop alos hijos delcontendeor que son todo,en proceso y terminado
+        for (let nodo of contenedor.children){
+            nodo.addEventListener('dragover',onDragover)
+            nodo.addEventListener('drop',onDrop)
+        }
+        bCookie.addEventListener('click',creaCookie)
+        //Si existe una cookie añade los sigueinte si no no hace nada
+        if(document.cookie)
+        h1Titulo.textContent+=' '+document.cookie.split('=')[1]
+        
+        //--------------------Funciones--------------------------
+        //Funcion que añade contenido
+        function añadirElementos() {
+            console.log(iTitulo)
+            let hijo = document.createElement('div');
+            let contendio = `<h5>${iTitulo.value}</h5> ${iDescripcion.value}`
+            hijo.innerHTML = contendio;
+            hijo.classList.add('todo');
+            //<----Eventos del hijo-----
+            hijo.setAttribute('draggable','true')
+            hijo.id=contador++
+            hijo.addEventListener('dblclick',elimina)
+            hijo.addEventListener('dragstart',onDragstart);
+            
+            todo.appendChild(hijo);
+        }
+        //Funcion que lo hace arrastrable
+        function onDragstart(e) {
+            e.dataTransfer.setData("text/plain", e.currentTarget.id);
+            e.currentTarget.style.border='2px dashed black'
+        }
+        //Elimina los valores por defecto
+        function onDragover(e){
+            e.preventDefault();
+            e.stopPropagation();
+            
+        }
+        //Funcion al ser arrastrado añade el elemento al nodo seleccionado
+        function onDrop(e){
+            //console.log(e.currentTarget.children.classList.add())
+            if (e.currentTarget.classList.contains('col')) {
+                const id = e.dataTransfer.getData('text')
+                //Clase origen
+                
+                
+                
+                let $soltado = document.getElementById(id)
+                $soltado.classList.remove($soltado.classList[0])
+                $soltado.classList.add(e.currentTarget.id)
+                e.currentTarget.appendChild($soltado)
+                
+                e.dataTransfer.clearData()
+                
+            }
+            
+            e.preventDefault()
+            console.log(e.currentTarget.classList)
+        }
+        //Funcion que elimina el hijo
+        function elimina(e){
+            e.currentTarget.parentNode.removeChild(e.currentTarget)
+            
+        }
+        //Funcion crea Cookie
+        function creaCookie(){
+            document.cookie=`nombre=${iCookie.value};`
+        }
+       
+    </script>
+</body>
+
+</html>
