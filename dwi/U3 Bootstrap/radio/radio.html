@@ -48,7 +48,7 @@
                     </div>
 
                     <div class="col-1   p-4 ">
-                        <div class="rounded rounded-circle  border border-4 border-dark bg-danger p-2">
+                        <div class="rounded rounded-circle   border border-4 border-dark bg-danger p-2">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-power"
                                 viewBox="0 0 16 16">
                                 <path d="M7.5 1v7h1V1h-1z" />
@@ -59,10 +59,10 @@
                     </div>
 
                 </div>
-                <div class="row bg-primary border border-4 border-end-0 border-bottom-0 border-start-0 border-dark">
+                <div class="row bg-primary border border-4 border-end-0  border-bottom-0 border-start-0 border-dark">
                     
-                        <div class="col-4 ">
-                            <img src="./speaker_2.svg" class="img-fluid" alt="">
+                        <div class="col-4  ">
+                            <img src="./speaker_2.svg" class="img-fluid " id="parlante1" alt="">
                     </div>
                     <div class="col-4 p-2 border border-5 border-dark d-flex flex-column justify-content-between ">
 
@@ -117,7 +117,7 @@
 
                     </div>
                     <div class="col-4 ">
-                        <img src="./speaker_2.svg" class="img-fluid"  alt="">
+                        <img src="./speaker_2.svg" class="img-fluid " id="parlante2"  alt="">
                 </div>
                 </div>
             </div>
@@ -132,6 +132,8 @@
         //Botoness
         let $play = document.getElementById('play');
         let $pause = document.getElementById('pause');
+        let $p1 = document.getElementById('parlante1');
+        let $p2 = document.getElementById('parlante2');
         let $anterior = document.getElementById('anterior');
         let $siguiente = document.getElementById('siguiente');
         let $stop = document.getElementById('stop');
@@ -156,15 +158,21 @@
         $pause.addEventListener('click', () => {
             console.log('pause')
             cancion.pause();
+            $p1.classList.remove('movimiento')
+            $p2.classList.remove('movimiento')
         })
 
         $play.addEventListener('click', () => {
             console.log('play')
             cancion.play();
+            $p1.classList.add('movimiento')
+            $p2.classList.add('movimiento')
         })
         $stop.addEventListener('click', () => {
             console.log('stop')
             cancion.load();
+            $p1.classList.remove('movimiento')
+            $p2.classList.remove('movimiento')
         })
         $volumen.addEventListener('change', () => {
             cancion.volume = $volumen.value;
