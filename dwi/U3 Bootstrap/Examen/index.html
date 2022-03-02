@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js" defer></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h1 id="titulo">Titulo del video</h1>
+        <p>Duracion <span id="duracion">Transcurrido</span></p>
+        <p>Volumen <span id="volumen"> actual</span></p>
+        <div id="media">
+            <video id="video">
+                <source src="video/mov_bbb.mp4" type="video/mp4" >
+            </video>
+            <div class="controles">
+                <button id="irA">Ir a</button>
+                <input type="number" placeholder="Instante" id="instante">
+                <button id="play-pause">Play/Pause</button>
+                <button id="cambioVol">Cambia volumen</button>
+                <input type="number" placeholder="Nuevo volumen" id="nuevoVol">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
