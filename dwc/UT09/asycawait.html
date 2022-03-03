@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const heroes = [
+            { id: 0, nombre: 'Iron Man' },
+            { id: 1, nombre: 'Spiderman' },
+            { id: 2, nombre: 'Thor' }
+        ]
+        function traeHeroConID(id) {
+            console.log(`Buscando los datos del heroe ${id}`)
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    if (id <= heroes.length - 1) {
+                        console.log(`Ya est el hero con id: ${heroes[id].nombre}`)
+                        resolve(heroes[id])
+                        //resolve('ricardo')
+                    }else{
+                        reject('error no esta ese id')
+                    }
+                }, 2000);
+            })
+        }
+        function mostrarHeroe(heroe) {
+            console.log(`Los datos del heroe son ${heroe.nombre}`)
+        }
+        
+        async function irAporDatos(){
+            try{
+                const myHero=await traeHeroConID(2);
+            console.log(myHero);
+            }
+            catch(err){
+                console.log(err);
+            }
+        }
+        
+        irAporDatos();
+    </script>
+</body>
+
+</html>

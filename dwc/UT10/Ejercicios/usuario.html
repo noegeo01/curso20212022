@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing:border-box;
+            padding: 0;
+            margin: 0;
+        }
+        
+        span{
+            color:blue
+        }
+        img{
+            margin: 1em 0;
+            
+            width: 200px;
+            height: 200px;
+            border-radius: 75%;
+            border: 0.5em purple solid;
+        }
+        div{
+            padding: 1em;
+            border:1px solid black;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 300px;
+        }
+        button{
+            padding: 0.5em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Persona</h1>
+    <div >
+        <img src="img/image-anne.jpg" alt="" id="imagen">
+        <p >Nombre <span id="nombre"></span></p>
+        <p >Apellidos<span id="apellidos"></span></p>
+        <p >Direccion <span id="direccion"></span></p>
+        <p >Edad  <span id="edad"></span></p>
+        <button>Cambio</button>
+    </div>
+
+    <script>
+
+        let $imagen=document.getElementById('imagen')
+        let $nombre=document.getElementById('nombre')
+        let $apellidos=document.getElementById('apellidos')
+        let $direccion=document.getElementById('direccion')
+        let $edad=document.getElementById('edad')
+
+        const traerPersona= async()=>{
+            const persona = await fetch('https://randomuser.me/api/')
+            const datos_persona= await persona.json()
+            console.log(datos_persona)
+        }
+        traerPersona()
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+        <h1 >Imagen aleatoria</h1>
+        <img src="#"  id="imagen">
+            
+</img>
+
+
+        <script>
+            //
+
+            let $imagen = document.getElementById('imagen')
+            pedirDatos($imagen)
+            $imagen.addEventListener('click',()=>pedirDatos($imagen))
+            const pedirDatos=async(donde)=>{
+            const imagen= await fetch('https://source.unsplash.com/random',{cache:"no-cache"})
+            const blob_img= await imagen.blob();
+            donde.src=URL.createObjectURL(blob_img)
+
+        }
+
+
+        </script>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    
+<body>
+    <h1>Lista de</h1>
+    <button id="bClick">Click</button>
+    <ul id="lista">
+
+    </ul>
+    
+    <script>
+        //En la direccion https://api.generadordni.es/v2/doi/nif
+        //Nos devuelve un nif aleatorio
+        //Al pulsar el boton se genera una lista con un nif aleatorio
+
+        let $lista = document.getElementById('lista')
+        let $boton = document.getElementById('bClick')
+        
+
+        $boton.addEventListener('click',()=>pedirDatos($lista))
+        const pedirDatos=async(donde)=>{
+            let hijo= document.createElement('li')
+            const dni= await fetch('https://api.generadordni.es/v2/doi/nie?results=1',{cache:"no-cache"})
+            const dni_texto= await dni.json();
+            console.log(dni_texto)
+            hijo.innerHTML=dni_texto
+            donde.appendChild(hijo)
+
+        }
+
+        
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    
+<body>
+    <h1>Poemas </h1>
+    <button id="bClick">Click</button>
+    <pre id="poesia">
+
+    </pre>
+    
+    <script>
+        //En la direccion https://jorgesanchez.net/servicios/poesia.php
+        //Nos devuelve una poesia 
+        //Que la muestre en un div 
+
+        let $poesia = document.getElementById('poesia')
+        let $boton = document.getElementById('bClick')
+
+
+        $boton.addEventListener('click',()=>pedirDatos($poesia))
+        const pedirDatos=async(donde)=>{
+            const poema= await fetch('https://jorgesanchez.net/servicios/poesia.php',{cache:"no-cache"})
+            const poema_texto= await poema.text();
+            $poesia.innerHTML=poema_texto
+
+        }
+
+        
+
+    </script>
+</body>
+</html>
