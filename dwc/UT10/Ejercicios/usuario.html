@@ -18,8 +18,8 @@
         img{
             margin: 1em 0;
             
-            width: 200px;
-            height: 200px;
+            width: 150px;
+            height: 150px;
             border-radius: 75%;
             border: 0.5em purple solid;
         }
@@ -49,17 +49,24 @@
 
     <script>
 
-        let $imagen=document.getElementById('imagen')
-        let $nombre=document.getElementById('nombre')
-        let $apellidos=document.getElementById('apellidos')
-        let $direccion=document.getElementById('direccion')
+        
+        
         let $edad=document.getElementById('edad')
+        
 
+        
         const traerPersona= async()=>{
             const persona = await fetch('https://randomuser.me/api/')
             const datos_persona= await persona.json()
-            $imagen.src=datos_persona.results[0].picture.medium
-            console.log(datos_persona.results[0].picture.medium)
+            rellenaUsuario(datos_persona.results[0])
+        }
+        function rellenaUsuario(usuario){
+            document.getElementsByTagName('img')[0].src=usuario.picture.large
+            document.getElementById('imagen').textContent=usuario.name.first
+            document.getElementById('nombre').textContent=usuario.name.last
+            document.getElementById('apellidos').textContent=usuario.location.city
+            document.getElementById('direccion').textContent=usuario.dob.age
+            document.getElementsByTagName('button')[0].addEventListener('click',traerPersona)
         }
         traerPersona()
     </script>

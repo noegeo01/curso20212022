@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing:border-box;
+            padding: 0;
+            margin: 0;
+        }
+        
+        span{
+            color:blue
+        }
+        img{
+            
+            
+            width: 150px;
+            height: 150px;
+            border-radius: 75%;
+            border: 0.5em purple solid;
+        }
+        div:nth-of-type(odd){
+            background-color: aquamarine;
+        }
+        div{
+            float: left;
+            padding: 1em;
+            border:1px solid black;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 300px;
+            margin: 0.5m;
+        }
+        button{
+            padding: 0.5em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Persona</h1>
+    
+
+    <script>
+
+        
+        
+        let $edad=document.getElementById('edad')
+        
+
+        //Trae 10 personas
+        const traerPersona= async()=>{
+            const persona = await fetch('https://randomuser.me/api/?results=10')
+            const datos_persona= await persona.json()
+            creaUsuarios(datos_persona.results)
+        }
+        //traer una sola persona
+        const traerUna= async(elemento)=>{
+            const persona = await fetch('https://randomuser.me/api/')
+            const datos_persona= await persona.json()
+            elemento.getElementsByTagName('img')[0].src=datos_persona.results[0].picture.large
+            let spans=elemento.getElementsByTagName('span')
+            spans[0].textContent=datos_persona.results[0].name.first
+            spans[1].textContent=datos_persona.results[0].name.last
+            spans[2].textContent=datos_persona.results[0].location.city
+            spans[3].textContent=datos_persona.results[0].dob.age
+            //rellenaUsuario(datos_persona.results[0])
+        }
+
+        //Crea usuarios con el div
+        function creaUsuarios(usuarios){
+            for (usuario of usuarios){
+                let elemento=document.createElement('div')
+                document.body.appendChild(añadirUsuario(elemento,usuario))
+
+            }
+            cargaBotones();
+
+        }   
+
+        function cargaBotones(){
+            let botones=document.getElementsByTagName('button');
+            for (boton of botones){
+                boton.addEventListener('click',(e)=>{
+                    traerUna(e.currentTarget.parentNode)
+                   //console.log(e.currentTarget.parentNode.getElementsByTagName('img')[0])
+                   //e.currentTarget.parentNode.getElementsByTagName('img')[0].src='img/image-anne.jpg'
+                })
+            }
+        }
+        //añade la informacion del div
+        function añadirUsuario(elemento,usuario){
+            elemento.innerHTML=`<img src="${usuario.picture.large}" alt="" id="imagen">
+                                <p >Nombre <span id="nombre">${usuario.name.first}</span></p>
+                                <p >Apellidos<span id="apellidos">${usuario.name.last}</span></p>
+                                <p >Direccion <span id="direccion">${usuario.location.city}</span></p>
+                                <p >Edad  <span id="edad">${usuario.dob.age}</span></p>
+                                <button>Cambio</button>`
+            return elemento
+                        
+        }
+
+        function rellenaUsuario(usuario){
+            document.getElementsByTagName('img')[0].src=usuario.picture.large
+            document.getElementById('imagen').textContent=usuario.name.first
+            document.getElementById('nombre').textContent=usuario.name.last
+            document.getElementById('apellidos').textContent=usuario.location.city
+            document.getElementById('direccion').textContent=usuario.dob.age
+            document.getElementsByTagName('button')[0].addEventListener('click',traerPersona)
+        }
+        traerPersona()
+    </script>
+
+
+
+
+
+</body>
+</html>
