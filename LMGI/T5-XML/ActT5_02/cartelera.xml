@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="ISO-8859-1" ?>
 <cartelera xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-	xmlns="./cartelera.xml" 
-	xsi:SchemaLocation="esquema_cartelera.xsd">	>
+xsi:noNamespaceSchemaLocation="esquema_cartelera.xsd">
 
     <película código="p1" duración="152" año="2002">
         <título>AQUELLAS JUERGAS UNIVERSITARIAS</título>
@@ -11,10 +10,19 @@
         <clasificación edad="tp" />
         <sinopsis> Mitch, Frank y Beanie son tres amigos treintañeros cuyas vidas no son exactamente lo que esperaban. Mitch tiene una novia ninfómana que se mete en la cama con el primero que agarra. Frank se ha casado y su matrimonio nada tiene que ver con las juergas salvajes que organizaban años atrás. </sinopsis>
         <director>Todd Philips</director>
+        <año>2001</año>
         <reparto>
-            <actor>Luke Wilson</actor>
-            <actor>Will Farrel</actor>
-            <actor>Vince Vaughn</actor>
+            <actor>
+                <nombre>Jesus</nombre>
+                <apellidos>Bonilla</apellidos>
+                <fecha_nacimiento>2001-04-03</fecha_nacimiento>
+            </actor>
+            <actor>
+                <nombre>Santiago</nombre>
+                <apellidos>Segura</apellidos>
+                <fecha_nacimiento>2001-04-03</fecha_nacimiento>
+                 </actor>
+                
         </reparto>
         <web>http://www.uip.es</web>
         <cartel>caratulas/Aquellas juergas.jpg</cartel>
@@ -26,14 +34,29 @@
         <sin_clasificar />
         <sinopsis> Por una extraña coincidencia del destino, alguien recibe una información extraconfidencial de un anciano en sus últimos segundos de vida: el secreto mejor guardado de la Historia. El receptor, un trabajador de hospital, se lo comunica secretamente a un supuesto amigo. Ambos inician una aventura rocambolesca y llena de misterio. </sinopsis>
         <director>Jesús Bonilla</director>
+        <año>2001</año>
         <reparto>
-            <actor>Jesús Bonilla</actor>
-            <actor>Santiago Segura</actor>
-            <actor>Alfredo Landa</actor>
-            <actor>Concha Velasco</actor>
-            <actor>Antonio Resines</actor>
-            <actor>Gabino Diego, María Barranco</actor>
-            <actor>María Barranco</actor>
+            <actor>
+                <nombre>Jesus</nombre>
+                <apellidos>Bonilla</apellidos>
+                <fecha_nacimiento>2001-04-03</fecha_nacimiento>
+            </actor>
+            <actor>
+                <nombre>Santiago</nombre>
+                <apellidos>Segura</apellidos>
+                <fecha_nacimiento>2001-04-03</fecha_nacimiento>
+                 </actor>
+            <actor>
+                <nombre>Landa</nombre>
+                <apellidos>..</apellidos>
+                <fecha_nacimiento>2000-02-07</fecha_nacimiento> </actor>
+            <actor>
+                <nombre>Juan</nombre>
+                <apellidos>Velasco</apellidos>
+                <fecha_nacimiento>2000-09-09</fecha_nacimiento> </actor>
+            
         </reparto>
+        <web>djd</web>
+        <cartel></cartel>
     </película>
 </cartelera>
