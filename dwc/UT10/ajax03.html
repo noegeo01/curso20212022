@@ -23,9 +23,10 @@
                     nombre:'deadpool'
                 })
             })
-            let datos=await respuesta.json() 
-            console.log(datos)
-            donde.innerHTML=datos[1].name
+            let datos=await respuesta.json()
+            console.log(datos[0])
+            //console.log('El estado de la peticion es : '+datos)
+            //donde.innerHTML=datos[1].name
         }
         pedirDatos($cab)
         
